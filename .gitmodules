@@ -1,0 +1,3 @@
+[submodule "debank_checker"]
+	path = debank_checker
+	url = https://github.com/oxmoei/debank_checker.git
