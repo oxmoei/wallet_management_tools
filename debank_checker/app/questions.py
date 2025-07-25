@@ -18,7 +18,7 @@ def get_action():
         inquirer.List(
             "action",
             message=colored("⬇⬆ 请选择选项", 'light_yellow'),
-            choices=["💲 -获取钱包中所有代币的余额", "🪙 -仅获取特定代币的余额", "📖 -帮助", "📤 -退出"],
+            choices=["💲 -获取钱包中所有EVM链的代币余额", "🪙 -仅获取特定代币的余额", "📖 -帮助", "📤 -退出"],
         )
     ]
     action = inquirer.prompt(question, theme=loadth(theme))['action']
@@ -38,11 +38,11 @@ def select_chains(chains):
         inquirer.Checkbox(
             "chains",
             message=colored("💁‍♀️  选择您想要获取余额的网络", 'light_yellow'),
-            choices=["所有网络", *chains],
+            choices=["所有 EVM 网络", *chains],
         )
     ]
     selected_chains = inquirer.prompt(question, theme=loadth(theme))['chains']
-    if ('所有网络' in selected_chains):
+    if ('所有 EVM 网络' in selected_chains):
         return chains
     return selected_chains
 
