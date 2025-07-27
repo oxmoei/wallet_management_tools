@@ -1,0 +1,234 @@
+[
+  {
+    "chain_id": 1,
+    "rpc_url": "https://eth.llamarpc.com"
+  },
+  {
+    "chain_id": 56,
+    "rpc_url": "https://binance.llamarpc.com"
+  },
+  {
+    "chain_id": 204,
+    "rpc_url": "https://opbnb-mainnet-rpc.bnbchain.org"
+  },
+  {
+    "chain_id": 8453,
+    "rpc_url": "https://base.llamarpc.com"
+  },
+  {
+    "chain_id": 42161,
+    "rpc_url": "https://arb1.arbitrum.io/rpc"
+  },
+  {
+    "chain_id": 137,
+    "rpc_url": "https://rpc.ankr.com/polygon"
+  },
+  {
+    "chain_id": 43114,
+    "rpc_url": "https://api.avax.network/ext/bc/C/rpc"
+  },
+  {
+    "chain_id": 10,
+    "rpc_url": "https://mainnet.optimism.io"
+  },
+  {
+    "chain_id": 223,
+    "rpc_url": "https://rpc.bsquared.network"
+  },
+  {
+    "chain_id": 5000,
+    "rpc_url": "https://rpc.mantle.xyz"
+  },
+  {
+    "chain_id": 250,
+    "rpc_url": "https://rpcapi.fantom.network"
+  },
+  {
+    "chain_id": 146,
+    "rpc_url": "https://rpc.soniclabs.com"
+  },
+  {
+    "chain_id": 25,
+    "rpc_url": "https://evm.cronos.org"
+  },
+  {
+    "chain_id": 1116,
+    "rpc_url": "https://rpc.coredao.org"
+  },
+  {
+    "chain_id": 81457,
+    "rpc_url": "https://rpc.blast.io"
+  },
+  {
+    "chain_id": 4200,
+    "rpc_url": "https://rpc.merlinchain.io"
+  },
+  {
+    "chain_id": 34443,
+    "rpc_url": "https://mainnet.mode.network"
+  },
+  {
+    "chain_id": 167000,
+    "rpc_url": "https://rpc.taiko.xyz"
+  },
+  {
+    "chain_id": 59144,
+    "rpc_url": "https://rpc.linea.build"
+  },
+  {
+    "chain_id": 8217,
+    "rpc_url": "https://public-en.node.kaia.io"
+  },
+  {
+    "chain_id": 534352,
+    "rpc_url": "https://rpc.scroll.io"
+  },
+  {
+    "chain_id": 169,
+    "rpc_url": "https://pacific-rpc.manta.network/http"
+  },
+  {
+    "chain_id": 42220,
+    "rpc_url": "https://forno.celo.org"
+  },
+  {
+    "chain_id": 1088,
+    "rpc_url": "https://andromeda.metis.io/?owner=1088"
+  },
+  {
+    "chain_id": 200901,
+    "rpc_url": "https://rpc.bitlayer.org"
+  },
+  {
+    "chain_id": 7777777,
+    "rpc_url": "https://rpc.zora.energy"
+  },
+  {
+    "chain_id": 1380012617,
+    "rpc_url": "https://mainnet.rpc.rarichain.org/http"
+  },
+  {
+    "chain_id": 1329,
+    "rpc_url": "https://evm-rpc.sei-apis.com"
+  },
+  {
+    "chain_id": 20240603,
+    "rpc_url": "https://rpc.mainnet.dbkchain.io"
+  },
+  {
+    "chain_id": 1030,
+    "rpc_url": "https://evm.confluxrpc.com"
+  },
+  {
+    "chain_id": 1480,
+    "rpc_url": "https://rpc.vana.org"
+  },
+  {
+    "chain_id": 1101,
+    "rpc_url": "https://rpc.polygon-zkevm.gateway.fm"
+  },
+  {
+    "chain_id": 196,
+    "rpc_url": "https://rpc.xlayer.tech"
+  },
+  {
+    "chain_id": 324,
+    "rpc_url": "https://mainnet.era.zksync.io"
+  },
+  {
+    "chain_id": 6001,
+    "rpc_url": "https://fullnode-mainnet.bouncebitapi.com"
+  },
+  {
+    "chain_id": 43111,
+    "rpc_url": "https://hemi.drpc.org"
+  },
+  {
+    "chain_id": 60808,
+    "rpc_url": "https://rpc.gobob.xyz"
+  },
+  {
+    "chain_id": 5545,
+    "rpc_url": "https://rpc.duckchain.io"
+  },
+  {
+    "chain_id": 2818,
+    "rpc_url": "https://rpc.morphl2.io"
+  },
+  {
+    "chain_id": 98866,
+    "rpc_url": "https://rpc.plume.org"
+  },
+  {
+    "chain_id": 48900,
+    "rpc_url": "https://mainnet.zircuit.com"
+  },
+  {
+    "chain_id": 80094,
+    "rpc_url": "https://rpc.berachain.com"
+  },
+  {
+    "chain_id": 1514,
+    "rpc_url": "https://mainnet.storyrpc.io"
+  },
+  {
+    "chain_id": 130,
+    "rpc_url": "https://mainnet.unichain.org"
+  },
+  {
+    "chain_id": 33139,
+    "rpc_url": "https://rpc.apechain.com"
+  },
+  {
+    "chain_id": 2741,
+    "rpc_url": "https://abstract-sepolia.drpc.org"
+  },
+  {
+    "chain_id": 232,
+    "rpc_url": "https://rpc.lens.xyz"
+  },
+  {
+    "chain_id": 4689,
+    "rpc_url": "https://babel-api.mainnet.iotex.io"
+  },
+  {
+    "chain_id": 1868,
+    "rpc_url": "https://rpc.soneium.org"
+  },
+  {
+    "chain_id": 1111,
+    "rpc_url": "https://api.wemix.com"
+  },
+  {
+    "chain_id": 7000,
+    "rpc_url": "https://zetachain-evm.blockpi.network/v1/rpc/public"
+  },
+  {
+    "chain_id": 1284,
+    "rpc_url": "https://rpc.api.moonbeam.network"
+  },
+  {
+    "chain_id": 7560,
+    "rpc_url": "https://cyber.alt.technology"
+  },
+  {
+    "chain_id": 100,
+    "rpc_url": "https://rpc.gnosischain.com"
+  },
+  {
+    "chain_id": 1625,
+    "rpc_url": "https://rpc.ankr.com/gravity"
+  },
+  {
+    "chain_id": 7484,
+    "rpc_url": "https://rpc.x.raba.app"
+  },
+  {
+    "chain_id": 100003,
+    "rpc_url": "http://eth-jrpc.mainnet.quarkchain.io:39002"
+  },
+  {
+    "chain_id": 57073,
+    "rpc_url": "https://rpc-gel.inkonchain.com"
+  }
+]

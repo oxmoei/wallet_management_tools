@@ -15,6 +15,10 @@ from app.config import file_json
 from app.json import save_full_to_json, save_selected_to_json
 
 from termcolor import colored
+import os
+import sys
+# 确保可以从任何路径运行时都能正确引用本地 app 目录下的模块
+sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'app'))
 
 def choose_output_mode():
     print(colored("-"*50 + "\n", "magenta", attrs=["bold"]))
@@ -282,7 +286,7 @@ def get_balances(wallets, ticker=None, output_mode="1"):
         logger.warning("未安装 tabulate 库，表格美化功能不可用。可通过 pip install tabulate 安装。")
 
     print(colored("\n" + "-"*50, "magenta", attrs=["bold"]))
-    print(colored("\U0001F4CA 统计结果 SUMMARY ", "white", attrs=["bold", "reverse"]).center(50))
+    print(colored("\U0001F4CA 统计结果 SUMMARY ", "magenta", attrs=["bold", "reverse"]).center(50))
     print()
     total_wallets = len(wallets)
     total_balance = sum(balances.values())
@@ -319,14 +323,17 @@ def get_balances(wallets, ticker=None, output_mode="1"):
     print()
     logger.success(f'🔆  完成！查询结果已生成至 {file_json}')
     logger.info(f'⏱️  耗时: {round((time() - start_time) / 60, 1)} 分钟.\n')
-    print(colored("="*50 + "\n", "magenta", attrs=["bold"]))
-
-def main():
-    art = text2art(text="DEBANK   CHECKER", font="standart")
-    print(colored(art,'light_blue'))
+    print(colored("="*60, "magenta", attrs=["bold"]))
     print(colored('💬  Telegram: t.me/cryptostar210','light_cyan'))
     print(colored('☕  请我喝杯咖啡：0xd328426a8e0bcdbbef89e96a91911eff68734e84','light_cyan'))
-    print(colored("-"*50 + "\n", "magenta", attrs=["bold"]))
+    print(colored("="*60 + "\n", "magenta", attrs=["bold"]))
+
+def main():
+    print(colored("-"*60, "magenta", attrs=["bold"]))
+    print(colored("🚀 批量钱包资产查询工具🚀\n", "green", attrs=["bold", "reverse"]))
+    art = text2art(text="DEBANK   CHECKER", font="standart")
+    print(colored(art,'light_blue'))
+    print(colored("-"*60 + "\n", "magenta", attrs=["bold"]))
 
     print(colored("📝  请输入 EVM 钱包地址列表（每行一个地址，输入完后回车确认）：", "yellow", attrs=["bold"]))
     input_lines = []

@@ -13,7 +13,7 @@ Set-ExecutionPolicy Bypass -Scope CurrentUser
 运行：
 
 工具2：scabvenger
-主要功能：
+主要功能：该脚本是一个批量资产转移工具，主要用于自动化处理多链资产转移操作。
 运行：
 
 **工具会不断更新，请保持关注！**

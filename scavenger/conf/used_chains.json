@@ -1,0 +1,660 @@
+[
+  {
+    "name": "mode",
+    "chain_id": 34443,
+    "tokens": [
+      {
+        "name": "ETH",
+        "address": "mode",
+        "amount": 0.001998404038992793
+      }
+    ],
+    "token_count": 1
+  },
+  {
+    "name": "ink",
+    "chain_id": 57073,
+    "tokens": [
+      {
+        "name": "ETH",
+        "address": "ink",
+        "amount": 0.00079
+      }
+    ],
+    "token_count": 1
+  },
+  {
+    "name": "dbk",
+    "chain_id": 20240603,
+    "tokens": [
+      {
+        "name": "ETH",
+        "address": "dbk",
+        "amount": 0.00029
+      }
+    ],
+    "token_count": 1
+  },
+  {
+    "name": "scrl",
+    "chain_id": 534352,
+    "tokens": [
+      {
+        "name": "USD Coin",
+        "address": "0x06efdbff2a14a7c8e15944d1f4a48f9f95f663a4",
+        "amount": 2.044225
+      },
+      {
+        "name": "Scrolly The Map",
+        "address": "0xb65ad8d81d1e4cb2975352338805af6e39ba8be8",
+        "amount": 25087.912090205205
+      },
+      {
+        "name": "ETH",
+        "address": "scrl",
+        "amount": 0.000555727219035816
+      }
+    ],
+    "token_count": 3
+  },
+  {
+    "name": "cro",
+    "chain_id": 25,
+    "tokens": [
+      {
+        "name": "CRO",
+        "address": "cro",
+        "amount": 17.541930481586306
+      }
+    ],
+    "token_count": 1
+  },
+  {
+    "name": "sei",
+    "chain_id": 1329,
+    "tokens": [
+      {
+        "name": "SEI",
+        "address": "sei",
+        "amount": 0.9858841394902798
+      }
+    ],
+    "token_count": 1
+  },
+  {
+    "name": "xlayer",
+    "chain_id": 196,
+    "tokens": [
+      {
+        "name": "OKB",
+        "address": "xlayer",
+        "amount": 0.0020486811
+      }
+    ],
+    "token_count": 1
+  },
+  {
+    "name": "mnt",
+    "chain_id": 5000,
+    "tokens": [
+      {
+        "name": "MNT",
+        "address": "mnt",
+        "amount": 2.1997510030354395
+      },
+      {
+        "name": "USDe",
+        "address": "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34",
+        "amount": 0.7575771177711125
+      }
+    ],
+    "token_count": 2
+  },
+  {
+    "name": "merlin",
+    "chain_id": 4200,
+    "tokens": [
+      {
+        "name": "BTC",
+        "address": "merlin",
+        "amount": 3.9319380129324e-05
+      },
+      {
+        "name": "MDBL",
+        "address": "0x8aed42735027aa6d97023d8196b084ecfba701af",
+        "amount": 5300.0
+      },
+      {
+        "name": "Merlin's Seal BTC",
+        "address": "0xb880fd278198bd590252621d4cd071b1842e9bcd",
+        "amount": 1.576514489085e-05
+      }
+    ],
+    "token_count": 3
+  },
+  {
+    "name": "gravity",
+    "chain_id": 100003,
+    "tokens": [
+      {
+        "name": "Latch staked USD",
+        "address": "0xc4af68dd5b96f0a544c4417407773fefdc97f58d",
+        "amount": 8.969195749078628
+      },
+      {
+        "name": "G",
+        "address": "gravity",
+        "amount": 2.4615846260435554
+      }
+    ],
+    "token_count": 2
+  },
+  {
+    "name": "cfx",
+    "chain_id": 1030,
+    "tokens": [
+      {
+        "name": "CFX",
+        "address": "cfx",
+        "amount": 0.6697431530284851
+      }
+    ],
+    "token_count": 1
+  },
+  {
+    "name": "matic",
+    "chain_id": 137,
+    "tokens": [
+      {
+        "name": "POL",
+        "address": "matic",
+        "amount": 15.113557317321627
+      }
+    ],
+    "token_count": 1
+  },
+  {
+    "name": "xdai",
+    "chain_id": 100,
+    "tokens": [
+      {
+        "name": "xDai",
+        "address": "xdai",
+        "amount": 0.002402071409300287
+      },
+      {
+        "name": "Wrapped Ether on xDai",
+        "address": "0x6a023ccd1ff6f2045c3309768ead9e68f978f6e1",
+        "amount": 0.001882405637612629
+      }
+    ],
+    "token_count": 2
+  },
+  {
+    "name": "taiko",
+    "chain_id": 167000,
+    "tokens": [
+      {
+        "name": "Wrapped Ether",
+        "address": "0xa51894664a773981c6c112c43ce576f315d5b1b6",
+        "amount": 0.000309999999999999
+      },
+      {
+        "name": "ETH",
+        "address": "taiko",
+        "amount": 0.000260132906077133
+      }
+    ],
+    "token_count": 2
+  },
+  {
+    "name": "bsc",
+    "chain_id": 56,
+    "tokens": [
+      {
+        "name": "BNB",
+        "address": "bsc",
+        "amount": 0.00795871376645043
+      },
+      {
+        "name": "BSquared Token",
+        "address": "0x783c3f003f172c6ac5ac700218a357d2d66ee2a2",
+        "amount": 0.2975944135622
+      },
+      {
+        "name": "Gravity",
+        "address": "0x9c7beba8f6ef6643abd725e45a4e8387ef260649",
+        "amount": 62.00902283735688
+      }
+    ],
+    "token_count": 3
+  },
+  {
+    "name": "ftm",
+    "chain_id": 250,
+    "tokens": [
+      {
+        "name": "FTM",
+        "address": "ftm",
+        "amount": 7.355087139011938
+      }
+    ],
+    "token_count": 1
+  },
+  {
+    "name": "linea",
+    "chain_id": 59144,
+    "tokens": [
+      {
+        "name": "Foxy",
+        "address": "0x5fbdf89403270a1846f5ae7d113a989f850d1566",
+        "amount": 5.0
+      },
+      {
+        "name": "ETH",
+        "address": "linea",
+        "amount": 0.002372197297431974
+      }
+    ],
+    "token_count": 2
+  },
+  {
+    "name": "opbnb",
+    "chain_id": 204,
+    "tokens": [
+      {
+        "name": "BNB",
+        "address": "opbnb",
+        "amount": 0.000760379622005558
+      }
+    ],
+    "token_count": 1
+  },
+  {
+    "name": "avax",
+    "chain_id": 43114,
+    "tokens": [
+      {
+        "name": "AVAX",
+        "address": "avax",
+        "amount": 0.03891681770442503
+      }
+    ],
+    "token_count": 1
+  },
+  {
+    "name": "blast",
+    "chain_id": 81457,
+    "tokens": [
+      {
+        "name": "Blast",
+        "address": "0xb1a5700fa2358173fe465e6ea4ff52e36e88e2ad",
+        "amount": 112.97593362514516
+      },
+      {
+        "name": "ETH",
+        "address": "blast",
+        "amount": 0.000614916967214976
+      }
+    ],
+    "token_count": 2
+  },
+  {
+    "name": "eth",
+    "chain_id": 1,
+    "tokens": [
+      {
+        "name": "Wrapped Ether",
+        "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+        "amount": 0.000670209018263195
+      },
+      {
+        "name": "Tether USD",
+        "address": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+        "amount": 0.784126
+      },
+      {
+        "name": "Eigen",
+        "address": "0xec53bf9167f50cdeb3ae105f56099aaab9061f83",
+        "amount": 0.5666605207357807
+      },
+      {
+        "name": "ETH",
+        "address": "eth",
+        "amount": 4.1262364626e-05
+      }
+    ],
+    "token_count": 4
+  },
+  {
+    "name": "op",
+    "chain_id": 10,
+    "tokens": [
+      {
+        "name": "NBL",
+        "address": "0x4b03afc91295ed778320c2824bad5eb5a1d852dd",
+        "amount": 48.0
+      },
+      {
+        "name": "ETH",
+        "address": "op",
+        "amount": 0.001580533638873062
+      }
+    ],
+    "token_count": 2
+  },
+  {
+    "name": "manta",
+    "chain_id": 169,
+    "tokens": [
+      {
+        "name": "ETH",
+        "address": "manta",
+        "amount": 1.41774371085e-07
+      }
+    ],
+    "token_count": 1
+  },
+  {
+    "name": "pze",
+    "chain_id": 1101,
+    "tokens": [
+      {
+        "name": "Tether USD",
+        "address": "0x1e4a5963abfd975d8c9021ce480b42188849d41d",
+        "amount": 5.00001
+      }
+    ],
+    "token_count": 1
+  },
+  {
+    "name": "base",
+    "chain_id": 8453,
+    "tokens": [
+      {
+        "name": "donotfomoew",
+        "address": "0x15ac90165f8b45a80534228bdcb124a011f62fee",
+        "amount": 691.6276982994214
+      },
+      {
+        "name": "SOL",
+        "address": "0x209ba0deaa26f5f95acd2110de7ce3bd01bd1258",
+        "amount": 5.0
+      },
+      {
+        "name": "Renzo Restaked ETH",
+        "address": "0x2416092f143378750bb29b79ed961ab195cceea5",
+        "amount": 6.3843493186318e-05
+      },
+      {
+        "name": "SALUKI",
+        "address": "0x26c69e4924bd0d7d52d680b33616042ee13f621c",
+        "amount": 25.0
+      },
+      {
+        "name": "Liberty world financial",
+        "address": "0x2953ca1174b41b28439ef1155235fa699d7b75ba",
+        "amount": 950.0
+      },
+      {
+        "name": "MARA Holdings",
+        "address": "0x2a1985ae2479f5a7adbb0888715849e3d016ba39",
+        "amount": 13000.0
+      },
+      {
+        "name": "Black Agnus",
+        "address": "0x306fd3e7b169aa4ee19412323e1a5995b8c1a1f4",
+        "amount": 60000.0
+      },
+      {
+        "name": "Candy",
+        "address": "0x33b7f6225b4cbe5d368b7bb4807d6375b18b8c2b",
+        "amount": 4524783.802062366
+      },
+      {
+        "name": "Consent to read this",
+        "address": "0x38aee4574c260855914d9e19221cf4c10b016051",
+        "amount": 389051.9723735923
+      },
+      {
+        "name": "BUILD",
+        "address": "0x3c281a39944a2319aa653d81cfd93ca10983d234",
+        "amount": 641309.0
+      },
+      {
+        "name": "Layer3",
+        "address": "0x46777c76dbbe40fabb2aab99e33ce20058e76c59",
+        "amount": 12.611609768709414
+      },
+      {
+        "name": "Degen",
+        "address": "0x4ed4e862860bed51a9570b96d89af5e1b0efefed",
+        "amount": 29.9763596085469
+      },
+      {
+        "name": "Brett Skywalker",
+        "address": "0x52220332f48f1e2cd3128025cf70bcba5a513c57",
+        "amount": 333.0
+      },
+      {
+        "name": "MikeAI",
+        "address": "0x5efc4446e1d772428adbd6053a0421ca7b3ed85a",
+        "amount": 69.0
+      },
+      {
+        "name": "Sekuya",
+        "address": "0x623cd3a3edf080057892aaf8d773bbb7a5c9b6e9",
+        "amount": 18.47
+      },
+      {
+        "name": "USD Coin",
+        "address": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "amount": 0.055336
+      },
+      {
+        "name": "Cats do something",
+        "address": "0x87a0233a8cb4392ec3eb8fa467817fc0b6a326dd",
+        "amount": 2000.0
+      },
+      {
+        "name": "JACKIE CHAIN",
+        "address": "0x93ac8f81e799c3b76112a649715dd86cea655bdf",
+        "amount": 1000.0
+      },
+      {
+        "name": "Bento",
+        "address": "0x9de16c805a3227b9b92e39a446f9d56cf59fe640",
+        "amount": 8880888.0
+      },
+      {
+        "name": "Snowy Owl",
+        "address": "0xa1ca6299ba48366af1845a9a8ae59b87ff0d5c01",
+        "amount": 366.0
+      },
+      {
+        "name": "CARV",
+        "address": "0xc08cd26474722ce93f4d0c34d16201461c10aa8c",
+        "amount": 2.77
+      },
+      {
+        "name": "Blep Super Meme",
+        "address": "0xc438b0c0e80a8fa1b36898d1b36a3fc2ec371c54",
+        "amount": 100.0
+      },
+      {
+        "name": "Toilet Wars",
+        "address": "0xc95e81a4a709358a97621419467d601971732cef",
+        "amount": 150.0
+      },
+      {
+        "name": "New Syria Coin",
+        "address": "0xd0349c25484009902aa8f1a7285eca916f35fb6c",
+        "amount": 39000.0
+      },
+      {
+        "name": "The Nation Token",
+        "address": "0xd968196fa6977c4e58f2af5ac01c655ea8332d22",
+        "amount": 740000.0
+      },
+      {
+        "name": "USD Base Coin",
+        "address": "0xd9aaec86b65d86f6a7b5b1b0c42ffa531710b6ca",
+        "amount": 6.213049
+      },
+      {
+        "name": "Baby Poo",
+        "address": "0xec313c9d476c6cca6839ad60266302eac6e2e9fa",
+        "amount": 1000000.0
+      },
+      {
+        "name": "ETH",
+        "address": "base",
+        "amount": 0.003911363070049723
+      }
+    ],
+    "token_count": 28
+  },
+  {
+    "name": "zeta",
+    "chain_id": 7000,
+    "tokens": [
+      {
+        "name": "ZetaChain ZRC20 BNB-bsc_mainnet",
+        "address": "0x48f80608b672dc30dc7e3dbbd0343c5f02c738eb",
+        "amount": 0.001696
+      },
+      {
+        "name": "ZETA",
+        "address": "zeta",
+        "amount": 1.4106432693362163
+      }
+    ],
+    "token_count": 2
+  },
+  {
+    "name": "rari",
+    "chain_id": 1380012617,
+    "tokens": [
+      {
+        "name": "ETH",
+        "address": "rari",
+        "amount": 0.00037
+      }
+    ],
+    "token_count": 1
+  },
+  {
+    "name": "bb",
+    "chain_id": 6001,
+    "tokens": [
+      {
+        "name": "BB",
+        "address": "bb",
+        "amount": 1.9997165
+      }
+    ],
+    "token_count": 1
+  },
+  {
+    "name": "btr",
+    "chain_id": 200901,
+    "tokens": [
+      {
+        "name": "BTC",
+        "address": "btr",
+        "amount": 1e-18
+      }
+    ],
+    "token_count": 1
+  },
+  {
+    "name": "wemix",
+    "chain_id": 1111,
+    "tokens": [
+      {
+        "name": "WEMIX",
+        "address": "wemix",
+        "amount": 1.798348599999623
+      }
+    ],
+    "token_count": 1
+  },
+  {
+    "name": "klay",
+    "chain_id": 8217,
+    "tokens": [
+      {
+        "name": "KAIA",
+        "address": "klay",
+        "amount": 26.538557545462133
+      }
+    ],
+    "token_count": 1
+  },
+  {
+    "name": "vana",
+    "chain_id": 1480,
+    "tokens": [
+      {
+        "name": "VANA",
+        "address": "vana",
+        "amount": 0.016771286251552
+      }
+    ],
+    "token_count": 1
+  },
+  {
+    "name": "era",
+    "chain_id": 324,
+    "tokens": [
+      {
+        "name": "ETH",
+        "address": "era",
+        "amount": 4.5865460625e-06
+      },
+      {
+        "name": "ZinoPet Token",
+        "address": "0x0c6eaaab86e8374a91e3f42c726b6fd1abacb54c",
+        "amount": 112387.76233825427
+      }
+    ],
+    "token_count": 2
+  },
+  {
+    "name": "arb",
+    "chain_id": 42161,
+    "tokens": [
+      {
+        "name": "LogX Network",
+        "address": "0x59062301fb510f4ea2417b67404cb16d31e604ba",
+        "amount": 13.54562598653
+      },
+      {
+        "name": "Molten",
+        "address": "0x66e535e8d2ebf13f49f3d49e5c50395a97c137b1",
+        "amount": 0.5258228163742757
+      },
+      {
+        "name": "Wormhole Token",
+        "address": "0xb0ffa8000886e57f86dd5264b9582b2ad87b2b91",
+        "amount": 1.0
+      },
+      {
+        "name": "OX Coin",
+        "address": "0xba0dda8762c24da9487f5fa026a9b64b695a07ea",
+        "amount": 5.0
+      },
+      {
+        "name": "USD₮0",
+        "address": "0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9",
+        "amount": 0.006378
+      },
+      {
+        "name": "ETH",
+        "address": "arb",
+        "amount": 0.000316927321183022
+      }
+    ],
+    "token_count": 6
+  }
+]

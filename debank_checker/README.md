@@ -1,9 +1,69 @@
-# Debank Ckecker
+# DeBank Checker
 
-# 功能
-在 Debank 上批量钱包查询多链资产余额
+本目录包含两个主要脚本：`main.py` 和 `gen_used_chains.py`，用于批量查询 EVM 钱包资产和链上代币分布分析。
 
-# 运行环境
-Python 3.x
-NodeJS（必须，因部分签名/加密逻辑依赖 js/main.js）
-依赖包：通过 pip install -r requirements.txt 安装
+---
+
+## 1. main.py
+
+### 功能简介
+- 批量查询多个 EVM 钱包在各条链（及池子）上的资产余额。
+- 支持详细模式（各链/池子余额明细）和简洁模式（仅总余额）。
+- 支持多线程加速查询。
+- 查询结果自动保存为 JSON 文件，并以表格形式美观展示。
+- 支持筛选特定代币余额。
+
+### 主要用法
+```bash
+python main.py
+```
+- 按提示输入钱包地址（每行一个，回车结束）。
+- 选择输出模式：详细/简洁。
+- 按菜单选择操作：
+  - 查询所有 EVM 链余额
+  - 查询特定代币余额
+  - 查看帮助
+  - 退出
+
+### 典型输出
+- 钱包总数、总余额、余额大于0的钱包数
+- 每个钱包的余额明细（可选）
+- 结果文件：`balance.json`
+
+---
+
+## 2. gen_used_chains.py
+
+### 功能简介
+- 针对单个 EVM 钱包，分析其实际使用过的链及各链上的代币分布。
+- 自动生成 `used_chains.json`，包含每条链的名称、ID、代币明细和币种数量。
+- 支持链ID映射、进度条、彩色输出。
+
+### 主要用法
+```bash
+python gen_used_chains.py
+```
+- 按提示输入一个钱包地址（仅支持单个地址）。
+- 自动分析该钱包用过的链及其代币分布。
+- 结果文件：`used_chains.json`
+
+### 典型输出
+- 每条链的名称、ID、币种数量、代币明细
+- 汇总表格和美观的终端输出
+
+---
+
+## 依赖环境
+- Python 3.8+
+- 主要依赖：requests, termcolor, alive-progress, art, tabulate（可选）
+
+安装依赖：
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## 联系与支持
+- Telegram: [t.me/cryptostar210](https://t.me/cryptostar210)
+- 打赏地址：0xd328426a8e0bcdbbef89e96a91911eff68734e84

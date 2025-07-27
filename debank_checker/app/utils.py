@@ -119,6 +119,9 @@ def setup_session():
     }
     session.headers = headers
 
-    node_process = subprocess.Popen(['node', 'js/main.js'], stdin=subprocess.PIPE, stdout=subprocess.PIPE, universal_newlines=True)
+    # 确保可以从任何路径运行时都能正确引用 js/main.js
+    import os
+    js_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'js', 'main.js')
+    node_process = subprocess.Popen(['node', js_path], stdin=subprocess.PIPE, stdout=subprocess.PIPE, universal_newlines=True)
     return session, node_process
 
