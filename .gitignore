@@ -1,2 +1,5 @@
 scavenger/conf/match_chains.py
 scavenger/conf/chainlist.json
+scavenger/.env
+scavenger/src/__pycache__
+debank_checker/__pycache__
