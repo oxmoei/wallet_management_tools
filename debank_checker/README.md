@@ -1,6 +1,6 @@
 # DeBank Checker
 
-本目录包含两个主要脚本：`main.py` 和 `gen_used_chains.py`，用于批量查询 EVM 钱包资产和链上代币分布分析。
+用于批量查询 EVM 钱包的持有资产和 defi 资产。
 
 ---
 
@@ -57,9 +57,20 @@ python gen_used_chains.py
 - Python 3.8+
 - 主要依赖：requests, termcolor, alive-progress, art, tabulate（可选）
 
-安装依赖：
+## 安装依赖：
+### Linux/WSL/VPS/macOS 用户
+
 ```bash
-pip install -r requirements.txt
+chmod +x install.sh && ./install.sh
+```
+
+### Windows 用户
+
+以管理员身份启动 PowerShell，然后执行：
+
+```powershell
+Set-ExecutionPolicy Bypass -Scope CurrentUser
+.\install.ps1
 ```
 
 ---
