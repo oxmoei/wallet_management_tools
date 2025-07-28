@@ -1,7 +1,7 @@
 
 # 钱包管理工具合集
 
-一个功能强大的多链钱包管理工具集合，提供资产检查、批量转移等实用功能。
+一个功能强大的多链钱包管理工具集合。﹤持续添加新工具和维护中......﹥
 
 ## 🖥️ **支持系统**
 
@@ -42,7 +42,7 @@ Set-ExecutionPolicy Bypass -Scope CurrentUser
   - 资产明细包含持有资产和 DEFI 资产
   - 导出详细的资产报告
   
-  [详情介绍与使用说明](./debank_checker/README.md)
+  [详细介绍与使用说明](./debank_checker/README.md)
 
 ### 2. scavenger
 
@@ -50,7 +50,7 @@ Set-ExecutionPolicy Bypass -Scope CurrentUser
 - 自动化转移 EVM 钱包上的全部资产
 - 支持原生代币和 ERC20 代币
 
-[详情介绍与使用说明](./scavenger/README.md)
+[详细介绍与使用说明](./scavenger/README.md)
 
 
 ### 安全提醒
@@ -61,13 +61,6 @@ Set-ExecutionPolicy Bypass -Scope CurrentUser
 2. 建议先在测试网络上验证功能
 3. 小额测试后再进行大额操作
 4. 定期备份钱包数据
-
-## ⚠️ 注意事项
-
-- 本工具仅供学习和研究使用
-- 使用前请充分了解相关风险
-- 建议在测试环境中先进行验证
-- 请遵守当地法律法规
 
 ## 📄 许可证
 
