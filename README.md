@@ -3,13 +3,18 @@
 
 一个功能强大的多链钱包管理工具集合，提供资产检查、批量转移等实用功能。
 
-## 📋 目录
+## 🖥️ **支持系统**
 
-- [安装依赖](#安装依赖)
-- [工具列表](#工具列表)
-- [使用说明](#使用说明)
-- [注意事项](#注意事项)
-- [更新日志](#更新日志)
+- ![Windows](https://img.shields.io/badge/-Windows-0078D6?logo=windows&logoColor=white)
+- ![macOS](https://img.shields.io/badge/-macOS-000000?logo=apple&logoColor=white)
+- ![Linux](https://img.shields.io/badge/-Linux-FCC624?logo=linux&logoColor=black)
+
+
+### 环境要求
+
+- Python 3.8+
+- Node.js 16+
+- 稳定的网络连接
 
 ## 🚀 安装依赖
 
@@ -33,40 +38,20 @@ Set-ExecutionPolicy Bypass -Scope CurrentUser
 ### 1. debank_checker
 
   **主要功能：**
-  - 批量检查钱包在 DeBank 上的资产情况
-  - 支持所有 EVM 链上的持有资产和 DEFI 资产
+  - 批量查询 EVM 钱包在 DeBank 上的资产情况
+  - 资产明细包含持有资产和 DEFI 资产
   - 导出详细的资产报告
   
-  [详情与使用说明](./debank_checker/README.md)
+  [详情介绍与使用说明](./debank_checker/README.md)
 
 ### 2. scavenger
 
 **主要功能：**
-- 自动化处理 EVM 链资产转移操作
+- 自动化转移 EVM 钱包上的全部资产
 - 支持原生代币和 ERC20 代币
 
-[详情与使用说明](./scavenger/README.md)
+[详情介绍与使用说明](./scavenger/README.md)
 
-**使用步骤：**
-1. 配置源钱包和目标钱包地址
-2. 设置转移的代币类型和数量
-3. 选择目标网络
-4. 执行批量转移
-
-## 📖 使用说明
-
-### 环境要求
-
-- Python 3.8+
-- Node.js 16+
-- 稳定的网络连接
-
-### 配置文件
-
-每个工具都有对应的配置文件，请根据实际需求修改：
-
-- `debank_checker/config.json` - DeBank 检查器配置
-- `scavenger/config.json` - 资产转移工具配置
 
 ### 安全提醒
 
@@ -84,20 +69,10 @@ Set-ExecutionPolicy Bypass -Scope CurrentUser
 - 建议在测试环境中先进行验证
 - 请遵守当地法律法规
 
-## 📝 更新日志
-
-### v1.0.0 (2024-01-01)
-- 初始版本发布
-- 支持 DeBank 资产检查
-- 支持批量资产转移
-
----
-
-**工具会不断更新，请保持关注！**
-
-如有问题或建议，欢迎提交 Issue 或 Pull Request。
-
 ## 📄 许可证
 
 本项目采用 MIT 许可证 - 详见 [LICENSE](LICENSE) 文件
 
+## 联系与支持
+- Telegram: [t.me/cryptostar210](https://t.me/cryptostar210)
+- 打赏地址：0xd328426a8e0bcdbbef89e96a91911eff68734e84

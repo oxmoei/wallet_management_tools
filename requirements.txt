@@ -5,5 +5,4 @@ loguru==0.6.0
 requests==2.31.0
 termcolor==2.3.0
 tls_client==0.2.1
-cryptography==44.0.0
-python-dotenv
+python-dotenv==1.0.1

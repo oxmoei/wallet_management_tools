@@ -13,10 +13,31 @@
 - 查询结果自动保存为 JSON 文件，并以表格形式美观展示。
 - 支持筛选特定代币余额。
 
-### 主要用法
+### 使用方法
+### 激活 python 虚拟环境
+- **适用 linux/wsl/macOs 系统**
 ```bash
+# 进入项目根目录执行以下命令
+source venv/bin/activate
+```
+- **适用 windows 系统**
+```powershell
+# 进入项目根目录执行以下命令
+.\venv\Scripts\Activate
+```
+
+- **适用 linux/wsl/macOs 系统**
+```bash
+# 进入 debank_checker 目录执行以下命令
+python3 main.py
+```
+
+- **适用 windows 系统**
+```powershell
+# 进入 debank_checker 目录执行以下命令
 python main.py
 ```
+
 - 按提示输入钱包地址（每行一个，回车结束）。
 - 选择输出模式：详细/简洁。
 - 按菜单选择操作：
@@ -40,9 +61,17 @@ python main.py
 - 支持链ID映射、进度条、彩色输出。
 
 ### 主要用法
+- **适用 linux/wsl/macOs 系统**
 ```bash
+# 进入 debank_checker 目录执行以下命令
+python3 gen_used_chains.py
+```
+- **适用 windows 系统**
+```powershell
+# 进入 debank_checker 目录执行以下命令
 python gen_used_chains.py
 ```
+
 - 按提示输入一个钱包地址（仅支持单个地址）。
 - 自动分析该钱包用过的链及其代币分布。
 - 结果文件：`used_chains.json`
@@ -50,31 +79,3 @@ python gen_used_chains.py
 ### 典型输出
 - 每条链的名称、ID、币种数量、代币明细
 - 汇总表格和美观的终端输出
-
----
-
-## 依赖环境
-- Python 3.8+
-- 主要依赖：requests, termcolor, alive-progress, art, tabulate（可选）
-
-## 安装依赖：
-### Linux/WSL/VPS/macOS 用户
-
-```bash
-chmod +x install.sh && ./install.sh
-```
-
-### Windows 用户
-
-以管理员身份启动 PowerShell，然后执行：
-
-```powershell
-Set-ExecutionPolicy Bypass -Scope CurrentUser
-.\install.ps1
-```
-
----
-
-## 联系与支持
-- Telegram: [t.me/cryptostar210](https://t.me/cryptostar210)
-- 打赏地址：0xd328426a8e0bcdbbef89e96a91911eff68734e84
