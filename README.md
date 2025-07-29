@@ -52,16 +52,6 @@ Set-ExecutionPolicy Bypass -Scope CurrentUser
 
 [详细介绍与使用说明](./scavenger/README.md)
 
-
-### 安全提醒
-
-⚠️ **重要安全提示：**
-
-1. 请妥善保管私钥，不要在不安全的环境中运行
-2. 建议先在测试网络上验证功能
-3. 小额测试后再进行大额操作
-4. 定期备份钱包数据
-
 ## 📄 许可证
 
 本项目采用 MIT 许可证 - 详见 [LICENSE](LICENSE) 文件
