@@ -48,15 +48,15 @@ python main.py
 ### 典型输出
 - 钱包总数、总余额、余额大于0的钱包数
 - 每个钱包的余额明细（可选）
-- 结果文件：`balance.json`
+- 结果文件：`balances.json`
 
 ---
 
 ## 2. gen_used_chains.py
 
 ### 功能简介
-- 针对单个 EVM 钱包，分析其实际使用过的链及各链上的代币分布。
-- 自动生成 `used_chains.json`，包含每条链的名称、ID、代币明细和币种数量。
+- 针对单个 EVM 钱包，分析其在各链上的代币分布。
+- 自动生成 `used_chains.json`，包含每条链的名称、Chain_ID、代币明细和币种数量。
 - 支持链ID映射、进度条、彩色输出。
 
 ### 使用方法
@@ -72,7 +72,7 @@ python gen_used_chains.py
 ```
 
 - 按提示输入一个钱包地址（仅支持单个地址）。
-- 自动分析该钱包用过的链及其代币分布。
+- 自动分析该地址在各链的代币分布。
 - 结果文件：`used_chains.json`
 
 ### 典型输出
@@ -80,5 +80,5 @@ python gen_used_chains.py
 - 汇总表格和美观的终端输出
 
 ### 故障排除
-- **ModuleNotFoundError: No module named...**: 确保你已激活虚拟环境，并已成功安装了所需的 python 库。（可手动运行 `pip install -r requirements.txt `进行再次安装）
-- **获取 DeBank 数据很慢或失败**：可能请求被 Cloudflare 限制。解决方法：稍候重试、减少查询地址数、减少线程数。
+- **ModuleNotFoundError: No module named...**: 确保你已激活虚拟环境，并已成功安装了所需的 python 库。| 解决方法：激活虚拟环境，运行 `pip install -r requirements.txt `进行再次安装。
+- **获取 DeBank 数据很慢或失败**：请求被 Cloudflare 限制。| 解决方法：稍候重试、减少查询地址数、减少线程数。

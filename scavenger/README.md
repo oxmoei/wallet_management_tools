@@ -148,11 +148,9 @@ python native.py
 ## ⚠️ 注意事项
 
 1. **执行顺序**：**必须先运行 `used_chains.py` 更新配置文件，再执行资产转移脚本**
-2. **私钥安全**：确保 `.env` 文件权限正确，不要泄露私钥
-3. **Gas 费用**：确保账户有足够的原生代币支付 Gas 费用
-4. **网络连接**：RPC_list.json 配置的为**公开 RPC 端点**，可能会失效、限频或不稳定，最好修改为自己的**专属 RPC 端点**（可在 Alchemy、Infura、Ankr、Blast 等提供商上免费注册）
-5. **余额检查**：脚本会自动检查余额是否足够支付 Gas
-6. **测试建议**：首次使用建议启用 Dry-run 模式测试
+2. **Gas 费用**：确保账户有足够的原生代币支付 Gas 费用
+3. **网络连接**：RPC_list.json 配置的为**公开 RPC 端点**，个别可能会失效、限频或不稳定，最好手动修改为自己的**专属 RPC 端点**（可在 Alchemy、Infura、Ankr、Blast 等提供商上免费注册）
+4. **测试建议**：首次使用建议启用 Dry-run 模式测试
 
 ## 🛠️ 故障排除
 - **ModuleNotFoundError: No module named...**: 确保你已激活虚拟环境，并已成功安装了所需的 python 库。（可手动运行 `pip install -r requirements.txt `进行再次安装）
