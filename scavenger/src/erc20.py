@@ -88,7 +88,8 @@ def main():
             rpc_url = rpc_info[chain_id_str]
             w3 = Web3(Web3.HTTPProvider(rpc_url))
             nonce = w3.eth.get_transaction_count(from_address)
-            print(f"[{chain_idx}/{len(chain_ids)}] 获取初始 Nonce: {nonce}")
+            print(f"{Fore.RED}[{chain_idx}/{len(chain_ids)}] {Fore.YELLOW}获取初始 Nonce: {nonce}")
+
             # 获取 ERC20 token 地址列表
             erc20_tokens_list = []
             asset_balances = {}

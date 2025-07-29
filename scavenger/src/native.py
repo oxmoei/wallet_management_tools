@@ -134,7 +134,7 @@ def main():
             rpc_url = rpc_info[chain_id_str]
             w3 = Web3(Web3.HTTPProvider(rpc_url))
             nonce = w3.eth.get_transaction_count(from_address)
-            print(f"[{idx}/{len(chain_ids)}] 获取初始 Nonce: {nonce}")
+            print(f"{Fore.RED}[{idx}/{len(chain_ids)}] {Fore.YELLOW}获取初始 Nonce: {nonce}")
             print(f"{Fore.YELLOW}{'='*50}")
             print(f"{Fore.YELLOW}⏳ 正在处理链 {chain_id}（{rpc_url}）")
             print(f"{Fore.YELLOW}{'='*50}{Style.RESET_ALL}")

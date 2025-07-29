@@ -21,7 +21,7 @@
   },
   {
     "chain_id": 137,
-    "rpc_url": "https://rpc.ankr.com/polygon"
+    "rpc_url": "https://polygon-mainnet.rpcfast.com?api_key=xbhWBI1Wkguk8SNMu1bvvLurPGLXmgwYeC4S6g2H7WdwFigZSmPWVZRxrskEQwIf"
   },
   {
     "chain_id": 43114,
