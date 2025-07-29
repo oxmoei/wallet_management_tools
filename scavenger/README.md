@@ -86,12 +86,12 @@ ERC20 代币的标准 ABI 接口文件。
 ### 激活 python 虚拟环境
 - **适用 linux/wsl/macOs 系统**
 ```bash
-# 进入项目根目录执行以下命令
+# 在项目根目录下执行以下命令
 source venv/bin/activate
 ```
 - **适用 windows 系统**
 ```powershell
-# 进入项目根目录执行以下命令
+# 在项目根目录下执行以下命令
 .\venv\Scripts\Activate
 ```
 
@@ -99,42 +99,42 @@ source venv/bin/activate
 在执行转移脚本之前，**必须先运行 `used_chains.py` 来更新 `used_chains.json` 配置文件**：
 - **适用 linux/wsl/macOs 系统**
 ```bash
-# 进入 scavenger/src 目录执行以下命令
+# 进入 scavenger/src 目录，执行以下命令
 python3 used_chains.py
 ```
 - **适用 windows 系统**
 ```powershell
-# 进入 scavenger\src 目录执行以下命令
+# 进入 scavenger\src 目录，执行以下命令
 python used_chains.py
 ```
 
-### 运行 ERC20 代币转移
+### 运行 ERC20 代币转移脚本
 运行前确保你的钱包在各链有足够的原生代币支付 Gas 费用
 - **适用 linux/wsl/macOs 系统**
 ```bash
-# 进入 scavenger/src 目录执行以下命令
+# 进入 scavenger/src 目录，执行以下命令
 python3 erc20.py
 ```
 - **适用 windows 系统**
 ```powershell
-# 进入 scavenger\src 目录执行以下命令
+# 进入 scavenger\src 目录，执行以下命令
 python erc20.py
 ```
 
-### 运行原生代币转移
+### 运行原生代币转移脚本
 - **适用 linux/wsl/macOs 系统**
 ```bash
-# 进入 scavenger/src 目录执行以下命令
+# 进入 scavenger/src 目录，执行以下命令
 python3 native.py
 ```
 - **适用 windows 系统**
 ```powershell
-# 进入 scavenger\src 目录执行以下命令
+# 进入 scavenger\src 目录，执行以下命令
 python native.py
 ```
 
 ### 完整执行流程
-1. **第一步**：运行 `used_chains.py` 生成配置文件
+1. **第一步**：运行 `used_chains.py` 更新配置文件
 2. **第二步**：根据需要运行 `erc20.py` 或 `native.py`
 3. **可选**：启用 Dry-run 模式进行测试
 

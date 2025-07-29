@@ -6,12 +6,12 @@
 ## 激活 python 虚拟环境
 - **适用 linux/wsl/macOs 系统**
 ```bash
-# 进入项目根目录执行以下命令
+# 在项目的根目录下执行以下命令
 source venv/bin/activate
 ```
 - **适用 windows 系统**
 ```powershell
-# 进入项目根目录执行以下命令
+# 在项目的根目录下执行以下命令
 .\venv\Scripts\Activate
 ```
 ## 1. main.py
@@ -27,13 +27,13 @@ source venv/bin/activate
 
 - **适用 linux/wsl/macOs 系统**
 ```bash
-# 进入 debank_checker 目录执行以下命令
+# 进入 debank_checker 目录，执行以下命令
 python3 main.py
 ```
 
 - **适用 windows 系统**
 ```powershell
-# 进入 debank_checker 目录执行以下命令
+# 进入 debank_checker 目录，执行以下命令
 python main.py
 ```
 

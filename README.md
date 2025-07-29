@@ -3,14 +3,14 @@
 
 一个功能强大的多链钱包管理工具集合。  ﹤持续添加新工具和维护中......﹥
 
-## 🖥️ **支持系统**
+## 🖥️ 支持系统
 
 - ![Windows](https://img.shields.io/badge/-Windows-0078D6?logo=windows&logoColor=white)
 - ![macOS](https://img.shields.io/badge/-macOS-000000?logo=apple&logoColor=white)
 - ![Linux](https://img.shields.io/badge/-Linux-FCC624?logo=linux&logoColor=black)
 
 
-### 环境要求
+### 🌿 环境要求
 
 - Python 3.8+
 - Node.js 16+
