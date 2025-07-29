@@ -27,6 +27,10 @@ install_dependencies() {
             if ! command -v xclip &> /dev/null; then
                 PACKAGES_TO_INSTALL="$PACKAGES_TO_INSTALL xclip"
             fi
+
+            if ! dpkg -s python3-venv &> /dev/null; then
+                PACKAGES_TO_INSTALL="$PACKAGES_TO_INSTALL python3-venv"
+            fi
             
             if [ ! -z "$PACKAGES_TO_INSTALL" ]; then
                 sudo apt update
@@ -85,7 +89,7 @@ fi
 # 激活虚拟环境并逐一检查安装 requirements.txt
 if [ -f "requirements.txt" ]; then
     source venv/bin/activate
-    pip3 install --upgrade pip || true
+    pip install --upgrade pip || true
     while IFS= read -r line || [ -n "$line" ]; do
         # 跳过空行
         if [ -z "$line" ]; then
@@ -94,9 +98,9 @@ if [ -f "requirements.txt" ]; then
         # 提取包名（去除==及后面的版本号）
         pkg_name=$(echo "$line" | cut -d'=' -f1)
         # 检查是否已安装
-        if ! pip3 show "$pkg_name" >/dev/null 2>&1; then
+        if ! pip show "$pkg_name" >/dev/null 2>&1; then
             echo "未检测到 $pkg_name，正在安装: $line"
-            pip3 install "$line" || true
+            pip install "$line" || true
         else
             echo "$pkg_name 已安装，跳过。"
         fi

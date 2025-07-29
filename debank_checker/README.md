@@ -78,3 +78,7 @@ python gen_used_chains.py
 ### 典型输出
 - 每条链的名称、ID、币种数量、代币明细
 - 汇总表格和美观的终端输出
+
+### 故障排除
+- **ModuleNotFoundError: No module named...**: 确保你已激活虚拟环境，并已成功安装了所需的 python 库。（可手动运行 `pip install -r requirements.txt `进行再次安装）
+- **获取 DeBank 数据很慢或失败**：可能请求被 Cloudflare 限制。解决方法：稍候重试、减少查询地址数、减少线程数。

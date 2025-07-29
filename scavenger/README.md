@@ -150,14 +150,12 @@ python native.py
 1. **执行顺序**：**必须先运行 `used_chains.py` 更新配置文件，再执行资产转移脚本**
 2. **私钥安全**：确保 `.env` 文件权限正确，不要泄露私钥
 3. **Gas 费用**：确保账户有足够的原生代币支付 Gas 费用
-4. **网络连接**：RPC_list.json 配置的为**公开 RPC 端点**，可能会失效、限频或不稳定，最好修改为自己的**专属 RPC 端点**（可在 Alchemy、Infura、Ankr、Blast 等提供商上免费注册）。
+4. **网络连接**：RPC_list.json 配置的为**公开 RPC 端点**，可能会失效、限频或不稳定，最好修改为自己的**专属 RPC 端点**（可在 Alchemy、Infura、Ankr、Blast 等提供商上免费注册）
 5. **余额检查**：脚本会自动检查余额是否足够支付 Gas
 6. **测试建议**：首次使用建议启用 Dry-run 模式测试
 
 ## 🛠️ 故障排除
-
-### 常见错误
-- **输出大量 PRC 错误日志**：确保先运行 `used_chains.py` 来更新配置文件 `used_chains.json`
-- **地址格式错误**：确保你的钱包地址是有效的 EVM 地址
+- **ModuleNotFoundError: No module named...**: 确保你已激活虚拟环境，并已成功安装了所需的 python 库。（可手动运行 `pip install -r requirements.txt `进行再次安装）
+- **输出大量 PRC 错误日志**：确保运行 `资产转移脚本 `前先运行 `used_chains.py` 来更新配置文件 `used_chains.json`
 - **RPC 连接失败**：RPC 端点失效、限频或不稳定，请检查 RPC 端点状态
 - **余额不足**：确保你的钱包在各链有足够的原生代币支付 Gas 费用

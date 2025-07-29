@@ -335,7 +335,7 @@ def main():
     print(colored(art,'light_blue'))
     print(colored("-"*60 + "\n", "magenta", attrs=["bold"]))
 
-    print(colored("📝  请输入 EVM 钱包地址列表（每行一个地址，输入完后回车确认）：", "yellow", attrs=["bold"]))
+    print(colored("📝  请输入 EVM 钱包地址列表（每行一个地址，输入完后两次回车确认）：", "yellow", attrs=["bold"]))
     input_lines = []
     while True:
         try:

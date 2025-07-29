@@ -6,3 +6,4 @@ requests==2.31.0
 termcolor==2.3.0
 tls_client==0.2.1
 python-dotenv==1.0.1
+setuptools==80.9.0
