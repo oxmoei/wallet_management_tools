@@ -18,7 +18,7 @@
 
 ## 🚀 安装依赖
 
-### Linux/WSL/VPS/macOS 用户
+### Linux/WSL/macOS 用户
 
 ```bash
 chmod +x install.sh && ./install.sh
