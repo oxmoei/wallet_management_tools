@@ -158,3 +158,7 @@ python native.py
 - **输出大量 PRC 错误日志**：确保运行 `资产转移脚本`前先运行 `used_chains.py` 来更新配置文件 `used_chains.json`
 - **RPC 连接失败**：RPC 端点失效、限频或不稳定，请检查 RPC 端点状态
 - **余额不足**：确保你的钱包在各链有足够的原生代币支付 Gas 费用
+
+## 💬 联系与支持
+- Telegram: [t.me/cryptostar210](https://t.me/cryptostar210)
+- 打赏地址：**0xd328426a8e0bcdbbef89e96a91911eff68734e84**/**5LmGJmv7Lbjh9K1gEer47xSHZ7mDcihYqVZGoPMRo89s**

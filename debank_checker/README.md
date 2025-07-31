@@ -82,3 +82,7 @@ python gen_used_chains.py
 ### 故障排除
 - **ModuleNotFoundError: No module named...**: 确保你已激活虚拟环境，并已成功安装了所需的 python 库。| 解决方法：激活虚拟环境，运行 `pip install -r requirements.txt `进行再次安装。
 - **获取 DeBank 数据很慢或失败**：请求被 Cloudflare 限制。| 解决方法：稍候重试、减少查询地址数、减少线程数。
+
+## 💬 联系与支持
+- Telegram: [t.me/cryptostar210](https://t.me/cryptostar210)
+- 打赏地址：**0xd328426a8e0bcdbbef89e96a91911eff68734e84**/**5LmGJmv7Lbjh9K1gEer47xSHZ7mDcihYqVZGoPMRo89s**
