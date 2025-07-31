@@ -99,12 +99,12 @@ source venv/bin/activate
 在执行转移脚本之前，**必须先运行 `used_chains.py` 来更新 `used_chains.json` 配置文件**：
 - **适用 linux/wsl/macOs 系统**
 ```bash
-# 进入 scavenger/src 目录，执行以下命令
+# 进入 evm_scavenger/src 目录，执行以下命令
 python3 used_chains.py
 ```
 - **适用 windows 系统**
 ```powershell
-# 进入 scavenger\src 目录，执行以下命令
+# 进入 evm_scavenger\src 目录，执行以下命令
 python used_chains.py
 ```
 
@@ -112,24 +112,24 @@ python used_chains.py
 运行前确保你的钱包在各链有足够的原生代币支付 Gas 费用
 - **适用 linux/wsl/macOs 系统**
 ```bash
-# 进入 scavenger/src 目录，执行以下命令
+# 进入 evm_scavenger/src 目录，执行以下命令
 python3 erc20.py
 ```
 - **适用 windows 系统**
 ```powershell
-# 进入 scavenger\src 目录，执行以下命令
+# 进入 evm_scavenger\src 目录，执行以下命令
 python erc20.py
 ```
 
 ### 运行原生代币转移脚本
 - **适用 linux/wsl/macOs 系统**
 ```bash
-# 进入 scavenger/src 目录，执行以下命令
+# 进入 evm_scavenger/src 目录，执行以下命令
 python3 native.py
 ```
 - **适用 windows 系统**
 ```powershell
-# 进入 scavenger\src 目录，执行以下命令
+# 进入 evm_scavenger\src 目录，执行以下命令
 python native.py
 ```
 
@@ -149,7 +149,7 @@ python native.py
 
 1. **执行顺序**：**必须先运行 `used_chains.py` 更新配置文件，再执行资产转移脚本**
 2. **Gas 费用**：确保账户有足够的原生代币支付 Gas 费用
-3. **网络连接**：`RPC_list.json` 配置的为**公开 RPC 端点**，个别可能会失效、限频或不稳定，最好手动修改为自己的**专属 RPC 端点**（可在 Alchemy、Infura、Ankr、Blast 等提供商上免费注册）
+3. **网络连接**：`RPC_list.json` 配置的为**公开 RPC 端点**，个别可能会失效、限频或不稳定，建议手动修改为自己的**专属 RPC 端点**（可在 Alchemy、Infura、Ankr、QuickNode 等提供商上免费注册）
 4. **支持的 EVM 链**：`chain_index.json` 配置的为支持的 EVM 链列表，但不一定齐全，可手动进行添加。格式：`{ "chain_id": 1, "name": "eth" },`,确保`name`字段名称与 DeBank 的命名相同。
 5. **测试建议**：首次使用建议启用 Dry-run 模式测试
 
@@ -161,4 +161,4 @@ python native.py
 
 ## 💬 联系与支持
 - Telegram: [t.me/cryptostar210](https://t.me/cryptostar210)
-- 打赏地址：**0xd328426a8e0bcdbbef89e96a91911eff68734e84**/**5LmGJmv7Lbjh9K1gEer47xSHZ7mDcihYqVZGoPMRo89s**
+- 打赏地址：**0xd328426a8e0bcdbbef89e96a91911eff68734e84** ▋**5LmGJmv7Lbjh9K1gEer47xSHZ7mDcihYqVZGoPMRo89s**

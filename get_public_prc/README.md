@@ -11,14 +11,30 @@
 
 ## 使用方法
 
-### 1. 运行脚本
-
+### 1. 激活 python 虚拟环境
+- **适用 linux/wsl/macOs 系统**
+```bash
+# 在项目根目录下执行以下命令
+source venv/bin/activate
+```
+- **适用 windows 系统**
+```powershell
+# 在项目根目录下执行以下命令
+.\venv\Scripts\Activate
+```
+### 2. 运行脚本
+- **适用 linux/wsl/macOs 系统**
 ```bash
 # 进入 get_public_prc 目录，执行以下命令
 python3 main.py
 ```
+- **适用 windows 系统**
+```powershell
+# 进入 get_public_prc 目录，执行以下命令
+python main.py
+```
 
-### 2. 按提示操作
+### 3. 按提示操作
 
 脚本运行后会引导你完成以下步骤：
 
@@ -34,7 +50,7 @@ python3 main.py
    - `1` - HTTP(s) URL
    - `2` - WSS URL
 
-### 3. 查看结果
+### 4. 查看结果
 
 - 如果找到匹配的条目，结果会保存到 `result.json` 文件中
 - 脚本会显示找到的条目数量和文件保存路径
@@ -58,7 +74,7 @@ python3 main.py
 ✅ 找到 5 个匹配的条目，结果已保存到 /path/to/script/result.json
 ```
 
-### 示例 2：搜索链ID为1的 RPC
+### 示例 2：搜索 `链ID` 为1的 RPC
 
 ```
 ✨ RPC 条目查询脚本 ✨
@@ -132,11 +148,7 @@ A: 结果文件会保存在脚本所在的目录中，文件名为 `result.json`
 ### Q: 如何获取 WSS 类型的 RPC？
 A: 在 URL 类型选择时选择选项 2 (WSS URL)
 
-## 许可证
-
-本项目仅供学习和研究使用。
-
 ---
 ## 💬 联系与支持
 - Telegram: [t.me/cryptostar210](https://t.me/cryptostar210)
-- 打赏地址：**0xd328426a8e0bcdbbef89e96a91911eff68734e84**/**5LmGJmv7Lbjh9K1gEer47xSHZ7mDcihYqVZGoPMRo89s**
+- 打赏地址：**0xd328426a8e0bcdbbef89e96a91911eff68734e84** ▋**5LmGJmv7Lbjh9K1gEer47xSHZ7mDcihYqVZGoPMRo89s**
