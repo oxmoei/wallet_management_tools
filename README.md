@@ -8,34 +8,26 @@
 - ![macOS](https://img.shields.io/badge/-macOS-000000?logo=apple&logoColor=white)
 - ![Linux](https://img.shields.io/badge/-Linux-FCC624?logo=linux&logoColor=black)
 
-
-### 🌿 环境要求
-
-- Python 3.8+
-- Node.js 16+
-- 稳定的网络连接
-
 ## 🚀 安装依赖
 自动检查并安装所缺少的软件包和[python库](./requirements.txt)
 
-### Linux/WSL/macOS 用户
+- **Linux/WSL/macOS 用户**
 
 ```bash
 chmod +x install.sh && ./install.sh
 ```
 
-### Windows 用户
-
-以管理员身份启动 PowerShell，然后执行：
+- **Windows 用户**
 
 ```powershell
+# 以管理员身份启动 PowerShell，然后执行：
 Set-ExecutionPolicy Bypass -Scope CurrentUser
 .\install.ps1
 ```
 
 ## 🛠️ 工具列表
 
-### 1. debank_checker
+### 1️⃣ debank_checker
 
   **主要功能：**
   - 批量查询 EVM 钱包在 DeBank 上的资产情况
@@ -44,7 +36,7 @@ Set-ExecutionPolicy Bypass -Scope CurrentUser
   
   [详细介绍与使用说明](./debank_checker/README.md)
 
-### 2. evm_scavenger
+### 2️⃣ evm_scavenger
 
 **主要功能：**
 - 一键清空 EVM 钱包上的全部资产
@@ -52,7 +44,7 @@ Set-ExecutionPolicy Bypass -Scope CurrentUser
 
 [详细介绍与使用说明](./evm_scavenger/README.md)
 
-### 3. spl_scavenger
+### 3️⃣ spl_scavenger
 
 **主要功能：**
 - 一键清空 Solana 钱包中所有 SPL_Token
@@ -60,7 +52,7 @@ Set-ExecutionPolicy Bypass -Scope CurrentUser
 
 [详细介绍与使用说明](./spl_scavenger/README.md)
 
-### 4. get_public_rpc
+### 4️⃣ get_public_rpc
 
 **主要功能：**
 - 条件筛选获取公共 RPC 端点
