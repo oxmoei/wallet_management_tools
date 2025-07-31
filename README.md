@@ -44,17 +44,30 @@ Set-ExecutionPolicy Bypass -Scope CurrentUser
   
   [详细介绍与使用说明](./debank_checker/README.md)
 
-### 2. scavenger
+### 2. evm_scavenger
 
 **主要功能：**
-- 自动化转移 EVM 钱包上的全部资产
+- 一键清空 EVM 钱包上的全部资产
 - 支持原生代币和 ERC20 代币
 
-[详细介绍与使用说明](./scavenger/README.md)
+[详细介绍与使用说明](./evm_scavenger/README.md)
 
-## 📄 许可证
+### 3. spl_scavenger
 
-本项目采用 MIT 许可证 - 详见 [LICENSE](LICENSE) 文件
+**主要功能：**
+- 一键清空 Solana 钱包中所有 SPL_Token
+- 支持批量处理多个钱包
+
+[详细介绍与使用说明](./spl_scavenger/README.md)
+
+### 4. get_public_rpc
+
+**主要功能：**
+- 条件筛选获取公共 RPC 端点
+- 支持按名称或链 ID 搜索，并可筛选 HTTP 或 WSS 类型
+
+[详细介绍与使用说明](./get_public_rpc/README.md)
+
 
 ## 💬 联系与支持
 - Telegram: [t.me/cryptostar210](https://t.me/cryptostar210)

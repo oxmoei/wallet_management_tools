@@ -6,4 +6,4 @@ evm_scavenger/conf/used_chains.json
 debank_checker/__pycache__
 debank_checker/balances.json
 get_public_prc/result.json
-solana_scavenger/.env
+spl_scavenger/.env

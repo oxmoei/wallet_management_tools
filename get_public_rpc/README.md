@@ -25,12 +25,12 @@ source venv/bin/activate
 ### 2. 运行脚本
 - **适用 linux/wsl/macOs 系统**
 ```bash
-# 进入 get_public_prc 目录，执行以下命令
+# 进入 get_public_rpc 目录，执行以下命令
 python3 main.py
 ```
 - **适用 windows 系统**
 ```powershell
-# 进入 get_public_prc 目录，执行以下命令
+# 进入 get_public_rpc 目录，执行以下命令
 python main.py
 ```
 

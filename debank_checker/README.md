@@ -15,13 +15,6 @@ tls_client==0.2.1 - TLS客户端
 inquirer==3.1.3 - 交互式命令行界面
 tabulate - 表格美化（脚本中有检测，如果没有安装会降级到普通输出）
 setuptools==75.8.2 - 包管理
-python-dotenv==1.0.1 - 环境变量管理
-web3==7.12.0 - Web3功能
-eth-account==0.13.7 - 以太坊账户管理
-colorama==0.4.6 - 跨平台颜色支持
-httpx==0.28.1 - 异步HTTP客户端
-solana==0.36.6 - Solana区块链支持
-solders==0.23.0 - Solana相关功能
 ```
 
 ## 激活 python 虚拟环境
