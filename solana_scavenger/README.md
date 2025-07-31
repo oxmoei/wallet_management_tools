@@ -17,7 +17,21 @@
 - Solana网络连接
 - 目标地址需要已初始化（有SOL余额）
 
+## 🔧 依赖库
+
+脚本依赖以下Python库：
+
+```
+solana==0.36.6
+solders==0.23.0
+python-dotenv==1.0.0
+colorama==0.4.6
+requests==2.28.2
+httpx==0.28.1
+```
+
 ## 📖 使用方法
+
 ### 激活 python 虚拟环境
 - **适用 linux/wsl/macOs 系统**
 ```bash
@@ -59,19 +73,6 @@ Solana网络的RPC节点地址，支持：
 
 #### PRIVATE_KEY_X
 源钱包的私钥，支持Base58格式。脚本会自动推导出对应的公钥地址。
-
-## 🔧 依赖库
-
-脚本依赖以下Python库：
-
-```
-solana==0.36.6
-solders==0.23.0
-python-dotenv==1.0.0
-colorama==0.4.6
-requests==2.28.2
-httpx==0.28.1
-```
 
 ## 📊 输出示例
 
