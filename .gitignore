@@ -1,7 +1,9 @@
-scavenger/conf/match_chains.py
-scavenger/conf/chainlist.json
-scavenger/.env
-scavenger/src/__pycache__
-scavenger/conf/used_chains.json
+evm_scavenger/conf/match_chains.py
+evm_scavenger/conf/chainlist.json
+evm_scavenger/.env
+evm_scavenger/src/__pycache__
+evm_scavenger/conf/used_chains.json
 debank_checker/__pycache__
 debank_checker/balances.json
+get_public_prc/result.json
+solana_scavenger/.env
