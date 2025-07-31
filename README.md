@@ -16,7 +16,7 @@
 - 稳定的网络连接
 
 ## 🚀 安装依赖
-自动检查并安装所缺少的软件包和 python 库
+自动检查并安装所缺少的软件包和[python库](./requirements.txt)
 
 ### Linux/WSL/macOS 用户
 
