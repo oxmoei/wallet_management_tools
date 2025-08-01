@@ -9,6 +9,7 @@ COLOR_YELLOW = '\033[93m'
 COLOR_RED = '\033[91m'
 COLOR_BLUE = '\033[94m'
 COLOR_END = '\033[0m'
+COLOR_PURPLE = '\033[95m' 
 
 def find_rpc_entry(keyword, search_type="name"):
     """
@@ -48,10 +49,10 @@ def find_rpc_entry(keyword, search_type="name"):
     return found_entries
 
 if __name__ == "__main__":
-    print(f"{COLOR_BLUE}✨ RPC 条目查询脚本 ✨{COLOR_END}")
+    print(f"{COLOR_PURPLE}✨ RPC 条目查询脚本 ✨{COLOR_END}")
     
     # 提示用户选择搜索类型
-    print(f"\n{COLOR_GREEN}请选择搜索类型：{COLOR_END}")
+    print(f"\n\033[7m{COLOR_GREEN}请选择搜索类型：{COLOR_END}\033[0m")
     print(f"{COLOR_YELLOW}1. 按名称 (name) 搜索{COLOR_END}")
     print(f"{COLOR_YELLOW}2. 按链ID (chainId) 搜索{COLOR_END}")
     
@@ -68,12 +69,12 @@ if __name__ == "__main__":
     
     # 提示输入关键词
     if search_type == "chainId":
-        keyword_input = input(f"\n{COLOR_GREEN}请输入链ID (精准匹配): {COLOR_END}")
+        keyword_input = input(f"{COLOR_GREEN}请输入链ID (精准匹配): {COLOR_END}")
     else:
-        keyword_input = input(f"\n{COLOR_GREEN}请输入 {search_field} 关键词: {COLOR_END}")
+        keyword_input = input(f"{COLOR_GREEN}请输入 {search_field} 关键词: {COLOR_END}")
 
     # 选择 URL 类型
-    print(f"{COLOR_GREEN}请选择要筛选的 URL 类型：{COLOR_END}")
+    print(f"\n\033[7m{COLOR_GREEN}请选择要筛选的 URL 类型：{COLOR_END}\033[0m")
     print(f"{COLOR_YELLOW}1. http(s) URL{COLOR_END}")
     print(f"{COLOR_YELLOW}2. wss URL{COLOR_END}")
     while True:
@@ -114,8 +115,8 @@ if __name__ == "__main__":
         try:
             with open(output_file_path, 'w', encoding='utf-8') as outfile:
                 json.dump(filtered_results, outfile, indent=2)
-            print(f"{COLOR_BLUE}✅ 找到 {len(filtered_results)} 个匹配的条目，结果已保存到 {output_file_path}{COLOR_END}")
+            print(f"\n{COLOR_BLUE}✅ 找到 {len(filtered_results)} 个匹配的条目，结果已保存到 {output_file_path}{COLOR_END}")
         except IOError as e:
-            print(f"{COLOR_RED}错误：无法写入文件 {output_file_path} - {e}{COLOR_END}")
+            print(f"\n{COLOR_RED}错误：无法写入文件 {output_file_path} - {e}{COLOR_END}")
     else:
         print(f"\n{COLOR_YELLOW}❌ 没有找到匹配的条目。{COLOR_END}") 
