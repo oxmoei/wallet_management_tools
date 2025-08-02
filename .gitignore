@@ -6,3 +6,5 @@ evm_scavenger/conf/used_chains.json
 debank_checker/__pycache__
 debank_checker/balances.json
 get_public_prc/result.json
+spl_scavenger/.env
+okxOS_checker/node_modules

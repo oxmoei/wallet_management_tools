@@ -115,7 +115,7 @@ Solana网络的RPC节点地址，支持：
 4. **Dry Run测试**: 建议先使用`DRY_RUN=true`测试配置是否正确
 5. **RPC限制**: 某些RPC节点可能有请求频率限制
 
-## 🐛 常见问题
+## ❓ 常见问题
 
 ### Q: 转账失败提示"invalid account data for instruction"
 A: 确保目标地址已经初始化（有SOL余额）。

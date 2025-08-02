@@ -1,0 +1,65 @@
+name: 🚀 发布
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+    
+    - name: 🐍 设置 Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: 3.11
+    
+    - name: 📦 安装依赖
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+        pip install build twine
+    
+    - name: 🏗️ 构建包
+      run: |
+        python -m build
+    
+    - name: 📋 创建发布
+      id: create_release
+      uses: actions/create-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        tag_name: ${{ github.ref }}
+        release_name: Release ${{ github.ref }}
+        draft: false
+        prerelease: false
+    
+    - name: 📤 上传发布资源
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }}
+        asset_path: ./dist/*
+        asset_name: wallet-management-tools-${{ github.ref_name }}
+        asset_content_type: application/zip
+    
+    - name: 📝 更新 CHANGELOG
+      run: |
+        echo "## [$(echo ${{ github.ref }} | sed 's/refs\/tags\/v//')] - $(date +%Y-%m-%d)" >> CHANGELOG.md
+        echo "" >> CHANGELOG.md
+        echo "### 新增" >> CHANGELOG.md
+        echo "- 新功能描述" >> CHANGELOG.md
+        echo "" >> CHANGELOG.md
+        echo "### 修复" >> CHANGELOG.md
+        echo "- Bug 修复描述" >> CHANGELOG.md
+        echo "" >> CHANGELOG.md
+        echo "### 变更" >> CHANGELOG.md
+        echo "- 其他变更描述" >> CHANGELOG.md
+        echo "" >> CHANGELOG.md 

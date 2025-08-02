@@ -1,0 +1,39 @@
+{
+  "name": "okxos-checker",
+  "version": "1.0.0",
+  "description": "基于 OKX OS 钱包 API 的多链资产余额查询工具，支持查询 62+ 个区块链网络的资产余额",
+  "main": "src/single.js",
+  "scripts": {
+    "start": "node src/single.js",
+    "single": "node src/single.js",
+    "batch": "node src/batch.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "okx",
+    "wallet",
+    "blockchain",
+    "crypto",
+    "balance",
+    "checker",
+    "api"
+  ],
+  "author": "cryptostar210",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/oxmoei/wallet_management_tools.git"
+  },
+  "bugs": {
+    "url": "https://github.com/oxmoei/wallet_management_tools/issues"
+  },
+  "homepage": "https://github.com/oxmoei/wallet_management_tools#readme",
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "cli-table3": "^0.6.5",
+    "dotenv": "^16.4.7"
+  }
+}

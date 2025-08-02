@@ -8,7 +8,12 @@
 - ![macOS](https://img.shields.io/badge/-macOS-000000?logo=apple&logoColor=white)
 - ![Linux](https://img.shields.io/badge/-Linux-FCC624?logo=linux&logoColor=black)
 
-## 🚀 安装依赖
+## 克隆仓库并进入项目目录
+```bash
+git clone https://github.com/oxmoei/wallet_management_tools.git && cd wallet_management_tools
+
+```
+## 🌿 安装依赖
 自动检查并安装所缺少的软件包和[python库](./requirements.txt)
 
 - **Linux/WSL/macOS 用户**
@@ -25,40 +30,35 @@ Set-ExecutionPolicy Bypass -Scope CurrentUser
 .\install.ps1
 ```
 
-## 🛠️ 工具列表
+## 🧾 工具列表
 
 ### 1️⃣ debank_checker
 
-  **主要功能：**
+  **主要功能：**               [➡️详细介绍与使用说明](./debank_checker/README.md)
   - 批量查询 EVM 钱包在 DeBank 上的资产情况
   - 资产明细包含持有资产和 DEFI 资产
   - 导出详细的资产报告
   
-  [➡️详细介绍与使用说明](./debank_checker/README.md)
-
+ 
 ### 2️⃣ evm_scavenger
 
-**主要功能：**
+**主要功能：**                 [➡️详细介绍与使用说明](./evm_scavenger/README.md)
 - 一键清空 EVM 钱包上的全部资产
 - 支持原生代币和 ERC20 代币
 
-[➡️详细介绍与使用说明](./evm_scavenger/README.md)
 
 ### 3️⃣ spl_scavenger
 
-**主要功能：**
+**主要功能：**                 [➡️详细介绍与使用说明](./spl_scavenger/README.md)
 - 一键清空 Solana 钱包中所有 SPL_Token
 - 支持批量处理多个钱包
 
-[➡️详细介绍与使用说明](./spl_scavenger/README.md)
 
 ### 4️⃣ get_public_rpc
 
-**主要功能：**
+**主要功能：**                 [➡️详细介绍与使用说明](./get_public_rpc/README.md)
 - 条件筛选获取公共 RPC 端点
 - 支持按名称或链 ID 搜索，并可筛选 HTTP 或 WSS 类型
-
-[➡️详细介绍与使用说明](./get_public_rpc/README.md)
 
 
 ## 💬 联系与支持

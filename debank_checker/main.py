@@ -330,7 +330,7 @@ def get_balances(wallets, ticker=None, output_mode="1"):
 
 def main():
     print(colored("-"*60, "magenta", attrs=["bold"]))
-    print(colored("🚀 批量钱包资产查询工具🚀\n", "green", attrs=["bold", "reverse"]))
+    print(colored("🚀 批量 EVM 钱包资产查询工具🚀\n", "green", attrs=["bold", "reverse"]))
     art = text2art(text="DEBANK   CHECKER", font="standart")
     print(colored(art,'light_blue'))
     print(colored("-"*60 + "\n", "magenta", attrs=["bold"]))
