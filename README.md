@@ -1,5 +1,5 @@
 
-# 钱包管理工具合集
+# 钱包管理百宝箱
 一个功能强大的多链钱包管理工具集合。  ﹤持续添加新工具和维护中......﹥
 
 ## 🖥️ 支持系统
@@ -35,26 +35,31 @@ Set-ExecutionPolicy Bypass -Scope CurrentUser
 ### 1️⃣ debank_checker
 
   **主要功能：**               [➡️详细介绍与使用说明](./debank_checker/README.md)
-  - 批量查询 EVM 钱包在 DeBank 上的资产情况
-  - 资产明细包含持有资产和 DEFI 资产
+  - 批量查询 EVM 钱包的资产情况（基于 DeBank ）
+  - 资产明细包含持有资产和 DEFI 资产（只支持 EVM 链）
   - 导出详细的资产报告
   
- 
-### 2️⃣ evm_scavenger
+### 2️⃣ okxOS_checker
+
+  **主要功能：**               [➡️详细介绍与使用说明](./okxOS_checker/README.md)
+  - 批量查询多链资产的余额（基于 OKXOS API ）
+  - 支持 62+ 个区块链网络（不只限于 EVM 链）
+
+### 3️⃣ evm_scavenger
 
 **主要功能：**                 [➡️详细介绍与使用说明](./evm_scavenger/README.md)
 - 一键清空 EVM 钱包上的全部资产
-- 支持原生代币和 ERC20 代币
+- 包括一键清空原生代币和一键清空 ERC20 代币
 
 
-### 3️⃣ spl_scavenger
+### 4️⃣ spl_scavenger
 
 **主要功能：**                 [➡️详细介绍与使用说明](./spl_scavenger/README.md)
 - 一键清空 Solana 钱包中所有 SPL_Token
 - 支持批量处理多个钱包
 
 
-### 4️⃣ get_public_rpc
+### 5️⃣ get_public_rpc
 
 **主要功能：**                 [➡️详细介绍与使用说明](./get_public_rpc/README.md)
 - 条件筛选获取公共 RPC 端点
