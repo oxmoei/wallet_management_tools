@@ -81,11 +81,14 @@ python main.py
 请选择搜索类型：
 1. 按名称 (name) 搜索
 2. 按链ID (chainId) 搜索
+
 请输入选择 (1 或 2): 2
 请输入链ID (精准匹配): 1
+
 请选择要筛选的 URL 类型：
 1. http(s) URL
 2. wss URL
+
 请输入选择 (1 或 2): 2
 ✅ 找到 3 个匹配的条目，结果已保存到 /path/to/script/result.json
 ```
@@ -136,9 +139,6 @@ python main.py
 
 ## 常见问题
 
-### Q: 脚本运行时提示 "ModuleNotFoundError: No module named 'requests'"
-A: 请先安装 requests 库：`pip install requests`
-
 ### Q: 搜索结果为空怎么办？
 A: 尝试使用更宽泛的关键词，或者检查网络连接是否正常
 
@@ -151,4 +151,4 @@ A: 在 URL 类型选择时选择选项 2 (WSS URL)
 ---
 ## 💬 联系与支持
 - Telegram: [t.me/cryptostar210](https://t.me/cryptostar210)
-- 打赏地址：**0xd328426a8e0bcdbbef89e96a91911eff68734e84** ▋**5LmGJmv7Lbjh9K1gEer47xSHZ7mDcihYqVZGoPMRo89s**
+- 请我喝杯☕：**0xd328426a8e0bcdbbef89e96a91911eff68734e84** ▋**5LmGJmv7Lbjh9K1gEer47xSHZ7mDcihYqVZGoPMRo89s**

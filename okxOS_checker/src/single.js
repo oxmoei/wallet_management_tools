@@ -265,7 +265,7 @@ console.log(chalk.cyan.bold(`
     \\____||_| |_||_____| \\____||_|\\_\\|_____||_| \\_\\
 `));
 console.log(
-  chalk.yellowBright.bold.inverse('💥 单个钱包各链资产余额查询工具') + '          ' +
+  chalk.yellowBright.bold.inverse('💥 单个钱包各链资产余额查询工具') + '       ' +
   chalk.yellowBright.bold.inverse('💥 支持查询任何链的地址')
 );
 console.log(chalk.magenta.bold(`==============================================================`));

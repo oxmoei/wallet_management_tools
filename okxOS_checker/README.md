@@ -58,6 +58,7 @@ node run single
 ```
 
 程序会提示您输入钱包地址，然后显示该地址在所有支持网络上的资产余额。
+
 ┌───────────────────────┬──────────┐
 │ 链名称                │ 资产估值 │
 ├───────────────────────┼──────────┤
@@ -82,6 +83,7 @@ node run batch
 ```
 
 程序会提示您输入多个钱包地址（每行一个），输入完成后按两次回车结束输入。
+
 ┌─────────┬──────────────────────────────────────────────┬──────────┐
 │ (index) │ 钱包地址                                     │ 资产估值 │
 ├─────────┼──────────────────────────────────────────────┼──────────┤
@@ -112,11 +114,11 @@ node run batch
 ## 🛠️ 故障排除
 
 ### 常见问题
-1. **网络连接**
+1. **网络连接** （测试命令： `ping www.okx.com`）
    ```
-   ❌ 无法连接到 www.okx.com（测试命令： `ping www.okx.com`）
+   ❌ 无法连接到 www.okx.com
    ```
-   解决方案：检查网络环境、防火墙设置、尝试使用代理、使用 VPS 运行。
+   解决方案：检查网络环境、防火墙设置、尝试使用代理、在其它环境（ 如：VPS ）上运行。
 
 2. **API 配置错误**
    ```
@@ -128,9 +130,9 @@ node run batch
    ```
    ❌ Chain not support
    ```
-   解决方案：持续关注官方公示所支持的链 https://web3.okx.com/zh-hans/build/docs/waas/walletapi-resources-supported-networks ，手动更新`chains.json`。（有个别链虽然已公示支持，但实际未支持。）
+   解决方案：持续关注官方公示所支持的链 https://web3.okx.com/zh-hans/build/docs/waas/walletapi-resources-supported-networks ，手动更新`chains.json`。（有个别链虽然已公示支持，但实际并未支持。）
 
 
 ## 💬 联系与支持
 - Telegram: [t.me/cryptostar210](https://t.me/cryptostar210)
-- 打赏地址：**0xd328426a8e0bcdbbef89e96a91911eff68734e84** ▋**5LmGJmv7Lbjh9K1gEer47xSHZ7mDcihYqVZGoPMRo89s**
+- 请我喝杯☕：**0xd328426a8e0bcdbbef89e96a91911eff68734e84** ▋**5LmGJmv7Lbjh9K1gEer47xSHZ7mDcihYqVZGoPMRo89s**

@@ -39,7 +39,7 @@ console.log(chalk.cyan.bold(`
     \\____||_| |_||_____| \\____||_|\\_\\|_____||_| \\_\\
 `));
 console.log(
-  chalk.yellowBright.bold.inverse('💥 批量钱包资产余额查询工具') + '          ' +
+  chalk.yellowBright.bold.inverse('💥 批量钱包资产余额查询工具') + '       ' +
   chalk.yellowBright.bold.inverse('💥 支持查询任何链的地址')
 );
 console.log(chalk.magenta.bold(`==============================================================`));
@@ -69,15 +69,8 @@ async function getAddressesFromConsole() {
           console.log(chalk.green(`✅ 已输入 ${addresses.length} 个地址。\n`));
           resolve(addresses);
         } else {
-          // 验证地址格式（简单的以太坊地址格式检查）
-          if (trimmedInput.match(/^0x[a-fA-F0-9]{40}$/)) {
-            addresses.push(trimmedInput);
-            // 不输出地址，避免重复显示
-          } else {
-            console.log(chalk.red(`❌ 无效的地址格式: ${trimmedInput}`));
-            console.log(chalk.yellow('💡 请输入有效的以太坊地址格式（0x开头，42位字符）'));
-          }
-          readAddress(); // 继续读取下一个地址
+          addresses.push(trimmedInput);
+          readAddress();
         }
       });
     };
