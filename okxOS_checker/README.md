@@ -54,7 +54,7 @@ OKX_PROJECT=your_project_here
 查询单个钱包地址在所有支持网络上的资产余额：
 
 ```bash
-node run single
+npm run single
 ```
 
 程序会提示您输入钱包地址（支持任何类型地址），然后显示该地址在所有支持网络上的资产余额。
@@ -82,7 +82,7 @@ node run single
 批量查询多个钱包地址的资产余额：
 
 ```bash
-node run batch
+npm run batch
 ```
 
 程序会提示您输入多个钱包地址（每行一个，支持任何类型地址），然后显示各个地址的资产余额。
