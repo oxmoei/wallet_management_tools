@@ -1,6 +1,6 @@
 
 # 钱包管理百宝箱
-一个功能强大的多链钱包管理工具集合。  ﹤持续添加新工具和维护中......﹥
+一个功能强大的 web3 钱包管理工具集合。  ﹤持续添加新工具和维护中......﹥
 
 ## 🖥️ 支持系统
 
@@ -36,36 +36,47 @@ Set-ExecutionPolicy Bypass -Scope CurrentUser
 
   **主要功能：**               ➡️[详细介绍与使用说明](./debank_checker/README.md)
   - 批量查询 EVM 钱包的资产情况（基于 DeBank ）
-  - 资产明细包含持有资产和 DEFI 资产（仅支持 EVM 链）
+  - 资产明细包含持有资产和 DEFI 资产（仅支持 EVM 链，如Arbiturm、BSC、BeraChain、Merlin、Plume等）
   - 导出详细的资产报告
   
 ### 2️⃣ okxOS_checker
 
   **主要功能：**               ➡️[详细介绍与使用说明](./okxOS_checker/README.md)
   - 批量查询多链资产的余额（基于 OKXOS API ）
-  - 支持 62+ 个区块链网络（不只限于 EVM 链）
+  - 支持 62+ 个区块链网络（不只限于 EVM 链，如：BTC、Litecoin、Dogecoin、Solana、Sui等）
   - 导出详细的资产报告
   
 ### 3️⃣ evm_scavenger
 
 **主要功能：**                 ➡️[详细介绍与使用说明](./evm_scavenger/README.md)
-- 一键清空 EVM 钱包上的全部资产
-- 包括一键清空原生代币和一键清空 ERC20 代币
+- 一键转移 EVM 钱包上的全部资产
+- 包括：一键清空原生代币和一键清空 ERC20 代币
 
 
 ### 4️⃣ spl_scavenger
 
 **主要功能：**                 ➡️[详细介绍与使用说明](./spl_scavenger/README.md)
-- 一键清空 Solana 钱包中所有 SPL_Token
+- 一键转移 Solana 钱包中所有 SPL_Token
 - 支持批量处理多个钱包
 
 
-### 5️⃣ get_public_rpc
+### 5️⃣ rpc_endpoint_finder
 
-**主要功能：**                 ➡️[详细介绍与使用说明](./get_public_rpc/README.md)
-- 条件筛选获取公共 RPC 端点
+**主要功能：**                 ➡️[详细介绍与使用说明](./rpc_endpoint_finder/README.md)
+- 获取最新的免费 RPC 端点
 - 支持按名称或链 ID 搜索，并可筛选 HTTP 或 WSS 类型
 
+### 6️⃣ flashbots_bundle_sender
+
+**主要功能：**                 ➡️[详细介绍与使用说明](./flashbots_bundle_sender/README.md)
+- 基于 FlashBots 的 MEV 交易捆绑发送工具
+- 仅支持以太坊及其测试网
+
+### 7️⃣ smart_contract_toolkit
+
+**主要功能：**                 ➡️[详细介绍与使用说明](./smart_contract_toolkit/README.md)
+- EVM 智能合约交互工具集
+- 包括：调用 ABI 执行和自定义 HEX 执行
 
 ## 💬 联系与支持
 - Telegram: [t.me/cryptostar210](https://t.me/cryptostar210)

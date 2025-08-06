@@ -1,8 +1,8 @@
 blank_issues_enabled: false
 contact_links:
   - name: 📚 使用文档
-    url: https://github.com/your-username/wallet-management-tools/wiki
+    url: https://github.com/oxmoei/wallet_management_tools/wiki
     about: 请先查看使用文档，了解工具的基本使用方法
   - name: 💬 讨论区
-    url: https://github.com/your-username/wallet-management-tools/discussions
+    url: https://github.com/oxmoei/wallet_management_tools/discussions
     about: 在讨论区分享想法、提问或与其他用户交流 
