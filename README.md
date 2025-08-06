@@ -34,47 +34,47 @@ Set-ExecutionPolicy Bypass -Scope CurrentUser
 
 ### 1️⃣ debank_checker
 
-  **主要功能：**               ➡️[详细介绍与使用说明](./debank_checker/README.md)
+  **主要功能：**               ➡️[详细介绍与使用说明](./debank_checker/DeBank_Checker.md)
   - 批量查询 EVM 钱包的资产情况（基于 DeBank ）
   - 资产明细包含持有资产和 DEFI 资产（仅支持 EVM 链，如Arbiturm、BSC、BeraChain、Merlin、Plume等）
   - 导出详细的资产报告
   
 ### 2️⃣ okxOS_checker
 
-  **主要功能：**               ➡️[详细介绍与使用说明](./okxOS_checker/README.md)
+  **主要功能：**               ➡️[详细介绍与使用说明](./okxOS_checker/OKXOS_Checker.md)
   - 批量查询多链资产的余额（基于 OKXOS API ）
   - 支持 62+ 个区块链网络（不只限于 EVM 链，如：BTC、Litecoin、Dogecoin、Solana、Sui等）
   - 导出详细的资产报告
   
 ### 3️⃣ evm_scavenger
 
-**主要功能：**                 ➡️[详细介绍与使用说明](./evm_scavenger/README.md)
+**主要功能：**                 ➡️[详细介绍与使用说明](./evm_scavenger/EVM_Scavenger.md)
 - 一键转移 EVM 钱包上的全部资产
 - 包括：一键清空原生代币和一键清空 ERC20 代币
 
 
 ### 4️⃣ spl_scavenger
 
-**主要功能：**                 ➡️[详细介绍与使用说明](./spl_scavenger/README.md)
+**主要功能：**                 ➡️[详细介绍与使用说明](./spl_scavenger/SPL_Scavenger.md)
 - 一键转移 Solana 钱包中所有 SPL_Token
 - 支持批量处理多个钱包
 
 
 ### 5️⃣ rpc_endpoint_finder
 
-**主要功能：**                 ➡️[详细介绍与使用说明](./rpc_endpoint_finder/README.md)
+**主要功能：**                 ➡️[详细介绍与使用说明](./rpc_endpoint_finder/RPC_Endpoint_Finder.md)
 - 获取最新的免费 RPC 端点
 - 支持按名称或链 ID 搜索，并可筛选 HTTP 或 WSS 类型
 
 ### 6️⃣ flashbots_bundle_sender
 
-**主要功能：**                 ➡️[详细介绍与使用说明](./flashbots_bundle_sender/README.md)
+**主要功能：**                 ➡️[详细介绍与使用说明](./flashbots_bundle_sender/FlashBots_Bundle_Sender.md)
 - 基于 FlashBots 的 MEV 交易捆绑发送工具
 - 仅支持以太坊及其测试网
 
 ### 7️⃣ smart_contract_toolkit
 
-**主要功能：**                 ➡️[详细介绍与使用说明](./smart_contract_toolkit/README.md)
+**主要功能：**                 ➡️[详细介绍与使用说明](./smart_contract_toolkit/SmartContract_Toolkit.md)
 - EVM 智能合约交互工具集
 - 包括：调用 ABI 执行和自定义 HEX 执行
 
