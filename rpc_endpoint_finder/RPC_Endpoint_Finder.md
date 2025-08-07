@@ -11,22 +11,11 @@
 
 ## 使用方法
 
-### 1. 激活 python 虚拟环境
-- **适用 linux/wsl/macOS 系统**
-```bash
-# 在项目根目录下执行以下命令
-source venv/bin/activate
-```
-- **适用 windows 系统**
-```powershell
-# 在项目根目录下执行以下命令
-.\venv\Scripts\Activate
-```
-### 2. 运行程序
+### 1. 运行程序
 - **适用 linux/wsl/macOS 系统**
 ```bash
 # 在 rpc_endpoint_finder 目录下执行以下命令
-python3 main.py
+poetry run python3 main.py
 ```
 - **适用 windows 系统**
 ```powershell
@@ -34,7 +23,7 @@ python3 main.py
 python main.py
 ```
 
-### 3. 按提示操作
+### 2. 按提示操作
 
 脚本运行后会引导你完成以下步骤：
 
@@ -50,7 +39,7 @@ python main.py
    - `1` - HTTP(s) URL
    - `2` - WSS URL
 
-### 4. 查看结果
+### 3. 查看结果
 
 - 如果找到匹配的条目，结果会保存到 `result.json` 文件中
 - 脚本会显示找到的条目数量和文件保存路径

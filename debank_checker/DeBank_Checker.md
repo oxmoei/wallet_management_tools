@@ -14,19 +14,7 @@ termcolor==2.3.0 - 终端颜色输出
 tls_client==0.2.1 - TLS客户端
 inquirer==3.1.3 - 交互式命令行界面
 tabulate - 表格美化（脚本中有检测，如果没有安装会降级到普通输出）
-setuptools==75.8.2 - 包管理
-```
-
-## 激活 python 虚拟环境
-- **适用 linux/wsl/macOs 系统**
-```bash
-# 在项目的根目录下执行以下命令
-source venv/bin/activate
-```
-- **适用 windows 系统**
-```powershell
-# 在项目的根目录下执行以下命令
-.\venv\Scripts\Activate
+setuptools==65.0.0 - 包管理
 ```
 
 ## 1. main.py
@@ -43,7 +31,7 @@ source venv/bin/activate
 - **适用 linux/wsl/macOs 系统**
 ```bash
 # 进入 debank_checker 目录，执行以下命令
-python3 main.py
+poetry run python3 main.py
 ```
 
 - **适用 windows 系统**

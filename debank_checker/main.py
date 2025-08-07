@@ -82,6 +82,7 @@ def show_help():
     print("🔊  因为该请求容易被 Cloudflare 限制，所以只能单线程处理。\n")
     print(colored("❓ 其他问题？", "red", attrs=["bold"]))
     print("🔊  欢迎交流 🔗 https://t.me/cryptostar210 \n")
+    print(colored("---------------------------------------------------------", "yellow", attrs=["bold"]))
 
 def get_used_chains(node_process, session, address):
     payload = {

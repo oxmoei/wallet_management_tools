@@ -51,23 +51,12 @@ AID_WALLET_PRIVATE_KEY=your_aid_wallet_private_key
 
 ## 📖 使用指南
 
-### 激活 python 虚拟环境
-- **适用 linux/wsl/macOs 系统**
-```bash
-# 在项目根目录下执行以下命令
-source venv/bin/activate
-```
-- **适用 windows 系统**
-```powershell
-# 在项目根目录下执行以下命令
-.\venv\Scripts\Activate
-```
 ### 🪙 代币NFT管理器
 #### 运行程序
 - **适用 linux/wsl/macOS 系统**
 ```bash
 # 在 smart_contract_toolkit 目录下执行以下命令
-python3 erc20_nft_manager.py
+poetry run python3 erc20_nft_manager.py
 ```
 - **适用 windows 系统**
 ```powershell
@@ -95,7 +84,7 @@ python erc20_nft_manager.py
 - **适用 linux/wsl/macOs 系统**
 ```bash
 # 在 smart_contract_toolkit 目录下执行以下命令
-python3 execute_for_hex.py
+poetry run python3 execute_for_hex.py
 ```
 - **适用 windows 系统**
 ```powershell

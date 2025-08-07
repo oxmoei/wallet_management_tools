@@ -92,24 +92,13 @@ DRY_RUN=false
 ERC20 代币的标准 ABI 接口文件。
 
 ## 🎯 使用方法
-### 激活 python 虚拟环境
-- **适用 linux/wsl/macOs 系统**
-```bash
-# 在项目根目录下执行以下命令
-source venv/bin/activate
-```
-- **适用 windows 系统**
-```powershell
-# 在项目根目录下执行以下命令
-.\venv\Scripts\Activate
-```
 
 ### 重要：执行顺序
 在执行转移脚本之前，**必须先运行 `used_chains.py` 来更新 `used_chains.json` 配置文件**：
 - **适用 linux/wsl/macOs 系统**
 ```bash
 # 在 evm_scavenger/src 目录下执行以下命令
-python3 used_chains.py
+poetry run python3 used_chains.py
 ```
 - **适用 windows 系统**
 ```powershell
@@ -122,7 +111,7 @@ python used_chains.py
 - **适用 linux/wsl/macOs 系统**
 ```bash
 # 在 evm_scavenger/src 目录下执行以下命令
-python3 erc20.py
+poetry run python3 erc20.py
 ```
 - **适用 windows 系统**
 ```powershell
@@ -134,7 +123,7 @@ python erc20.py
 - **适用 linux/wsl/macOS 系统**
 ```bash
 # 在 evm_scavenger/src 目录下执行以下命令
-python3 native.py
+poetry run python3 native.py
 ```
 - **适用 windows 系统**
 ```powershell

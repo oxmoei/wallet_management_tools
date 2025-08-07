@@ -13,7 +13,7 @@
 
 ## 📋 系统要求
 
-- Python 3.8+
+- Python 3.9+
 - Solana网络连接
 - 目标地址需要已初始化（有SOL余额）
 
@@ -32,24 +32,13 @@ httpx==0.28.1
 
 ## 📖 使用方法
 
-### 激活 python 虚拟环境
-- **适用 linux/wsl/macOS 系统**
-```bash
-# 在项目根目录下执行以下命令
-source venv/bin/activate
-```
-- **适用 windows 系统**
-```powershell
-# 在项目根目录下执行以下命令
-.\venv\Scripts\Activate
-```
 ### 基本使用
-- **适用 linux/wsl/macOS 系统**
+- **linux/wsl/macOS 用户**
 ```bash
 # 在 spl_scavenger 目录下执行以下命令
-python3 spl_scavenger.py
+poetry run python3 spl_scavenger.py
 ```
-- **适用 windows 系统**
+- **windows 用户**
 ```powershell
 # 在 spl_scavenger 目录下执行以下命令
 python spl_scavenger.py

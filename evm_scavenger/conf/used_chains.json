@@ -1,0 +1,53 @@
+[
+  {
+    "name": "bsc",
+    "chain_id": 56,
+    "tokens": [
+      {
+        "name": "BNB",
+        "address": "bsc",
+        "amount": 0.002104224
+      }
+    ],
+    "token_count": 1
+  },
+  {
+    "name": "vana",
+    "chain_id": 1480,
+    "tokens": [
+      {
+        "name": "SIXGPT",
+        "address": "0x84f8dc1ada73298281387e62616470f3dd5df2f6",
+        "amount": 1315.4586983401969
+      },
+      {
+        "name": "VOLARA",
+        "address": "0xeb68ef0550a5532447da0fea4f0ed9f804803b8b",
+        "amount": 25306.264917378
+      },
+      {
+        "name": "VANA",
+        "address": "vana",
+        "amount": 0.15529908103428344
+      }
+    ],
+    "token_count": 3
+  },
+  {
+    "name": "base",
+    "chain_id": 8453,
+    "tokens": [
+      {
+        "name": "ORA Coin",
+        "address": "0x333333c465a19c85f85c6cfbed7b16b0b26e3333",
+        "amount": 0.04202480251234012
+      },
+      {
+        "name": "ETH",
+        "address": "base",
+        "amount": 0.000270662808193015
+      }
+    ],
+    "token_count": 2
+  }
+]

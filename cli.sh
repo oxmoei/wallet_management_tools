@@ -202,7 +202,7 @@ main() {
             1)
                 # 批量 EVM 钱包查余额
                 if check_tool_exists "debank_checker/main.py"; then
-                    execute_tool "批量 EVM 钱包查余额" "python3 debank_checker/main.py"
+                    execute_tool "批量 EVM 钱包查余额" "poetry run python3 debank_checker/main.py"
                 fi
                 ;;
             2)
@@ -214,7 +214,7 @@ main() {
             3)
                 # 单一 EVM 钱包查余额
                 if check_tool_exists "debank_checker/gen_used_chains.py"; then
-                    execute_tool "单一 EVM 钱包查余额" "python3 debank_checker/gen_used_chains.py"
+                    execute_tool "单一 EVM 钱包查余额" "poetry run python3 debank_checker/gen_used_chains.py"
                 fi
                 ;;
             4)
@@ -226,41 +226,41 @@ main() {
             5)
                 # 一键转移 EVM 上的全部 ERC20
                 if check_dir_exists "evm_scavenger"; then
-                    local command="nano evm_scavenger/.env && python3 evm_scavenger/src/used_chains.py && python3 evm_scavenger/src/erc20.py"
+                    local command="nano evm_scavenger/.env && poetry run python3 evm_scavenger/src/used_chains.py && poetry run python3 evm_scavenger/src/erc20.py"
                     execute_tool "一键转移 EVM 上的全部 ERC20" "$command"
                 fi
                 ;;
             6)
                 # 一键转移 EVM 上的全部原生币
                 if check_dir_exists "evm_scavenger"; then
-                    local command="nano evm_scavenger/.env && python3 evm_scavenger/src/used_chains.py && python3 evm_scavenger/src/native.py"
+                    local command="nano evm_scavenger/.env && poetry run python3 evm_scavenger/src/used_chains.py && poetry run python3 evm_scavenger/src/native.py"
                     execute_tool "一键转移 EVM 上的全部原生币" "$command"
                 fi
                 ;;
             7)
                 # 一键转移 Solana 上的所有 SPL_Token
                 if check_dir_exists "spl_scavenger"; then
-                    local command="nano spl_scavenger/.env && python3 spl_scavenger/spl_scavenger.py"
+                    local command="nano spl_scavenger/.env && poetry run python3 spl_scavenger/spl_scavenger.py"
                     execute_tool "一键转移 Solana 上的所有 SPL Token" "$command"
                 fi
                 ;;
             8)
                 # 获取最新的免费 RPC 端点
                 if check_tool_exists "rpc_endpoint_finder/main.py"; then
-                    execute_tool "获取最新的免费 RPC 端点" "python3 rpc_endpoint_finder/main.py"
+                    execute_tool "获取最新的免费 RPC 端点" "poetry run python3 rpc_endpoint_finder/main.py"
                 fi
                 ;;
             9)
                 # EVM 智能合约交互--调用 ABI
                 if check_tool_exists "smart_contract_toolkit/erc20_nft_manager.py"; then
-                    local command="nano smart_contract_toolkit/.env && python3 smart_contract_toolkit/erc20_nft_manager.py"
+                    local command="nano smart_contract_toolkit/.env && poetry run python3 smart_contract_toolkit/erc20_nft_manager.py"
                     execute_tool "EVM 智能合约交互 (调用 ABI)" "$command"
                 fi
                 ;;
             10)
                 # EVM 智能合约交互--自定义 HEX
                 if check_tool_exists "smart_contract_toolkit/custom_hex_executor.py"; then
-                    local command="nano smart_contract_toolkit/.env && python3 smart_contract_toolkit/custom_hex_executor.py"
+                    local command="nano smart_contract_toolkit/.env && poetry run python3 smart_contract_toolkit/custom_hex_executor.py"
                     execute_tool "EVM 智能合约交互 (自定义 HEX)" "$command"
                 fi
                 ;;

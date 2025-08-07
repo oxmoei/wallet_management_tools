@@ -142,8 +142,8 @@ def print_summary_table(used_chain_data):
 
 def run_with_wallets(wallets: list[str]):
     base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-    chainid_path = os.path.join(base_dir, 'scavenger/conf/chain_index.json')
-    used_chain_path = os.path.join(base_dir, 'scavenger/conf/used_chains.json')
+    chainid_path = os.path.join(base_dir, 'evm_scavenger/conf/chain_index.json')
+    used_chain_path = os.path.join(base_dir, 'evm_scavenger/conf/used_chains.json')
     
     # 然后进行错误检查
     if not wallets:

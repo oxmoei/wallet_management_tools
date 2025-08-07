@@ -41,30 +41,14 @@ Set-ExecutionPolicy Bypass -Scope CurrentUser
 
 ## 🚀 快速开始
 
-### 激活 python 虚拟环境
-- **linux/wsl/macOs 用户**
-```bash
-# 在项目根目录下执行以下命令
-source venv/bin/activate
-```
-- **windows 用户**
-```powershell
-# 在项目根目录下执行以下命令
-.\venv\Scripts\Activate
-```
-
 ### 使用 CLI 界面
 
-我们提供了一个优雅的命令行界面来管理所有工具：
-
-- **linux/wsl/macOs 用户**
+启动命令行界面来管理所有工具，适用于 **linux/wsl/macOs 用户**
 ```bash
 # 在项目根目录下执行以下命令
 chmod +x cli.sh && ./cli.sh
 ```
-
-- **windows 用户**
-此 CLI 工具不适用于 windows powershell，各工具的使用方法请阅读各工具的 .md 文件。
+⚠️ 不适用于 **windows powershell** 。
 
 ## 🧾 工具合集
 

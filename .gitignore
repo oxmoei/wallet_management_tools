@@ -1,3 +1,5 @@
+venv/
+.venv/
 evm_scavenger/conf/match_chains.py
 evm_scavenger/conf/chainlist.json
 evm_scavenger/.env
@@ -11,3 +13,4 @@ okxOS_checker/node_modules/
 flashbots_bundle_sender/node_modules/
 flashbots_bundle_sender/.env
 smart_contract_toolkit/.env
+init_poetry.sh
