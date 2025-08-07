@@ -36,7 +36,7 @@ def print_banner():
 {purple_bg}{white_text}{bold}  ║                                                                          ║  {reset}
 {purple_bg}{white_text}{bold}  ║                      🎯 智能合约交互工具 🎯                              ║  {reset}
 {purple_bg}{white_text}{bold}  ║                                                                          ║  {reset}
-{purple_bg}{white_text}{bold}  ║             Multi-Function Token & NFT Management Tool                  ║  {reset}
+{purple_bg}{white_text}{bold}  ║             Multi-Function Token & NFT Management Tool                   ║  {reset}
 {purple_bg}{white_text}{bold}  ║                      ERC20代币 & NFT 管理工具                            ║  {reset}
 {purple_bg}{white_text}{bold}  ║                                                                          ║  {reset}
 {purple_bg}{white_text}{bold}  ║             Version: 2.0.0         Supported_Chains: EVM                 ║  {reset}

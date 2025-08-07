@@ -5,7 +5,9 @@ evm_scavenger/src/__pycache__/
 evm_scavenger/conf/used_chains.json
 debank_checker/__pycache__/
 debank_checker/balances.json
-get_public_prc/result.json
+rpc_endpoint_finder/result.json
 spl_scavenger/.env
 okxOS_checker/node_modules/
-flashbots_bundle/node_modules/
+flashbots_bundle_sender/node_modules/
+flashbots_bundle_sender/.env
+smart_contract_toolkit/.env

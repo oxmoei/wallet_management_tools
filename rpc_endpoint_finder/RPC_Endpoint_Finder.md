@@ -12,7 +12,7 @@
 ## 使用方法
 
 ### 1. 激活 python 虚拟环境
-- **适用 linux/wsl/macOs 系统**
+- **适用 linux/wsl/macOS 系统**
 ```bash
 # 在项目根目录下执行以下命令
 source venv/bin/activate
@@ -23,7 +23,7 @@ source venv/bin/activate
 .\venv\Scripts\Activate
 ```
 ### 2. 运行程序
-- **适用 linux/wsl/macOs 系统**
+- **适用 linux/wsl/macOS 系统**
 ```bash
 # 在 rpc_endpoint_finder 目录下执行以下命令
 python3 main.py

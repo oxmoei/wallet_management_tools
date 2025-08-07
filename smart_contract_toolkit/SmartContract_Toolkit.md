@@ -4,7 +4,7 @@
 
 ## 🌟 功能特性
 
-### 🪙 代币NFT管理器 (`erc20_nft_manager.py`)
+### 🪙 代币/NFT 管理器 (`erc20_nft_manager.py`)
 - **ERC20 代币操作**:
   - 💸 转账全部余额 - 将目标钱包中的所有代币转账到指定地址
   - 💰 批量转账 - 向多个地址批量转账代币
@@ -23,7 +23,7 @@
   - 🔄 交易状态监控 - 实时跟踪交易执行状态
   - 🛡️ 合约验证 - 自动验证合约地址和标准
 
-### 🔧 自定义HEX执行器 (`custom_hex_executor.py`)
+### 🔧 自定义 HEX 执行器 (`custom_hex_executor.py`)
 - **自定义 HEX 调用**: 支持任意合约函数调用
 - **HEX 数据解析**: 智能解析和验证 HEX 数据格式
 - **合约验证**: 自动验证合约地址有效性和代码存在性
@@ -41,8 +41,8 @@
 
 ```env
 # RPC 配置
-RPC_URL=https://your-rpc-endpoint
-PRIVATE_RPC=https://your-private-rpc  # 可选，用于交易发送
+RPC_URL=https://your-rpc-endpoint   # 可访问 https://chainlist.org/zh 获取
+PRIVATE_RPC=https://your-private-rpc  # 可选，可在 Alchemy、Infura、Ankr、QuickNode 等提供商上免费注册
 
 # 钱包配置
 TAR_WALLET_PRIVATE_KEY=your_target_wallet_private_key
@@ -64,7 +64,7 @@ source venv/bin/activate
 ```
 ### 🪙 代币NFT管理器
 #### 运行程序
-- **适用 linux/wsl/macOs 系统**
+- **适用 linux/wsl/macOS 系统**
 ```bash
 # 在 smart_contract_toolkit 目录下执行以下命令
 python3 erc20_nft_manager.py

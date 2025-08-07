@@ -93,6 +93,7 @@ def print_progress_bar(current, total, description="进度"):
 def format_wei_to_eth(wei_amount):
     """将 Wei 转换为更易读的格式"""
     if wei_amount >= 10**18:
+        
         eth_amount = wei_amount / 10**18
         return f"{eth_amount:.6f} ETH"
     elif wei_amount >= 10**15:

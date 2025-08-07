@@ -323,10 +323,6 @@ def get_balances(wallets, ticker=None, output_mode="1"):
     print()
     logger.success(f'🔆  完成！查询结果已生成至 {file_json}')
     logger.info(f'⏱️  耗时: {round((time() - start_time) / 60, 1)} 分钟.\n')
-    print(colored("="*60, "magenta", attrs=["bold"]))
-    print(colored('💬  Telegram: t.me/cryptostar210','light_cyan'))
-    print(colored('☕  请我喝杯咖啡：0xd328426a8e0bcdbbef89e96a91911eff68734e84','light_cyan'))
-    print(colored("="*60 + "\n", "magenta", attrs=["bold"]))
 
 def main():
     print(colored("-"*60, "magenta", attrs=["bold"]))

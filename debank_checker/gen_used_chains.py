@@ -217,10 +217,6 @@ def run_with_wallets(wallets: list[str]):
     print(colored("   🪙 tokens: 代币详情", "yellow"))
     print(colored("   📊 token_count: 币种数量", "yellow"))
     print()
-    print(colored("="*60, "magenta", attrs=["bold"]))
-    print(colored('💬  Telegram: t.me/cryptostar210','light_cyan'))
-    print(colored('☕  请我喝杯咖啡：0xd328426a8e0bcdbbef89e96a91911eff68734e84','light_cyan'))
-    print(colored("="*60 + "\n", "magenta", attrs=["bold"]))
 
 # 输入阶段
 if __name__ == "__main__":

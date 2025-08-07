@@ -131,7 +131,7 @@ python erc20.py
 ```
 
 ### 运行原生代币转移脚本
-- **适用 linux/wsl/macOs 系统**
+- **适用 linux/wsl/macOS 系统**
 ```bash
 # 在 evm_scavenger/src 目录下执行以下命令
 python3 native.py

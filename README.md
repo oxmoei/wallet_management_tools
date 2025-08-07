@@ -1,6 +1,11 @@
 
 # 📦 钱包管理百宝箱
 一个功能强大的 web3 钱包管理工具集合。  ﹤持续添加新工具和维护中......﹥
+ __    __      _ _      _     _____            _     ___      _ _           _   _              
+/ / /\ \ \__ _| | | ___| |_  /__   \___   ___ | |   / __\___ | | | ___  ___| |_(_) ___  _ __   
+\ \/  \/ / _` | | |/ _ \ __|   / /\/ _ \ / _ \| |  / /  / _ \| | |/ _ \/ __| __| |/ _ \| '_ \  
+ \  /\  / (_| | | |  __/ |_   / / | (_) | (_) | | / /__| (_) | | |  __/ (__| |_| | (_) | | | | 
+  \/  \/ \__,_|_|_|\___|\__|  \/   \___/ \___/|_| \____/\___/|_|_|\___|\___|\__|_|\___/|_| |_|
 
 ## 🖥️ 支持系统
 
@@ -30,13 +35,40 @@ Set-ExecutionPolicy Bypass -Scope CurrentUser
 .\install.ps1
 ```
 
+## 🚀 快速开始
+
+### 激活 python 虚拟环境
+- **linux/wsl/macOs 用户**
+```bash
+# 在项目根目录下执行以下命令
+source venv/bin/activate
+```
+- **windows 用户**
+```powershell
+# 在项目根目录下执行以下命令
+.\venv\Scripts\Activate
+```
+
+### 使用 CLI 界面
+
+我们提供了一个优雅的命令行界面来管理所有工具：
+
+- **linux/wsl/macOs 用户**
+```bash
+# 在项目根目录下执行以下命令
+chmod +x cli.sh && ./cli.sh
+```
+
+- **windows 用户**
+此 CLI 工具不适用于 windows powershell，各工具的使用方法请阅读各工具的 .md 文件。
+
 ## 🧾 工具合集
 
 ### 1️⃣ debank_checker
 
   **主要功能：**               ➡️[详细介绍与使用说明](./debank_checker/DeBank_Checker.md)
   - 批量查询 EVM 钱包的资产情况（基于 DeBank ）
-  - 资产明细包含持有资产和 DEFI 资产（仅支持 EVM 链，如Arbiturm、BSC、BeraChain、Merlin、Plume等）
+  - 资产明细包含持有资产和 DEFI 资产（仅支持 EVM 链，如：Arbiturm、BSC、BeraChain、Merlin、Plume等）
   - 导出详细的资产报告
   
 ### 2️⃣ okxOS_checker
@@ -50,7 +82,7 @@ Set-ExecutionPolicy Bypass -Scope CurrentUser
 
 **主要功能：**                 ➡️[详细介绍与使用说明](./evm_scavenger/EVM_Scavenger.md)
 - 一键转移 EVM 钱包上的全部资产
-- 包括：一键清空原生代币和一键清空 ERC20 代币
+- 包括：一键清空原生代币（如：ETH、BNB、BERA等）和一键清空 ERC20 代币
 
 
 ### 4️⃣ spl_scavenger

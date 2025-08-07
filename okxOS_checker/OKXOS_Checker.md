@@ -133,7 +133,13 @@ npm run batch
    ```
    ❌ API错误: totalValueByAddress.chains: Chain not support
    ```
-   解决方案：持续关注官方公示所支持的链 https://web3.okx.com/zh-hans/build/docs/waas/walletapi-resources-supported-networks ，手动更新`chains.json`。（有个别链虽然已公示支持，但实际并未支持。）
+   解决方案：持续关注官方公示所支持的链列表 https://web3.okx.com/zh-hans/build/docs/waas/walletapi-resources-supported-networks ，手动更新`chains.json`。（有个别链虽然已公示支持，但实际并未支持。）
+
+3. **查询结果不准确**
+   ```
+   ❌ 查询 EVM 钱包余额不够准确
+   ```
+   解决方案：OKX OS API 并未支持所有 EVM，如需查询更全面的结果，可移步`debank_checker`
 
 
 ## 💬 联系与支持

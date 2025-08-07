@@ -33,7 +33,7 @@ httpx==0.28.1
 ## 📖 使用方法
 
 ### 激活 python 虚拟环境
-- **适用 linux/wsl/macOs 系统**
+- **适用 linux/wsl/macOS 系统**
 ```bash
 # 在项目根目录下执行以下命令
 source venv/bin/activate
@@ -44,7 +44,7 @@ source venv/bin/activate
 .\venv\Scripts\Activate
 ```
 ### 基本使用
-- **适用 linux/wsl/macOs 系统**
+- **适用 linux/wsl/macOS 系统**
 ```bash
 # 在 spl_scavenger 目录下执行以下命令
 python3 spl_scavenger.py
