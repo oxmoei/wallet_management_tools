@@ -113,7 +113,7 @@ poetry run python erc20.py
 poetry run python native.py
 ```
 
-### 完整执行流程
+### 总结：完整执行流程
 1. **第一步**：配置环境变量 `.env`
 2. **第二步**：运行 `used_chains.py` 来更新配置文件 `used_chains.json`
 3. **第三步**：根据需要运行 `erc20.py` 或 `native.py`

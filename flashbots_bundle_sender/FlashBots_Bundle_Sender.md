@@ -21,9 +21,9 @@
 - dotenv
 
 ## 📦 安装
+在 flashbots_bundle_sender 目录下执行以下命令：
 
 ```bash
-# 在 flashbots_bundle_sender 目录下执行以下命令
 npm install
 ```
 
@@ -43,7 +43,7 @@ FLASHBOTS_RELAY_SIGNING_KEY=0xYOUR_SIGNING_KEY
 
 # 钱包私钥
 SAFE_WALLET_PRIVATE_KEY=0xYOUR_SAFE_KEY
-TAR_WALLET_PRIVATE_KEY=0xYOUR_VICTIM_KEY
+TAR_WALLET_PRIVATE_KEY=0xYOUR_TAR_KEY
 
 # 合约配置
 CONTRACT_ADDRESS=0xYOUR_CONTRACT
@@ -56,9 +56,9 @@ SAFE_TO_TAR_AMOUNT=
 ```
 
 ## 🚀 使用
+在 flashbots_bundle_sender 目录下执行以下命令：
 
 ```bash
-# 在 flashbots_bundle_sender 目录下执行以下命令
 node src/main.js
 ```
 

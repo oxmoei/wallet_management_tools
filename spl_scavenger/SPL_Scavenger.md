@@ -1,6 +1,6 @@
 # 🧹 Solana SPL Token 清道夫 (Scavenger)
 
-一个用于一键清空 Solana 钱包中所有 SPL_Token 的 Python 脚本。支持批量处理多个钱包，自动检测 Token 余额并转账到指定地址。
+一个用于一键转移 Solana 钱包中所有 SPL_Token 的 Python 脚本。支持批量处理多个钱包，自动检测 Token 余额并转账到指定地址。
 
 ## ✨ 功能特性
 

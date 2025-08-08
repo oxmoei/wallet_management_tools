@@ -25,14 +25,14 @@ git clone https://github.com/oxmoei/wallet_management_tools.git && cd wallet_man
 ## 🌿 安装依赖
 自动检查并安装所缺少的 [软件包](./dependencies.txt) 和 [python库](./requirements.txt)
 
-- **Linux/WSL/macOS 用户**
-在项目根目录下执行以下命令：
+- **Linux/WSL/macOS 用户：**
+在项目根目录下执行以下命令
 ```bash
 chmod +x install.sh && ./install.sh
 ```
 
-- **Windows 用户**
-以管理员身份启动 PowerShell，在项目根目录下执行以下命令：
+- **Windows 用户：**
+以管理员身份启动 PowerShell，在项目根目录下执行以下命令
 ```powershell
 Set-ExecutionPolicy Bypass -Scope CurrentUser
 .\install.ps1
@@ -44,13 +44,13 @@ Set-ExecutionPolicy Bypass -Scope CurrentUser
 
 启动命令行界面来管理所有工具
 
-- **linux/wsl/macOs 用户**
-在项目根目录下执行以下命令：
+- **linux/wsl/macOs 用户：**
+在项目根目录下执行以下命令
 ```bash
 chmod +x cli.sh && ./cli.sh
 ```
-- **windows 用户**
-以管理员身份启动 PowerShell，在项目根目录下执行以下命令：
+- **windows 用户：**
+以管理员身份启动 PowerShell，在项目根目录下执行以下命令
 ```powershell
 .\cli_for_wins.ps1
 ```

@@ -24,9 +24,9 @@
 - npm 或 yarn 包管理器
 
 ### 安装依赖
+在 okxOS_checker 目录下执行以下命令：
 
 ```bash
-# 在 okxOS_checker 目录下执行以下命令
 npm install
 ```
 
@@ -46,8 +46,6 @@ OKX_SECRET_KEY=your_secret_key_here
 OKX_PASSPHRASE=your_passphrase_here
 OKX_PROJECT=your_project_here
 ```
-
-## 📖 使用方法
 
 ### 单个地址查询
 

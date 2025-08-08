@@ -2,7 +2,7 @@ git
 curl
 wget
 nvm
-nodejs>=16.0
+nodejs>=18.0
 python3>=3.9+
 python3-pip
 Poetry
