@@ -26,9 +26,8 @@ setuptools==65.0.0 - 包管理
 - 支持筛选特定代币余额。
 
 ### 使用方法
-
+在 debank_checker 目录下执行以下命令：
 ```
-# 进入 debank_checker 目录，执行以下命令
 poetry run python main.py
 ```
 
@@ -55,9 +54,8 @@ poetry run python main.py
 - 支持链ID映射、进度条、彩色输出。
 
 ### 使用方法
-
+在 debank_checker 目录下执行以下命令：
 ```
-# 进入 debank_checker 目录执行以下命令
 poetry run python gen_used_chains.py
 ```
 

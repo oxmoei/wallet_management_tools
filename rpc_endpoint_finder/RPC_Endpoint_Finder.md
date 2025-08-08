@@ -12,8 +12,8 @@
 ## 使用方法
 
 ### 1. 运行程序
+在 rpc_endpoint_finder 目录下执行以下命令：
 ```
-# 在 rpc_endpoint_finder 目录下执行以下命令
 poetry run python main.py
 ```
 

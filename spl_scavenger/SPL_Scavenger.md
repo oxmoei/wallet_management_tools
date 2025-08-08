@@ -31,31 +31,31 @@ httpx==0.28.1
 ```
 
 ## 📖 使用方法
+### 配置环境变量
+在项目根目录的 `.env` 文件中设置：
+```env
+# 必填：发送方 Solana 钱包私钥，支持批量（base58 格式）
+PRIVATE_KEY_1=
+PRIVATE_KEY_2=
+PRIVATE_KEY_2=
+...
 
-### 基本使用
+# 必填：接收方 Solana 钱包地址
+TO_ADDRESS=
+TO_PRIVATE_KEY=
+
+# 必填：Solana RPC节点
+RPC_URL=https://api.mainnet-beta.solana.com
+
+# 可选：Dry-run模式（true/false，默认false，true为仅模拟不实际转账）
+DRY_RUN=false
 ```
-# 在 spl_scavenger 目录下执行以下命令
+
+### 运行脚本
+在 spl_scavenger 目录下执行以下命令：
+```
 poetry run python spl_scavenger.py
 ```
-
-### 配置说明
-
-#### RPC_URL
-Solana网络的RPC节点地址，支持：
-- 主网: `https://api.mainnet-beta.solana.com`
-- 测试网: `https://api.testnet.solana.com`
-- 开发网: `https://api.devnet.solana.com`
-- 自定义RPC: `https://your-rpc-endpoint.com`
-
-#### TO_ADDRESS
-接收所有Token的目标钱包地址。**重要**: 目标地址必须已经初始化（有SOL余额）。
-
-#### DRY_RUN
-- `true`: 模拟运行，显示将要执行的转账但不实际发送
-- `false`: 实际执行转账
-
-#### PRIVATE_KEY_X
-源钱包的私钥，支持Base58格式。脚本会自动推导出对应的公钥地址。
 
 ## 📊 输出示例
 
