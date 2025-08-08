@@ -51,17 +51,11 @@ AID_WALLET_PRIVATE_KEY=your_aid_wallet_private_key
 
 ## 📖 使用指南
 
-### 🪙 代币NFT管理器
+### 🪙 代币/NFT管理器
 #### 运行程序
-- **适用 linux/wsl/macOS 系统**
-```bash
-# 在 smart_contract_toolkit 目录下执行以下命令
-poetry run python3 erc20_nft_manager.py
 ```
-- **适用 windows 系统**
-```powershell
 # 在 smart_contract_toolkit 目录下执行以下命令
-python erc20_nft_manager.py
+poetry run python erc20_nft_manager.py
 ```
 
 #### 选择操作
@@ -81,15 +75,9 @@ python erc20_nft_manager.py
 ### 🔧 自定义合约执行器
 
 #### 运行程序
-- **适用 linux/wsl/macOs 系统**
-```bash
-# 在 smart_contract_toolkit 目录下执行以下命令
-poetry run python3 execute_for_hex.py
 ```
-- **适用 windows 系统**
-```powershell
 # 在 smart_contract_toolkit 目录下执行以下命令
-python execute_for_hex.py
+poetry run python execute_for_hex.py
 ```
 
 #### 自定义 HEX 数据

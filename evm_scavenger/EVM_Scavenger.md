@@ -95,40 +95,23 @@ ERC20 代币的标准 ABI 接口文件。
 
 ### 重要：执行顺序
 在执行转移脚本之前，**必须先运行 `used_chains.py` 来更新 `used_chains.json` 配置文件**：
-- **适用 linux/wsl/macOs 系统**
-```bash
-# 在 evm_scavenger/src 目录下执行以下命令
-poetry run python3 used_chains.py
+
 ```
-- **适用 windows 系统**
-```powershell
-# 在 evm_scavenger\src 目录下执行以下命令
-python used_chains.py
+# 在 evm_scavenger/src 目录下执行以下命令
+poetry run python used_chains.py
 ```
 
 ### 运行 ERC20 代币转移脚本
 运行前确保你的钱包在各链有足够的原生代币支付 Gas 费用
-- **适用 linux/wsl/macOs 系统**
-```bash
-# 在 evm_scavenger/src 目录下执行以下命令
-poetry run python3 erc20.py
 ```
-- **适用 windows 系统**
-```powershell
-# 在 evm_scavenger\src 目录下执行以下命令
-python erc20.py
+# 在 evm_scavenger/src 目录下执行以下命令
+poetry run python erc20.py
 ```
 
 ### 运行原生代币转移脚本
-- **适用 linux/wsl/macOS 系统**
-```bash
-# 在 evm_scavenger/src 目录下执行以下命令
-poetry run python3 native.py
 ```
-- **适用 windows 系统**
-```powershell
-# 在 evm_scavenger\src 目录下执行以下命令
-python native.py
+# 在 evm_scavenger/src 目录下执行以下命令
+poetry run python native.py
 ```
 
 ### 完整执行流程

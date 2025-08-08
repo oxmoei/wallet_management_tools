@@ -43,12 +43,18 @@ Set-ExecutionPolicy Bypass -Scope CurrentUser
 
 ### 使用 CLI 界面
 
-启动命令行界面来管理所有工具，适用于 **linux/wsl/macOs 用户**
+启动命令行界面来管理所有工具
+
+- **linux/wsl/macOs 用户**
 ```bash
 # 在项目根目录下执行以下命令
 chmod +x cli.sh && ./cli.sh
 ```
-⚠️ 不适用于 **windows powershell** 。
+- **windows 用户** 。
+```powershell
+# 以管理员身份启动 PowerShell，然后执行：
+.\cli_for_wins.ps1
+```
 
 ## 🧾 工具合集
 

@@ -26,7 +26,7 @@
 ### 安装依赖
 
 ```bash
-cd okxOS_checker
+# 在 okxOS_checker 目录下执行以下命令
 npm install
 ```
 

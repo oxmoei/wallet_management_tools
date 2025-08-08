@@ -12,7 +12,6 @@ loguru==0.6.0 - 日志记录
 requests==2.28.2 - HTTP请求
 termcolor==2.3.0 - 终端颜色输出
 tls_client==0.2.1 - TLS客户端
-inquirer==3.1.3 - 交互式命令行界面
 tabulate - 表格美化（脚本中有检测，如果没有安装会降级到普通输出）
 setuptools==65.0.0 - 包管理
 ```
@@ -28,16 +27,9 @@ setuptools==65.0.0 - 包管理
 
 ### 使用方法
 
-- **适用 linux/wsl/macOs 系统**
-```bash
-# 进入 debank_checker 目录，执行以下命令
-poetry run python3 main.py
 ```
-
-- **适用 windows 系统**
-```powershell
 # 进入 debank_checker 目录，执行以下命令
-python main.py
+poetry run python main.py
 ```
 
 - 按提示输入钱包地址（每行一个，回车结束）。
@@ -63,15 +55,10 @@ python main.py
 - 支持链ID映射、进度条、彩色输出。
 
 ### 使用方法
-- **适用 linux/wsl/macOs 系统**
-```bash
-# 进入 debank_checker 目录执行以下命令
-python3 gen_used_chains.py
+
 ```
-- **适用 windows 系统**
-```powershell
 # 进入 debank_checker 目录执行以下命令
-python gen_used_chains.py
+poetry run python gen_used_chains.py
 ```
 
 - 按提示输入一个钱包地址（仅支持单个地址）。

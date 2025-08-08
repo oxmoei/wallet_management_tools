@@ -2,7 +2,7 @@
 name = "wallet_management_tools"
 version = "0.1.0"
 description = "Python 项目"
-authors = ["Your Name <your.email@example.com>"]
+authors = ["Oxmoei <https://t.me/cryptostar210>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]

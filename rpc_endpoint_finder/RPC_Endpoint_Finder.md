@@ -12,15 +12,9 @@
 ## 使用方法
 
 ### 1. 运行程序
-- **适用 linux/wsl/macOS 系统**
-```bash
-# 在 rpc_endpoint_finder 目录下执行以下命令
-poetry run python3 main.py
 ```
-- **适用 windows 系统**
-```powershell
 # 在 rpc_endpoint_finder 目录下执行以下命令
-python main.py
+poetry run python main.py
 ```
 
 ### 2. 按提示操作

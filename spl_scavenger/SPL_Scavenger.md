@@ -33,15 +33,9 @@ httpx==0.28.1
 ## 📖 使用方法
 
 ### 基本使用
-- **linux/wsl/macOS 用户**
-```bash
-# 在 spl_scavenger 目录下执行以下命令
-poetry run python3 spl_scavenger.py
 ```
-- **windows 用户**
-```powershell
 # 在 spl_scavenger 目录下执行以下命令
-python spl_scavenger.py
+poetry run python spl_scavenger.py
 ```
 
 ### 配置说明
