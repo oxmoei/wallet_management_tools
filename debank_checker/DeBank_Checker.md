@@ -27,7 +27,7 @@ setuptools==65.0.0 - 包管理
 
 ### 使用方法
 在 debank_checker 目录下执行以下命令：
-```
+```bash
 poetry run python main.py
 ```
 
@@ -55,7 +55,7 @@ poetry run python main.py
 
 ### 使用方法
 在 debank_checker 目录下执行以下命令：
-```
+```bash
 poetry run python gen_used_chains.py
 ```
 

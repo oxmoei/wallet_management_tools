@@ -52,7 +52,7 @@ AID_WALLET_PRIVATE_KEY=your_aid_wallet_private_key
 
 ### 运行程序：**代币/NFT管理器**
 在 smart_contract_toolkit 目录下执行以下命令
-```
+```bash
 poetry run python erc20_nft_manager.py
 ```
 
@@ -72,7 +72,7 @@ poetry run python erc20_nft_manager.py
 
 ### 运行程序：**自定义合约执行器**
 在 smart_contract_toolkit 目录下执行以下命令：
-```
+```bash
 poetry run python execute_for_hex.py
 ```
 

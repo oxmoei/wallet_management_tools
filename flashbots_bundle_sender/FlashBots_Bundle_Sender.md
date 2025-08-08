@@ -55,7 +55,7 @@ MAX_PRIORITY_FEE=
 SAFE_TO_TAR_AMOUNT=
 ```
 
-## 🚀 使用
+## 📖 使用
 在 flashbots_bundle_sender 目录下执行以下命令：
 
 ```bash

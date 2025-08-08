@@ -24,6 +24,7 @@
 ```
 solana==0.36.6
 solders==0.23.0
+anchorpy==0.21.0
 python-dotenv==1.0.0
 colorama==0.4.6
 requests==2.28.2
@@ -53,7 +54,7 @@ DRY_RUN=false
 
 ### 运行脚本
 在 spl_scavenger 目录下执行以下命令：
-```
+```bash
 poetry run python spl_scavenger.py
 ```
 

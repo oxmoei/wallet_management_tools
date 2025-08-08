@@ -13,3 +13,4 @@ colorama==0.4.6
 httpx==0.28.1
 solana==0.36.6
 solders==0.23.0
+anchorpy==0.21.0
