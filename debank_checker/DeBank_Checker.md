@@ -45,7 +45,7 @@ poetry run python main.py
 
 ---
 
-## 2️⃣ gen_used_chains.py
+## 2️⃣ used_chains_checker.py
 
 ### 功能简介
 - 针对单个 EVM 钱包，分析其在各链上的代币分布。
@@ -55,7 +55,7 @@ poetry run python main.py
 ### 使用方法
 在 debank_checker 目录下执行以下命令：
 ```bash
-poetry run python gen_used_chains.py
+poetry run python used_chains_checker.py
 ```
 
 - 按提示输入一个钱包地址（仅支持单个地址）。

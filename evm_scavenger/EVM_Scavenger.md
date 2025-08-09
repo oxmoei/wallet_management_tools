@@ -96,7 +96,7 @@ DRY_RUN=false
 
 在 evm_scavenger/src 目录下执行以下命令：
 ```bash
-poetry run python used_chains.py
+poetry run python gen_used_chains.py
 ```
 
 ### 运行 ERC20 代币转移脚本

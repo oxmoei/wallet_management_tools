@@ -214,7 +214,7 @@ main() {
             3)
                 # 单一 EVM 钱包查余额
                 if check_tool_exists "debank_checker/gen_used_chains.py"; then
-                    execute_tool "单一 EVM 钱包查余额" "poetry run python3 debank_checker/gen_used_chains.py"
+                    execute_tool "单一 EVM 钱包查余额" "poetry run python3 debank_checker/used_chains_checker.py"
                 fi
                 ;;
             4)
@@ -233,7 +233,7 @@ main() {
             6)
                 # 一键转移 EVM 上的全部原生币
                 if check_dir_exists "evm_scavenger"; then
-                    local command="nano evm_scavenger/.env && poetry run python3 evm_scavenger/src/used_chains.py && poetry run python3 evm_scavenger/src/native.py"
+                    local command="nano evm_scavenger/.env && poetry run python3 evm_scavenger/src/gen_used_chains.py && poetry run python3 evm_scavenger/src/native.py"
                     execute_tool "一键转移 EVM 上的全部原生币" "$command"
                 fi
                 ;;

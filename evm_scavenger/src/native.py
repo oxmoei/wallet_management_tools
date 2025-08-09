@@ -22,6 +22,93 @@ SPECIAL_GAS = {
 }
 
 # ========== 工具函数 ==========
+def print_header(dry_run):
+    """打印优雅的标题"""
+    # 打印装饰性分隔线
+    print(f"\n{Fore.YELLOW}✨{Fore.LIGHTBLUE_EX}{'─' * 80}{Fore.YELLOW}✨{Style.RESET_ALL}")
+    
+    # 打印横幅艺术字
+    banner_art = [
+        "▗▖  ▗▖ ▗▄▖▗▄▄▄▖▗▄▄▄▖▗▖  ▗▖▗▄▄▄▖     ▗▄▄▖ ▗▄▄▖ ▗▄▖ ▗▖  ▗▖▗▄▄▄▖▗▖  ▗▖ ▗▄▄▖▗▄▄▄▖▗▄▄▖ ",
+        "▐▛▚▖▐▌▐▌ ▐▌ █    █  ▐▌  ▐▌▐▌       ▐▌   ▐▌   ▐▌ ▐▌▐▌  ▐▌▐▌   ▐▛▚▖▐▌▐▌   ▐▌   ▐▌ ▐▌",
+        "▐▌ ▝▜▌▐▛▀▜▌ █    █  ▐▌  ▐▌▐▛▀▀▘     ▝▀▚▖▐▌   ▐▛▀▜▌▐▌  ▐▌▐▛▀▀▘▐▌ ▝▜▌▐▌▝▜▌▐▛▀▀▘▐▛▀▚▖",
+        "▐▌  ▐▌▐▌ ▐▌ █  ▗▄█▄▖ ▝▚▞▘ ▐▙▄▄▖    ▗▄▄▞▘▝▚▄▄▖▐▌ ▐▌ ▝▚▞▘ ▐▙▄▄▖▐▌  ▐▌▝▚▄▞▘▐▙▄▄▖▐▌ ▐▌",
+        "",
+    ]
+    
+    # 打印自定义艺术字
+    for line in banner_art:
+        if line.strip():
+            print(f"{Fore.LIGHTBLUE_EX}{line}{Style.RESET_ALL}")
+        else:
+            print()
+    
+    # 打印原有标题
+    print(f"{Fore.CYAN}{Fore.GREEN}{'🚀 一键转移各链所有原生代币'.center(68)}{Fore.CYAN}")
+    print(f"{Fore.CYAN}{Fore.YELLOW}{f'Dry-run 模式: {"开启" if dry_run else "关闭"}'.center(71)}{Fore.CYAN}")
+    print(f"{Fore.YELLOW}✨{Fore.LIGHTBLUE_EX}{'─' * 80}{Fore.YELLOW}✨{Style.RESET_ALL}\n")
+
+def print_section_header(title, color=Fore.CYAN):
+    """打印章节标题"""
+    print(f"\n{color}{'─' * 20} {title} {'─' * 20}{Style.RESET_ALL}")
+
+def print_status(message, status_type="info"):
+    """打印状态消息"""
+    icons = {
+        "info": "ℹ️",
+        "success": "✅",
+        "warning": "⚠️",
+        "error": "❌",
+        "loading": "⏳"
+    }
+    colors = {
+        "info": Fore.CYAN,
+        "success": Fore.GREEN,
+        "warning": Fore.YELLOW,
+        "error": Fore.RED,
+        "loading": Fore.BLUE
+    }
+    icon = icons.get(status_type, "ℹ️")
+    color = colors.get(status_type, Fore.WHITE)
+    print(f"{color}{icon} {message}{Style.RESET_ALL}")
+
+def print_chain_header(chain_id, rpc_url, chain_idx, total_chains):
+    """打印链信息头部"""
+    print(f"{Fore.MAGENTA}{'┌' + '─' * 60 + '┐'}")
+    print(f"{Fore.MAGENTA}│{Fore.GREEN} 链 {chain_idx}/{total_chains} - ID: {Fore.YELLOW}{chain_id}")
+    print(f"{Fore.MAGENTA}│{Fore.CYAN} RPC: {Fore.WHITE}{rpc_url[:50]}{'...' if len(rpc_url) > 50 else ''}{' ' * (54 - min(len(rpc_url), 50))}{Fore.MAGENTA}│")
+    print(f"{Fore.MAGENTA}{'└' + '─' * 60 + '┘'}{Style.RESET_ALL}")
+
+def print_summary(total_success, total_fail, total_skip, dry_run):
+    """打印总结信息"""
+    print(f"\n{Fore.MAGENTA}{'╔' + '═' * 68 + '╗'}")
+    print(f"{Fore.MAGENTA}║{Fore.GREEN}{'🎯 执行完成总结'.center(61)}{Fore.MAGENTA}║")
+    print(f"{Fore.MAGENTA}{'╠' + '═' * 68 + '╣'}")
+    
+    # 成功统计
+    success_color = Fore.GREEN if total_success > 0 else Fore.WHITE
+    print(f"{Fore.MAGENTA}║{success_color} ✅ 成功处理: {total_success:>8} 条链{' ' * 41}{Fore.MAGENTA}║")
+    
+    # 失败统计
+    fail_color = Fore.RED if total_fail > 0 else Fore.WHITE
+    print(f"{Fore.MAGENTA}║{fail_color} ❌ 处理失败: {total_fail:>8} 条链{' ' * 41}{Fore.MAGENTA}║")
+    
+    # 跳过统计
+    skip_color = Fore.YELLOW if total_skip > 0 else Fore.WHITE
+    print(f"{Fore.MAGENTA}║{skip_color} ⏫ 跳过处理: {total_skip:>8} 条链{' ' * 41}{Fore.MAGENTA}║")
+    
+    # 总计
+    total = total_success + total_fail + total_skip
+    print(f"{Fore.MAGENTA}{'╠' + '═' * 68 + '╣'}")
+    print(f"{Fore.MAGENTA}║{Fore.CYAN} 📊 总计处理: {total:>8} 条链{' ' * 41}{Fore.MAGENTA}║")
+    
+    # 模式信息
+    mode_text = "🔒 模拟模式" if dry_run else "🚀 实际执行"
+    mode_color = Fore.YELLOW if dry_run else Fore.GREEN
+    print(f"{Fore.MAGENTA}║{mode_color} {mode_text.center(62)}{Fore.MAGENTA}║")
+    
+    print(f"{Fore.MAGENTA}{'╚' + '═' * 68 + '╝'}{Style.RESET_ALL}\n")
+
 def load_json(path, desc):
     try:
         with open(path) as f:
@@ -92,6 +179,7 @@ def process_chain(chain_id_str, rpc_info, from_address, to_address, private_key,
                 print(f"成功转出后 Nonce 递增至: {nonce+1}\n")
         else:
             print(f"\n{Fore.RED}⚠️ 余额 ({w3.from_wei(balance, 'ether')}) 不足支付 gas ({w3.from_wei(eth_gas_cost, 'ether')})，跳过转账{Style.RESET_ALL}\n")
+            return "skip"
     except Exception as e:
         print(f"\n{Fore.RED}❌ 处理链 {chain_id_str} 失败: {e}{Style.RESET_ALL}\n")
 
@@ -115,14 +203,25 @@ def main():
         print(f"\n{Fore.RED}❌ 错误: used_chains.json 文件格式不正确或为空: {used_chains_path}{Style.RESET_ALL}\n")
         exit()
     chain_ids = [str(chain['chain_id']) for chain in used_chains_data]
-    print(f"\n{Fore.CYAN}{'='*50}")
-    print(f"\033[7m{Fore.GREEN}🚀 原生币转移脚本启动！🚀（Dry-run: {dry_run}）{Style.RESET_ALL}\n")
-    print(f"{Fore.CYAN}⛓️ 成功加载 {Fore.YELLOW}{len(chain_ids)}{Fore.CYAN} 条链信息")
-    print(f"{Fore.CYAN}🏠 当前账户地址: {Fore.YELLOW}{from_address}")
-    print(f"{Fore.CYAN}🏦 目标账户地址: {Fore.YELLOW}{to_address}")
-    print(f"{Fore.CYAN}{'='*50}{Style.RESET_ALL}\n")
+    
+    # 打印启动信息
+    print_header(dry_run)
+    
+    # 环境检查
+    print_section_header("环境变量检查", Fore.BLUE)
+    print_status(f"发送方地址: {Fore.YELLOW}{from_address}{Style.RESET_ALL}", "success")
+    print_status(f"接收方地址: {Fore.YELLOW}{to_address}{Style.RESET_ALL}", "success")
+    
+    # 加载配置文件
+    print_section_header("配置文件加载", Fore.BLUE)
+    print_status(f"RPC 列表加载成功: {Fore.YELLOW}{len(rpc_data)}{Style.RESET_ALL} 个节点", "success")
+    print_status(f"链信息加载成功: {Fore.YELLOW}{len(chain_ids)}{Style.RESET_ALL} 条链", "success")
+    
+    # 开始处理
+    print_section_header("♻️ 开始批量处理♻️", Fore.GREEN)
     success_count = 0
     fail_count = 0
+    skip_count = 0
     for idx, chain_id_str in enumerate(chain_ids, 1):
         nonce = None
         try:
@@ -134,23 +233,22 @@ def main():
             rpc_url = rpc_info[chain_id_str]
             w3 = Web3(Web3.HTTPProvider(rpc_url))
             nonce = w3.eth.get_transaction_count(from_address)
-            print(f"{Fore.RED}[{idx}/{len(chain_ids)}] {Fore.YELLOW}获取初始 Nonce: {nonce}")
-            print(f"{Fore.YELLOW}{'='*50}")
-            print(f"{Fore.YELLOW}⏳ 正在处理链 {chain_id}（{rpc_url}）")
-            print(f"{Fore.YELLOW}{'='*50}{Style.RESET_ALL}")
+            print_chain_header(chain_id, rpc_url, idx, len(chain_ids))
+            print_status(f"获取初始 Nonce: {Fore.YELLOW}{nonce}{Style.RESET_ALL}", "info")
         except Exception as e:
             print(f"{Fore.RED}❌ 获取链 {chain_id_str} Nonce 或 RPC 失败: {e}{Style.RESET_ALL}\n")
             fail_count += 1
             continue
         try:
-            process_chain(chain_id_str, rpc_info, from_address, to_address, private_key, dry_run, False)
-            success_count += 1
+            result = process_chain(chain_id_str, rpc_info, from_address, to_address, private_key, dry_run, False)
+            if result == "skip":
+                skip_count += 1
+            else:
+                success_count += 1
         except Exception:
             fail_count += 1
-    print(f"{Fore.MAGENTA}{'='*40}")
-    print(f"\033[7m{Fore.GREEN}🔆 所有链处理完成！（Dry-run: {dry_run}）{Style.RESET_ALL}")
-    print(f"{Fore.GREEN}✅ 成功: {success_count}，{Fore.RED}❌ 失败: {fail_count}{Style.RESET_ALL}")
-    print(f"{Fore.MAGENTA}{'='*40}{Style.RESET_ALL}")
+    # 打印总结信息
+    print_summary(success_count, fail_count, skip_count, dry_run)
 
 if __name__ == "__main__":
     main()
