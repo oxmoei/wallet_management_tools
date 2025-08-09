@@ -95,21 +95,21 @@ DRY_RUN=false
 ### 更新配置文件 `used_chains.json` 
 
 在 evm_scavenger/src 目录下执行以下命令：
-```bash
+```
 poetry run python gen_used_chains.py
 ```
 
 ### 运行 ERC20 代币转移脚本
 在 evm_scavenger/src 目录下执行以下命令：
 
-```bash
+```
 # 确保你的钱包在各链有足够的原生代币来支付 Gas 费用
 poetry run python erc20.py
 ```
 
 ### 运行原生代币转移脚本
 在 evm_scavenger/src 目录下执行以下命令：
-```bash
+```
 poetry run python native.py
 ```
 

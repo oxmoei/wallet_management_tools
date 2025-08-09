@@ -23,7 +23,7 @@
 ## 📦 安装
 在 flashbots_bundle_sender 目录下执行以下命令：
 
-```bash
+```
 npm install
 ```
 
@@ -58,7 +58,7 @@ SAFE_TO_TAR_AMOUNT=
 ## 📖 使用
 在 flashbots_bundle_sender 目录下执行以下命令：
 
-```bash
+```
 node src/main.js
 ```
 

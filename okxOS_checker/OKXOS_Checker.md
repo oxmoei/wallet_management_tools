@@ -26,7 +26,7 @@
 ### 安装依赖
 在 okxOS_checker 目录下执行以下命令：
 
-```bash
+```
 npm install
 ```
 
@@ -51,7 +51,7 @@ OKX_PROJECT=your_project_here
 
 查询单个钱包地址在所有支持网络上的资产余额：
 
-```bash
+```
 npm run single
 ```
 
@@ -79,7 +79,7 @@ npm run single
 
 批量查询多个钱包地址的资产余额：
 
-```bash
+```
 npm run batch
 ```
 

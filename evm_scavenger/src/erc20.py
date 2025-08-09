@@ -25,14 +25,14 @@ dry_run = os.getenv("DRY_RUN", "false").lower() == "true"
 def print_header():
     """打印优雅的标题"""
     # 打印装饰性分隔线
-    print(f"\n{Fore.YELLOW}✨{Fore.LIGHTBLUE_EX}{'─' * 75}{Fore.YELLOW}✨{Style.RESET_ALL}")
-    
-    # 打印横幅艺术字
+    print(f"{Fore.YELLOW}✦ ˚ . ⋆   ˚ ✦  ˚  ✦  . ⋆ ˚   ✦  . ⋆ ˚   ✦ ˚ . ⋆   ˚ ✦  ˚  ✦  . ⋆   ˚ ✦  ˚  ✦  . ⋆ ✦ ˚{Style.RESET_ALL}")
+
+    # 打印横幅艺术
     banner_art = [
-        "▗▄▄▄▖▗▄▄▖  ▗▄▄▖▄▄▄▄ ▄▀▀▚▖     ▗▄▄▖ ▗▄▄▖ ▗▄▖ ▗▖  ▗▖▗▄▄▄▖▗▖  ▗▖ ▗▄▄▖▗▄▄▄▖▗▄▄▖ ",
-        "▐▌   ▐▌ ▐▌▐▌      █ █  ▐▌    ▐▌   ▐▌   ▐▌ ▐▌▐▌  ▐▌▐▌   ▐▛▚▖▐▌▐▌   ▐▌   ▐▌ ▐▌",
-        "▐▛▀▀▘▐▛▀▚▖▐▌   █▀▀▀ █  ▐▌     ▝▀▚▖▐▌   ▐▛▀▜▌▐▌  ▐▌▐▛▀▀▘▐▌ ▝▜▌▐▌▝▜▌▐▛▀▀▘▐▛▀▚▖",
-        "▐▙▄▄▖▐▌ ▐▌▝▚▄▄▖█▄▄▄ ▀▄▄▞▘    ▗▄▄▞▘▝▚▄▄▖▐▌ ▐▌ ▝▚▞▘ ▐▙▄▄▖▐▌  ▐▌▝▚▄▞▘▐▙▄▄▖▐▌ ▐▌",
+        "   ▗▄▄▄▖▗▄▄▖  ▗▄▄▖▄▄▄▄ ▄▀▀▚▖     ▗▄▄▖ ▗▄▄▖ ▗▄▖ ▗▖  ▗▖▗▄▄▄▖▗▖  ▗▖ ▗▄▄▖▗▄▄▄▖▗▄▄▖ ",
+        "   ▐▌   ▐▌ ▐▌▐▌      █ █  ▐▌    ▐▌   ▐▌   ▐▌ ▐▌▐▌  ▐▌▐▌   ▐▛▚▖▐▌▐▌   ▐▌   ▐▌ ▐▌",
+        "   ▐▛▀▀▘▐▛▀▚▖▐▌   █▀▀▀ █  ▐▌     ▝▀▚▖▐▌   ▐▛▀▜▌▐▌  ▐▌▐▛▀▀▘▐▌ ▝▜▌▐▌▝▜▌▐▛▀▀▘▐▛▀▚▖",
+        "   ▐▙▄▄▖▐▌ ▐▌▝▚▄▄▖█▄▄▄ ▀▄▄▞▘    ▗▄▄▞▘▝▚▄▄▖▐▌ ▐▌ ▝▚▞▘ ▐▙▄▄▖▐▌  ▐▌▝▚▄▞▘▐▙▄▄▖▐▌ ▐▌",
         "",
     ]
     
@@ -44,8 +44,9 @@ def print_header():
             print()
     
     # 打印原有标题
-    print(f"{Fore.CYAN}{Fore.GREEN}{'🚀 一键转移各链所有 ERC20 代币'.center(64)}{Fore.CYAN}")
-    print(f"{Fore.CYAN}{Fore.YELLOW}{f'Dry-run 模式: {"开启" if dry_run else "关闭"}'.center(68)}{Fore.CYAN}")
+    print(f"{Fore.CYAN}{Fore.GREEN}{'🚀 一键转移各链所有 ERC20 代币'.center(67)}{Fore.CYAN}")
+    print(f"{Fore.CYAN}{Fore.YELLOW}{f'Dry-run 模式: {"开启" if dry_run else "关闭"}'.center(71)}{Fore.CYAN}")
+    print(f"{Fore.YELLOW}✦ ˚ . ⋆   ˚ ✦  ˚  ✦  . ⋆ ˚   ✦  . ⋆ ˚   ✦ ˚ . ⋆   ˚ ✦  ˚  ✦  . ⋆   ˚ ✦  ˚  ✦  . ⋆ ✦ ˚{Style.RESET_ALL}")
     print(f"{Fore.YELLOW}✨{Fore.LIGHTBLUE_EX}{'─' * 75}{Fore.YELLOW}✨{Style.RESET_ALL}\n")
 
 def print_section_header(title, color=Fore.CYAN):

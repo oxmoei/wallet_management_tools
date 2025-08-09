@@ -26,7 +26,7 @@ setuptools==65.0.0 - 包管理
 
 ### 使用方法
 在 debank_checker 目录下执行以下命令：
-```bash
+```
 poetry run python main.py
 ```
 
@@ -54,7 +54,7 @@ poetry run python main.py
 
 ### 使用方法
 在 debank_checker 目录下执行以下命令：
-```bash
+```
 poetry run python used_chains_checker.py
 ```
 
@@ -67,7 +67,7 @@ poetry run python used_chains_checker.py
 - 汇总表格和美观的终端输出
 
 ### 故障排除
-- **ModuleNotFoundError: No module named...**: 确保你已激活虚拟环境，并已成功安装了所需的 python 库。| 解决方法：激活虚拟环境，运行 `pip install -r requirements.txt `进行再次安装。
+- **ModuleNotFoundError: No module named...**: 未安装了所需的 python 库。| 解决方法：运行 `install.sh`或`install.ps1`进行安装。
 - **获取 DeBank 数据很慢或失败**：请求被 Cloudflare 限制。| 解决方法：稍候重试、减少查询地址数、减少线程数。
 
 ## 💬 联系与支持
