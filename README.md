@@ -37,13 +37,10 @@ chmod +x install.sh && ./install.sh
 Set-ExecutionPolicy Bypass -Scope CurrentUser
 .\install.ps1
 ```
-# **⚠️安装完依赖后，重新打开新的终端窗口以加载环境配置，保证你刚安装的依赖马上能用**
 
 ## 🚀 快速开始
 
-### 使用 CLI 界面
-
-启动命令行界面来管理所有工具
+### 启动 CLI 界面来管理所有工具
 
 - **linux/wsl/macOs 用户：**
 在项目根目录下执行以下命令

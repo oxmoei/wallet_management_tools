@@ -144,3 +144,36 @@ try {
 } catch {
     exit 1
 }
+
+# Automatically refresh environment variables
+Write-Output "Refreshing environment variables..."
+try {
+    # Refresh environment variables for current session
+    $env:Path = [System.Environment]::GetEnvironmentVariable('Path', 'Machine') + ';' + [System.Environment]::GetEnvironmentVariable('Path', 'User')
+    
+    # If Poetry is installed, ensure its path is available in current session
+    $poetryPath = "$env:APPDATA\Python\Scripts"
+    if (Test-Path $poetryPath) {
+        $env:Path = "$poetryPath;" + $env:Path
+        Write-Output "Poetry path added to current session"
+    }
+    
+    # Verify key tools are available
+    $tools = @('python', 'node', 'poetry')
+    foreach ($tool in $tools) {
+        try {
+            $version = & $tool --version 2>$null
+            if ($version) {
+                Write-Output "$tool available: $($version.Split("`n")[0])"
+            }
+        } catch {
+            Write-Output "$tool not available in current session, please restart PowerShell or manually refresh environment variables"
+        }
+    }
+    
+    Write-Output "Environment variables refresh completed!"
+} catch {
+    Write-Output "Environment variables refresh failed, please restart PowerShell manually or run: refreshenv"
+}
+
+Write-Output "Installation completed!"

