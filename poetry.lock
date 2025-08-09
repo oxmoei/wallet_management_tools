@@ -241,20 +241,6 @@ typing_extensions = {version = ">=4.5", markers = "python_version < \"3.13\""}
 trio = ["trio (>=0.26.1)"]
 
 [[package]]
-name = "art"
-version = "5.9"
-description = "ASCII Art Library For Python"
-optional = false
-python-versions = ">=2.7"
-files = [
-    {file = "art-5.9-py2.py3-none-any.whl", hash = "sha256:9b02463468fc51c77200dadee970cf02c9576008c4f3b99d7ed02371ec037bd1"},
-    {file = "art-5.9.tar.gz", hash = "sha256:6a311ec0a227c6554c6789e91e74c3f2c86453a2a8e76947788695b7a91ccff0"},
-]
-
-[package.extras]
-dev = ["bandit (>=1.5.1)", "codecov (>=2.0.15)", "coverage (>=4.1)", "pydocstyle (>=3.0.0)", "vulture (>=1.0)"]
-
-[[package]]
 name = "async-timeout"
 version = "5.0.1"
 description = "Timeout context manager for asyncio programs"
@@ -2371,4 +2357,4 @@ propcache = ">=0.2.1"
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.9"
-content-hash = "5dea16372a50970129d260d97adf5c31c00befc62e96bee61afc4ac9c965d35b"
+content-hash = "906d19164c56d9d90b182f2b61fa3c93683eedc9595aa62be63d5c53c014101a"

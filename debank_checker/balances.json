@@ -1,6 +1,21 @@
 [
   {
-    "wallet": "0xd4d059e90f7337fd8c1a221fc8df9eb1c04aba63",
-    "total_all_chains": 42.280550719471506
+    "wallet": "0xa59766e3f6f92c4ecb6481bb75fd21c4a2489677",
+    "chains": {
+      "base": {
+        "coins": [
+          {
+            "ticker": "ETH",
+            "amount": 0.000198467053322716,
+            "price": 4055.99,
+            "name": "ETH",
+            "usd": 0.8
+          }
+        ],
+        "total_usd_in_chain": 0.8
+      }
+    },
+    "total_in_usd": 0.8,
+    "total_all_chains": 0.8041865153931119
   }
 ]

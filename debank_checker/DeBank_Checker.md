@@ -7,7 +7,6 @@
 
 ```
 alive_progress==3.1.4 - 进度条显示
-art==5.9 - ASCII艺术文字
 loguru==0.6.0 - 日志记录
 requests==2.28.2 - HTTP请求
 termcolor==2.3.0 - 终端颜色输出

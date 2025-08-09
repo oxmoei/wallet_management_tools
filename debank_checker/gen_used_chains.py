@@ -1,7 +1,6 @@
 import os
 import json
 import sys
-from art import text2art
 from termcolor import colored
 from alive_progress import alive_bar
 
@@ -10,16 +9,55 @@ sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 from main import get_chains, setup_session, chain_balance, edit_session_headers, send_request
 
 def print_banner():
-    print(colored("-"*60, "magenta", attrs=["bold"]))
-    print(colored("🚀 钱包代币分析工具🚀\n", "green", attrs=["bold", "reverse"]))
-    art = text2art(text="DEBANK   CHECKER", font="standart")
-    print(colored(art,'light_blue'))
+    """打印精美的横幅"""
+    print(colored("✨", "yellow") + colored("─"*75, "light_blue") + colored("✨", "yellow"))
+    custom_art = [
+        "     ▗▄▄▄  ▗▄▄▄▖▗▄▄▖  ▗▄▖ ▗▖  ▗▖▗▖ ▗▖     ▗▄▄▖▗▖ ▗▖▗▄▄▄▖ ▗▄▄▖▗▖ ▗▖▗▄▄▄▖▗▄▄▖",
+        "     ▐▌  █ ▐▌   ▐▌ ▐▌▐▌ ▐▌▐▛▚▖▐▌▐▌▗▞▘    ▐▌   ▐▌ ▐▌▐▌   ▐▌   ▐▌▗▞▘▐▌   ▐▌ ▐▌",
+        "     ▐▌  █ ▐▛▀▀▘▐▛▀▚▖▐▛▀▜▌▐▌ ▝▜▌▐▛▚▖     ▐▌   ▐▛▀▜▌▐▛▀▀▘▐▌   ▐▛▚▖ ▐▛▀▀▘▐▛▀▚▖",
+        "     ▐▙▄▄▀ ▐▙▄▄▖▐▙▄▞▘▐▌ ▐▌▐▌  ▐▌▐▌ ▐▌    ▝▚▄▄▖▐▌ ▐▌▐▙▄▄▖▝▚▄▄▖▐▌ ▐▌▐▙▄▄▖▐▌ ▐▌",
+        "",
+    ]
+    
+    # 打印自定义艺术字
+    for line in custom_art:
+        if line.strip():  # 只打印非空行
+            print(colored(line, 'light_blue', attrs=["bold"]))
+        else:
+            print()  # 空行保持间距
+    
+    # 功能特色展示
+    features = [
+        "⛓️ 支持EVM链查询 (Ethereum, BSC, Polygon, Arbitrum, Optimism...)",
+        "💎 实时价格获取 (DeBank API)",
+        "📊 详细余额统计 (代币 + 流动性池)",
+        "⚡ 多线程并发处理 (提升查询速度)",
+    ]
+    
+    print(colored("🌟 功能特色:", "yellow", attrs=["bold"]))
+    for feature in features:
+        print(colored(f"   {feature}", "white"))
+    print()
+    
+    # 版本信息
+    print(colored("📋 版本信息:", "magenta", attrs=["bold"]))
+    print(colored("   🐍 Python 3.8+ | 🛜 DeBank—Cloud API | 🎯 仅支持单一EVM地址查询", "light_blue"))
+    print()
+    
+    # 底部装饰
+    print(colored("✨", "yellow") + colored("─"*75, "light_blue") + colored("✨", "yellow"))
+    print()
 
-def print_section_header(title):
-    """打印章节标题"""
-    print(colored(f"\n{'='*60}", "magenta", attrs=["bold"]))
-    print(colored(f"  {title}", "cyan", attrs=["bold"]))
-    print(colored(f"{'='*60}", "magenta", attrs=["bold"]))
+def print_separator(title=None):
+    """打印分隔线"""
+    if title:
+        print(colored("╭" + "─"*24 + f" {title} " + "─"*24 + "╮", "magenta", attrs=["bold"]))
+    else:
+        print(colored("╭" + "─"*58 + "╮", "magenta", attrs=["bold"]))
+
+def print_end_separator():
+    """打印结束分隔线"""
+    print(colored("╰" + "─"*58 + "╯", "magenta", attrs=["bold"]))
 
 def print_success(message):
     """打印成功信息"""
@@ -113,11 +151,32 @@ def get_chain_tokens(node_process, session, wallets, chain):
 
 def print_summary_table(used_chain_data):
     """打印汇总表格"""
-    print_section_header("📊 分析结果汇总")
+    print_separator("结果汇总")
+    print()
+    
+    # 统计信息卡片
+    total_chains = len(used_chain_data)
+    total_tokens = sum(chain['token_count'] for chain in used_chain_data)
+    
+    print(colored("╭" + "─"*25 + "╮" + " " + "╭" + "─"*25 + "╮", "magenta"))
+    print(colored("│", "magenta") + colored(f"  ⛓️ 链总数", "yellow", attrs=["bold"]) + colored(" "*14, "magenta") + colored("│", "magenta") + 
+          colored(" │", "magenta") + colored(f"  🪙 代币总数", "yellow", attrs=["bold"]) + colored(" "*12, "magenta") + colored("│", "magenta"))
+    print(colored("│", "magenta") + colored(f"  {total_chains:>8}", "white", attrs=["bold"]) + colored(" "*15, "magenta") + colored("│", "magenta") + 
+          colored(" │", "magenta") + colored(f"  {total_tokens:>10}", "magenta", attrs=["bold"]) + colored(" "*13, "magenta") + colored("│", "magenta"))
+    print(colored("╰" + "─"*25 + "╯" + " " + "╰" + "─"*25 + "╯", "magenta"))
+    print()
     
     # 表格头部
-    print(colored(f"{'链名称':<12} {'链ID':<10} {'币种数量':<8} {'状态'}", "yellow", attrs=["bold"]))
-    print(colored("-" * 50, "yellow"))
+    print(colored("📋  详细链信息", "cyan", attrs=["bold"]))
+    print()
+    
+    # 自定义表格格式
+    print(colored("┌" + "─"*15 + "┬" + "─"*12 + "┬" + "─"*10 + "┬" + "─"*10 + "┐", "cyan"))
+    print(colored("│", "cyan") + colored(f"{'链名称':^12}", "cyan", attrs=["bold"]) + 
+          colored("│", "cyan") + colored(f"{'链ID':^11}", "cyan", attrs=["bold"]) + 
+          colored("│", "cyan") + colored(f"{'币种数量':^6}", "cyan", attrs=["bold"]) + 
+          colored("│", "cyan") + colored(f"{'状态':^8}", "cyan", attrs=["bold"]) + colored("│", "cyan"))
+    print(colored("├" + "─"*15 + "┼" + "─"*12 + "┼" + "─"*10 + "┼" + "─"*10 + "┤", "cyan"))
     
     # 表格内容
     for chain_data in used_chain_data:
@@ -125,7 +184,7 @@ def print_summary_table(used_chain_data):
         chain_id = chain_data['chain_id'] or 'N/A'
         token_count = chain_data['token_count']
         
-        # 根据代币数量选择颜色
+        # 根据代币数量选择颜色和状态
         if token_count > 10:
             status_color = "green"
             status = "丰富"
@@ -136,9 +195,16 @@ def print_summary_table(used_chain_data):
             status_color = "blue"
             status = "较少"
         
-        print(f"{name:<12} {chain_id:<10} {token_count:<8} {colored(status, status_color)}")
+        name_str = colored(f"{name:^15}", "white", attrs=["bold"])
+        chain_id_str = colored(f"{chain_id:^12}", "white")
+        token_count_str = colored(f"{token_count:^10}", "magenta", attrs=["bold"])
+        status_str = colored(f"{status:^8}", status_color, attrs=["bold"])
+        
+        print(colored("│", "cyan") + name_str + colored("│", "cyan") + chain_id_str + 
+              colored("│", "cyan") + token_count_str + colored("│", "cyan") + status_str + colored("│", "cyan"))
     
-    print(colored("-" * 50, "yellow"))
+    print(colored("└" + "─"*15 + "┴" + "─"*12 + "┴" + "─"*10 + "┴" + "─"*10 + "┘", "cyan"))
+    print()
 
 def run_with_wallets(wallets: list[str]):
     base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -152,15 +218,23 @@ def run_with_wallets(wallets: list[str]):
     if len(wallets) > 1:
         print_error("只支持查询一个钱包地址，请重新运行并只输入一个地址！")
         exit()
+    
+    print_separator("钱包信息")
     print_success(f"查询钱包地址：{wallets[0]}")
-    print_section_header("🔧 系统初始化")
+    print_end_separator()
+    print()
+    
+    print_separator("系统初始")
     print_progress("正在初始化 DeBank 会话...")
     session, node_process = setup_session()
     print_success("DeBank 会话初始化完成")
     print_progress("正在获取钱包使用的链列表...")
     chains = list(get_chains(node_process, session, wallets))
-    print_success(f"发现 {len(chains)} 条链")
-    print_section_header("🔍 链余额分析")
+    print_success(f"发现已使用 {len(chains)} 条链")
+    print_end_separator()
+    print()
+    
+    print_separator("余额分析")
     print(colored("正在分析各链余额并收集代币地址信息...", "cyan", attrs=["bold"]))
     min_usd = 0
     filtered_chains = []
@@ -180,7 +254,10 @@ def run_with_wallets(wallets: list[str]):
                 chain_tokens[chain] = tokens
             bar()
     chains = filtered_chains
-    print_section_header("🗺️ 链ID映射")
+    print_end_separator()
+    print()
+    
+    print_separator("链ID映射")
     print_progress("正在加载链ID映射表...")
     try:
         with open(chainid_path, 'r', encoding='utf-8') as f:
@@ -190,7 +267,10 @@ def run_with_wallets(wallets: list[str]):
     except Exception as e:
         print_warning(f"加载链ID映射失败: {e}")
         chainid_map = {}
-    print_section_header("📊 数据生成")
+    print_end_separator()
+    print()
+    
+    print_separator("数据生成")
     print_progress("正在生成链数据...")
     used_chain_data = []
     for chain in chains:
@@ -207,8 +287,12 @@ def run_with_wallets(wallets: list[str]):
     with open(used_chain_path, 'w', encoding='utf-8') as f:
         json.dump(used_chain_data, f, ensure_ascii=False, indent=2)
     print_success(f"数据已保存到: {used_chain_path}")
+    print_end_separator()
+    print()
+    
     print_summary_table(used_chain_data)
-    print_section_header("🎉 任务完成")
+    
+    print_separator("任务完成")
     print_success(f"成功生成 used_chains.json，共 {len(used_chain_data)} 条链")
     print_info("每条链现在包含以下信息：")
     print()
@@ -217,13 +301,16 @@ def run_with_wallets(wallets: list[str]):
     print(colored("   🪙 tokens: 代币详情", "yellow"))
     print(colored("   📊 token_count: 币种数量", "yellow"))
     print()
+    print_end_separator()
 
 # 输入阶段
 if __name__ == "__main__":
     print_banner()
-    print_section_header("✍️ 钱包地址输入")
+    print_separator("地址输入")
     print(colored("请输入 EVM 钱包地址（只支持单个地址，输入完后两次回车确认）：", "yellow", attrs=["bold"]))
-    print(colored("💡 只允许输入一个钱包地址", "blue"))
+    print(colored("💡 只允许输入一个钱包地址", "blue", attrs=["bold"]))
+    print()
+    
     input_lines = []
     while True:
         try:

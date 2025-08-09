@@ -1,53 +1,128 @@
 [
   {
-    "name": "bsc",
-    "chain_id": 56,
+    "name": "soneium",
+    "chain_id": 1868,
     "tokens": [
       {
-        "name": "BNB",
-        "address": "bsc",
-        "amount": 0.002104224
+        "name": "ETH",
+        "address": "soneium",
+        "amount": 4.914925319226e-06
       }
     ],
     "token_count": 1
   },
   {
-    "name": "vana",
-    "chain_id": 1480,
+    "name": "arb",
+    "chain_id": 42161,
     "tokens": [
       {
-        "name": "SIXGPT",
-        "address": "0x84f8dc1ada73298281387e62616470f3dd5df2f6",
-        "amount": 1315.4586983401969
+        "name": "Hybrid",
+        "address": "0xb37194e8b99020ae0b8b6861d4217a9f016706a4",
+        "amount": 28.067959957661532
       },
       {
-        "name": "VOLARA",
-        "address": "0xeb68ef0550a5532447da0fea4f0ed9f804803b8b",
-        "amount": 25306.264917378
-      },
-      {
-        "name": "VANA",
-        "address": "vana",
-        "amount": 0.15529908103428344
+        "name": "ETH",
+        "address": "arb",
+        "amount": 2.841649385e-07
       }
     ],
-    "token_count": 3
+    "token_count": 2
   },
   {
     "name": "base",
     "chain_id": 8453,
     "tokens": [
       {
-        "name": "ORA Coin",
-        "address": "0x333333c465a19c85f85c6cfbed7b16b0b26e3333",
-        "amount": 0.04202480251234012
-      },
-      {
         "name": "ETH",
         "address": "base",
-        "amount": 0.000270662808193015
+        "amount": 1.747777056e-09
       }
     ],
-    "token_count": 2
+    "token_count": 1
+  },
+  {
+    "name": "era",
+    "chain_id": 324,
+    "tokens": [
+      {
+        "name": "ETH",
+        "address": "era",
+        "amount": 2.52318525e-06
+      }
+    ],
+    "token_count": 1
+  },
+  {
+    "name": "matic",
+    "chain_id": 137,
+    "tokens": [
+      {
+        "name": "XEN Crypto",
+        "address": "0x2ab0e9e4ee70fff1fb9d67031e44f6410170d00e",
+        "amount": 1.8731012408e-08
+      },
+      {
+        "name": "Unfettered Ecosystem",
+        "address": "0xaa4fbc6809a8e1924520fc85282ac4c76a7671d7",
+        "amount": 360.25
+      },
+      {
+        "name": "FENIX",
+        "address": "0xc3e8abfa04b0ec442c2a4d65699a40f7fced8055",
+        "amount": 5e-12
+      }
+    ],
+    "token_count": 3
+  },
+  {
+    "name": "opbnb",
+    "chain_id": 204,
+    "tokens": [
+      {
+        "name": "BNB",
+        "address": "opbnb",
+        "amount": 1.955572997e-09
+      }
+    ],
+    "token_count": 1
+  },
+  {
+    "name": "bsc",
+    "chain_id": 56,
+    "tokens": [
+      {
+        "name": "AITECH",
+        "address": "0x2d060ef4d6bf7f9e5edde373ab735513c0e4f944",
+        "amount": 0.37656388566116566
+      },
+      {
+        "name": "BONK KONG",
+        "address": "0x33480b412e977fb2c438e47cbb5cdbc615348e03",
+        "amount": 9.416245579e-09
+      },
+      {
+        "name": "Tether USD",
+        "address": "0x55d398326f99059ff775485246999027b3197955",
+        "amount": 5.4e-07
+      },
+      {
+        "name": "Eldarune",
+        "address": "0xab2ed911bdbea001fd3b29adbc35d8a76e68aae4",
+        "amount": 31.398571529664856
+      }
+    ],
+    "token_count": 4
+  },
+  {
+    "name": "zora",
+    "chain_id": 7777777,
+    "tokens": [
+      {
+        "name": "ETH",
+        "address": "zora",
+        "amount": 2.35548585481e-07
+      }
+    ],
+    "token_count": 1
   }
 ]

@@ -37,6 +37,7 @@ chmod +x install.sh && ./install.sh
 Set-ExecutionPolicy Bypass -Scope CurrentUser
 .\install.ps1
 ```
+# **⚠️安装完依赖后，重新打开新的终端窗口以加载环境配置，保证你刚安装的依赖马上能用**
 
 ## 🚀 快速开始
 
