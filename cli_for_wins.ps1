@@ -208,7 +208,7 @@ function Main {
             "1" {
                 # 批量 EVM 钱包查余额
                 if (Test-ToolExists "debank_checker/main.py") {
-                    Execute-Tool "批量 EVM 钱包查余额" "poetry run python3 debank_checker/main.py"
+                    Execute-Tool "批量 EVM 钱包查余额" "poetry run python debank_checker/main.py"
                 }
             }
             "2" {
@@ -220,7 +220,7 @@ function Main {
             "3" {
                 # 单一 EVM 钱包查余额
                 if (Test-ToolExists "debank_checker/gen_used_chains.py") {
-                    Execute-Tool "单一 EVM 钱包查余额" "poetry run python3 debank_checker/gen_used_chains.py"
+                    Execute-Tool "单一 EVM 钱包查余额" "poetry run python debank_checker/used_chains_checker.py"
                 }
             }
             "4" {
@@ -232,41 +232,41 @@ function Main {
             "5" {
                 # 一键转移 EVM 上的全部 ERC20
                 if (Test-DirectoryExists "evm_scavenger") {
-                    $command = "notepad evm_scavenger/.env; poetry run python3 evm_scavenger/src/used_chains.py; poetry run python3 evm_scavenger/src/erc20.py"
+                    $command = "notepad evm_scavenger/.env; poetry run python evm_scavenger/src/gen_used_chains.py; poetry run python evm_scavenger/src/erc20.py"
                     Execute-Tool "一键转移 EVM 上的全部 ERC20" $command
                 }
             }
             "6" {
                 # 一键转移 EVM 上的全部原生币
                 if (Test-DirectoryExists "evm_scavenger") {
-                    $command = "notepad evm_scavenger/.env; poetry run python3 evm_scavenger/src/used_chains.py; poetry run python3 evm_scavenger/src/native.py"
+                    $command = "notepad evm_scavenger/.env; poetry run python evm_scavenger/src/gen_used_chains.py; poetry run python evm_scavenger/src/native.py"
                     Execute-Tool "一键转移 EVM 上的全部原生币" $command
                 }
             }
             "7" {
                 # 一键转移 Solana 上的所有 SPL_Token
                 if (Test-DirectoryExists "spl_scavenger") {
-                    $command = "notepad spl_scavenger/.env; poetry run python3 spl_scavenger/spl_scavenger.py"
+                    $command = "notepad spl_scavenger/.env; poetry run python spl_scavenger/spl_scavenger.py"
                     Execute-Tool "一键转移 Solana 上的所有 SPL Token" $command
                 }
             }
             "8" {
                 # 获取最新的免费 RPC 端点
                 if (Test-ToolExists "rpc_endpoint_finder/main.py") {
-                    Execute-Tool "获取最新的免费 RPC 端点" "poetry run python3 rpc_endpoint_finder/main.py"
+                    Execute-Tool "获取最新的免费 RPC 端点" "poetry run python rpc_endpoint_finder/main.py"
                 }
             }
             "9" {
                 # EVM 智能合约交互--调用 ABI
                 if (Test-ToolExists "smart_contract_toolkit/erc20_nft_manager.py") {
-                    $command = "notepad smart_contract_toolkit/.env; poetry run python3 smart_contract_toolkit/erc20_nft_manager.py"
+                    $command = "notepad smart_contract_toolkit/.env; poetry run python smart_contract_toolkit/erc20_nft_manager.py"
                     Execute-Tool "EVM 智能合约交互 (调用 ABI)" $command
                 }
             }
             "10" {
                 # EVM 智能合约交互--自定义 HEX
                 if (Test-ToolExists "smart_contract_toolkit/custom_hex_executor.py") {
-                    $command = "notepad smart_contract_toolkit/.env; poetry run python3 smart_contract_toolkit/custom_hex_executor.py"
+                    $command = "notepad smart_contract_toolkit/.env; poetry run python smart_contract_toolkit/custom_hex_executor.py"
                     Execute-Tool "EVM 智能合约交互 (自定义 HEX)" $command
                 }
             }
