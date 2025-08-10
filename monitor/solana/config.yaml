@@ -5,48 +5,28 @@
 solana:
   # HTTP RPC节点列表 (支持多个节点，程序会自动切换)
   # WebSocket URL会自动从HTTP URL生成，无需手动配置
+  # 建议修改为自己的专属节点，可在 Helius、Alchemy、Infura、Ankr、QuickNode 等提供商上免费注册
   http_urls:
     - "https://api.mainnet-beta.solana.com"
     - "https://solana-api.projectserum.com"
     - "https://rpc.ankr.com/solana"
     - "https://solana.public-rpc.com"
-  # 建议修改为自己的专属节点，可在 Helius、Alchemy、Infura、Ankr、QuickNode 等提供商上免费注册
 
 # 监听地址列表 (要监听的Solana钱包地址)
 watch_addresses:
-  - ""  # 示例地址1
-  - ""  # 示例地址2
-  - ""  # 示例地址3
+  - "2wVXwDnWUBoZqmFvFTMiUtMA5NZSvCtWBHgiEuHzBEd3"  # 示例地址1
+  - "zEftHcuc7jDHwGFVzDEBiAe8bhP8VuvRAE64ETwg6kZ"  # 示例地址2
+
 
 # Telegram机器人配置
 telegram:
   # Telegram Bot Token (从 @BotFather 获取)
-  bot_token: "1234567890:ABCdefGHIjklMNOpqrsTUVwxyz"  # 🔴 请替换为您的Bot Token
+  bot_token: "123456789:ABCdefGHIjklMNOpqrsTUVwxyz"  # 🔴 请替换为您的Bot Token
   
   # Telegram Chat ID (接收通知的聊天ID)
-  chat_id: "123456789"  # 🔴 请替换为您的Chat ID
+  chat_id: "9876543210"  # 🔴 请替换为您的Chat ID
 
-# 配置说明:
-# ========================================
-# 
-# 1. solana.http_urls: HTTP RPC节点列表
-#    - 程序会按顺序尝试连接，如果某个节点失败会自动切换到下一个
-#    - WebSocket URL会自动从HTTP URL生成，无需手动配置
-#    - 建议配置多个节点以提高稳定性
-#    - 建议使用自己的专属节点，可在 Helius、Alchemy、Infura、Ankr、QuickNode 等提供商上免费注册
-# 
-# 2. watch_addresses: 要监听的Solana钱包地址
-#    - 程序会监听这些地址下的所有SPL Token账户
-#    - 支持监听多个地址
-# 
-# 3. telegram.bot_token: Telegram机器人Token
-#    - 从 @BotFather 创建机器人后获得
-#    - 格式: "数字:字母数字组合"
-# 
-# 4. telegram.chat_id: 接收通知的聊天ID
-#    - 可以是个人聊天、群组或频道
-#    - 可以通过 @userinfobot 获取您的Chat ID
-# 
+
 # 获取Telegram配置的步骤:
 # ========================================
 # 1. 在Telegram中搜索 @BotFather

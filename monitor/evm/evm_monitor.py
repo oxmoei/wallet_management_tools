@@ -9,70 +9,103 @@ from web3.providers.legacy_websocket import LegacyWebSocketProvider
 import json
 import websockets
 from datetime import datetime
+import colorama
+from colorama import Fore, Back, Style
+
+# 初始化colorama以支持跨平台彩色输出
+colorama.init(autoreset=True)
 
 # 获取脚本所在目录
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 
-# 自定义日志格式器，支持颜色和图标
+# 自定义彩色日志格式化器
 class ColoredFormatter(logging.Formatter):
-    """自定义日志格式器，支持颜色和图标"""
+    """自定义彩色日志格式化器"""
     
-    # 颜色代码
     COLORS = {
-        'DEBUG': '\033[36m',      # 青色
-        'INFO': '\033[32m',       # 绿色
-        'WARNING': '\033[33m',    # 黄色
-        'ERROR': '\033[31m',      # 红色
-        'CRITICAL': '\033[35m',   # 紫色
-        'RESET': '\033[0m'        # 重置
-    }
-    
-    # 日志级别对应的图标
-    ICONS = {
-        'DEBUG': '🔍',
-        'INFO': 'ℹ️',
-        'WARNING': '⚠️',
-        'ERROR': '❌',
-        'CRITICAL': '🚨'
+        'DEBUG': Fore.CYAN,
+        'INFO': Fore.GREEN,
+        'WARNING': Fore.YELLOW,
+        'ERROR': Fore.RED,
+        'CRITICAL': Fore.RED + Back.WHITE + Style.BRIGHT,
     }
     
     def format(self, record):
-        # 添加图标到日志消息
-        icon = self.ICONS.get(record.levelname, '')
-        record.icon = icon
+        # 添加时间戳
+        timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
         
-        # 格式化时间
-        record.formatted_time = datetime.fromtimestamp(record.created).strftime('%H:%M:%S')
+        # 根据日志级别选择颜色
+        color = self.COLORS.get(record.levelname, Fore.WHITE)
         
-        # 控制台输出带颜色
-        color = self.COLORS.get(record.levelname, '')
-        record.levelname = f"{color}{record.levelname}{self.COLORS['RESET']}"
-        record.icon = f"{color}{icon}{self.COLORS['RESET']}"
+        # 格式化消息
+        if record.levelname == 'INFO':
+            # 特殊处理INFO级别的消息，添加更多样式
+            if '🚨' in record.getMessage():
+                # 警报消息使用特殊样式
+                formatted_msg = f"{Fore.RED}{Style.BRIGHT}🚨 {record.getMessage()}{Style.RESET_ALL}"
+            elif '✅' in record.getMessage():
+                # 成功消息使用绿色
+                formatted_msg = f"{Fore.GREEN}{Style.BRIGHT}✅ {record.getMessage()}{Style.RESET_ALL}"
+            elif '🔌' in record.getMessage():
+                # 连接消息使用蓝色
+                formatted_msg = f"{Fore.BLUE}{Style.BRIGHT}🔌 {record.getMessage()}{Style.RESET_ALL}"
+            elif '📱' in record.getMessage():
+                # Telegram消息使用紫色
+                formatted_msg = f"{Fore.MAGENTA}{Style.BRIGHT}📱 {record.getMessage()}{Style.RESET_ALL}"
+            elif '🔔' in record.getMessage():
+                # 检测消息使用青色
+                formatted_msg = f"{Fore.CYAN}{Style.BRIGHT}🔔 {record.getMessage()}{Style.RESET_ALL}"
+            elif '🔄' in record.getMessage():
+                # 切换消息使用黄色
+                formatted_msg = f"{Fore.YELLOW}{Style.BRIGHT}🔄 {record.getMessage()}{Style.RESET_ALL}"
+            elif '🎯' in record.getMessage():
+                # 订阅消息使用绿色
+                formatted_msg = f"{Fore.GREEN}{Style.BRIGHT}🎯 {record.getMessage()}{Style.RESET_ALL}"
+            elif '👂' in record.getMessage():
+                # 监听消息使用蓝色
+                formatted_msg = f"{Fore.BLUE}{Style.BRIGHT}👂 {record.getMessage()}{Style.RESET_ALL}"
+            elif '🚀' in record.getMessage():
+                # 启动消息使用绿色
+                formatted_msg = f"{Fore.GREEN}{Style.BRIGHT}🚀 {record.getMessage()}{Style.RESET_ALL}"
+            elif '📋' in record.getMessage() or '⛓️' in record.getMessage():
+                # 统计信息使用青色
+                formatted_msg = f"{Fore.CYAN}{Style.BRIGHT}{record.getMessage()}{Style.RESET_ALL}"
+            elif '🔗' in record.getMessage():
+                # 交易哈希相关消息使用蓝色
+                formatted_msg = f"{Fore.BLUE}{Style.BRIGHT}{record.getMessage()}{Style.RESET_ALL}"
+            else:
+                formatted_msg = f"{color}{record.getMessage()}{Style.RESET_ALL}"
+        else:
+            formatted_msg = f"{color}{record.getMessage()}{Style.RESET_ALL}"
         
-        return super().format(record)
+        return f"{Fore.WHITE}[{timestamp}]{Style.RESET_ALL} {formatted_msg}"
 
-# 配置日志记录
-logger = logging.getLogger('EVM_Monitor')
+# 配置日志
+logger = logging.getLogger()
 logger.setLevel(logging.INFO)
 
-# 清除现有的处理器
-logger.handlers.clear()
+# 移除所有现有的处理器
+for handler in logger.handlers[:]:
+    logger.removeHandler(handler)
 
-# 控制台处理器（带颜色）
+# 添加控制台处理器
 console_handler = logging.StreamHandler()
-console_formatter = ColoredFormatter(
-    '%(icon)s %(formatted_time)s | %(levelname)-8s | %(message)s'
-)
-console_handler.setFormatter(console_formatter)
 console_handler.setLevel(logging.INFO)
-
-# 添加处理器到日志记录器
+console_handler.setFormatter(ColoredFormatter())
 logger.addHandler(console_handler)
 
 # 加载配置文件
-config_path = os.path.join(SCRIPT_DIR, "evm.yaml")
-with open(config_path, "r", encoding="utf-8") as f:
-    config = yaml.safe_load(f)
+config_path = os.path.join(SCRIPT_DIR, "config.yaml")
+try:
+    with open(config_path, "r", encoding="utf-8") as f:
+        config = yaml.safe_load(f)
+except FileNotFoundError:
+    logging.error(f"❌ 配置文件未找到: {config_path}")
+    logging.error("请确保 config.yaml 文件存在于脚本同目录下")
+    exit(1)
+except Exception as e:
+    logging.error(f"❌ 配置文件读取失败: {e}")
+    exit(1)
 
 # 监听地址
 WATCH_ADDRESSES = [addr.lower() for addr in config["watch_addresses"]]
@@ -83,6 +116,32 @@ TELEGRAM_CHAT_ID = config["telegram"]["chat_id"]
 
 # ERC20 Transfer 事件的 topic
 TRANSFER_TOPIC = "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef"
+
+def print_banner():
+    """打印启动横幅"""
+    banner = f"""
+{Fore.CYAN}{Style.BRIGHT}
+███████╗██╗   ██╗███╗   ███╗    ███╗   ███╗ ██████╗ ███╗   ██╗██╗████████╗ ██████╗ ██████╗ 
+██╔════╝██║   ██║████╗ ████║    ████╗ ████║██╔═══██╗████╗  ██║██║╚══██╔══╝██╔═══██╗██╔══██╗
+█████╗  ██║   ██║██╔████╔██║    ██╔████╔██║██║   ██║██╔██╗ ██║██║   ██║   ██║   ██║██████╔╝
+██╔══╝  ╚██╗ ██╔╝██║╚██╔╝██║    ██║╚██╔╝██║██║   ██║██║╚██╗██║██║   ██║   ██║   ██║██╔══██╗
+███████╗ ╚████╔╝ ██║ ╚═╝ ██║    ██║ ╚═╝ ██║╚██████╔╝██║ ╚████║██║   ██║   ╚██████╔╝██║  ██║
+╚══════╝  ╚═══╝  ╚═╝     ╚═╝    ╚═╝     ╚═╝ ╚═════╝ ╚═╝  ╚═══╝╚═╝   ╚═╝    ╚═════╝ ╚═╝  ╚═╝
+                                                                                           
+
+           ╔══════════════════════════════════════════════════════════════╗
+           ║                   🚀 EVM Token 监听器 🚀                     ║
+           ║                                                              ║
+           ║  📋 监听地址数量: {len(WATCH_ADDRESSES):<8}                                   ║
+           ║  ⛓️  监控链数量: {len(config['chains']):<8}                                    ║
+           ║  📱 Telegram通知: {'已启用' if TELEGRAM_BOT_TOKEN else '未配置':<8}                                ║
+           ║                                                              ║
+           ║  🎯 功能: 监听ERC20 Token到账 → 发送Telegram通知             ║
+           ╚══════════════════════════════════════════════════════════════╝
+{Style.RESET_ALL}
+"""
+    print(banner)
+    logging.info(f"✅ 配置文件加载成功: {config_path}")
 
 def send_telegram_alert(message):
     """ 发送 Telegram 报警通知 """
@@ -107,6 +166,7 @@ def handle_event(event, web3):
         from_address = "0x" + event["topics"][1][-40:]
         to_address = "0x" + event["topics"][2][-40:]
         token_address = event["address"]
+        transaction_hash = event.get("transactionHash", "")
         data = event.get("data", "")
         if not data:
             return
@@ -119,14 +179,15 @@ def handle_event(event, web3):
             message = (
                 f"🚨 *ERC20 代币到账警报* 🚨\n"
                 f"=============================\n"
-                f"📌 链: `{web3.eth.chain_id}`\n"
+                f"⛓️ 链: `{web3.eth.chain_id}`\n"
+                f"🆔 交易哈希: `{transaction_hash}`\n"
                 f"📤 发送地址: `{from_address}`\n"
                 f"📥 接收地址: `{to_address}`\n"
                 f"💰 数量: `{amount}`\n"
                 f"📜 代币合约: `{token_address}`"
             )
             send_telegram_alert(message)
-            logger.info(f"🔔 检测到 ERC20 代币到账 | 链: {web3.eth.chain_id} | 接收地址: {to_address[:10]}...{to_address[-8:]} | 数量: {amount} | 合约: {token_address[:10]}...{token_address[-8:]}")
+            logger.info(f"🔔 检测到 ERC20 代币到账 | 链: {web3.eth.chain_id} | 交易哈希: {transaction_hash[:10]}...{transaction_hash[-8:]} | 接收地址: {to_address[:10]}...{to_address[-8:]} | 数量: {amount} | 合约: {token_address[:10]}...{token_address[-8:]}")
 
 def create_web3(ws_url):
     """创建支持心跳的Web3实例"""
@@ -252,6 +313,9 @@ def run_listener_thread(chain_name, ws_urls):
 
 def start_listeners():
     """ 为每条链启动独立的监听线程 """
+    # 打印启动横幅
+    print_banner()
+    
     logger.info("🚀 启动 ERC20 代币监控系统...")
     logger.info(f"📋 监控地址数量: {len(WATCH_ADDRESSES)}")
     logger.info(f"⛓️  监控链数量: {len(config['chains'])}")

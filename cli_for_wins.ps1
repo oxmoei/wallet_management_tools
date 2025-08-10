@@ -52,6 +52,22 @@ function Show-Banner {
     Write-Host " \  /\  / (_| | | |  __/ |_   / / | (_) | (_) | | / /__| (_) | | |  __/ (__| |_| | (_) | | | | " -ForegroundColor $CYAN
     Write-Host "  \/  \/ \__,_|_|_|\___|\__|  \/   \___/ \___/|_| \____/\___/|_|_|\___|\___|\__|_|\___/|_| |_| " -ForegroundColor $CYAN
     Write-Host ""
+    
+    # 重要提醒
+    Write-Host "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" -ForegroundColor $YELLOW
+    Write-Host "      ⚠️  重要提醒 ⚠️" -ForegroundColor $YELLOW
+    Write-Host "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" -ForegroundColor $YELLOW
+    Write-Host ""
+    Write-Host "ℹ️ 请确保您已经安装必要的依赖和环境配置，否则无法正常使用!" -ForegroundColor $CYAN
+    Write-Host "ℹ️ 如果您还没有安装依赖，请先退出程序并以管理员身份执行以下命令:" -ForegroundColor $CYAN
+    Write-Host ""
+    Write-Host "     🔜 Set-ExecutionPolicy Bypass -Scope CurrentUser" -ForegroundColor $GREEN
+    Write-Host "     🔜 ./install.ps1" -ForegroundColor $GREEN
+    Write-Host ""
+    Write-Host "ℹ️ 如果已经安装完成，请按任意键继续..." -ForegroundColor $CYAN
+    Write-Host "⌨️ 按任意键继续..." -ForegroundColor $YELLOW -NoNewline
+    $null = $Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
+    Write-Host ""
     Write-Host ""
 }
 
@@ -81,6 +97,12 @@ function Show-MainMenu {
     Write-Host "  9. $TOOLS EVM 智能合约交互 (调用 ABI)" -ForegroundColor $GREEN
     Write-Host " 10. $TOOLS EVM 智能合约交互 (自定义 HEX)" -ForegroundColor $GREEN
     Write-Host " 11. $FIRE FlashBots 交易捆绑" -ForegroundColor $GREEN
+    Write-Host ""
+    
+    # 监控工具组
+    Write-Host "📊 监控工具" -ForegroundColor $BLUE
+    Write-Host " 12. $TOOLS 监控多条 EVM 链的 ERC20 代币余额变动" -ForegroundColor $GREEN
+    Write-Host " 13. $TOOLS 监控 Solana 的 SPL 余额变动" -ForegroundColor $GREEN
     Write-Host ""
     
     # 退出选项
@@ -136,7 +158,7 @@ function Execute-Tool {
     
     # 检查是否包含notepad命令
     if ($Command -like "*notepad*") {
-        Write-Host "$PALM 提示：准备使用记事本来编辑 .env 文件" -ForegroundColor $PURPLE
+        Write-Host "🔊 提示：准备使用记事本来编辑 .env 文件" -ForegroundColor $PURPLE
         Write-Host "     ┌─────────────────────────────────────────┐" -ForegroundColor $PURPLE
         Write-Host "     │  • 编辑完成后按 Ctrl + S 保存           │" -ForegroundColor $PURPLE
         Write-Host "     │  • 按 Ctrl + X 或关闭窗口退出           │" -ForegroundColor $PURPLE
@@ -277,13 +299,27 @@ function Main {
                     Execute-Tool "FlashBots 交易捆绑" $command
                 }
             }
+            "12" {
+                # 监控多条 EVM 链的 ERC20 代币余额变动
+                if (Test-ToolExists "monitor/evm/evm_monitor.py") {
+                    $command = "notepad monitor/evm/config.yaml; poetry run python monitor/evm/evm_monitor.py"
+                    Execute-Tool "监控多条 EVM 链的 ERC20 代币余额变动" $command
+                }
+            }
+            "13" {
+                # 监控 Solana 的 SPL 余额变动
+                if (Test-ToolExists "monitor/solana/spl_monitor.py") {
+                    $command = "notepad monitor/solana/config.yaml; poetry run python monitor/solana/spl_monitor.py"
+                    Execute-Tool "监控 Solana 的 SPL 余额变动" $command
+                }
+            }
             "0" {
                 Show-ExitMessage
                 exit 0
             }
             default {
                 Write-Host "$ERROR 无效选项，请重新选择" -ForegroundColor $RED
-                Write-Host "$INFO 请输入 0-11 之间的数字" -ForegroundColor $YELLOW
+                Write-Host "$INFO 请输入 0-13 之间的数字" -ForegroundColor $YELLOW
                 Start-Sleep -Seconds 2
             }
         }

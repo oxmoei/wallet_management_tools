@@ -75,13 +75,11 @@ chmod +x cli.sh && ./cli.sh
 - 一键转移 EVM 钱包上的全部资产
 - 包括：一键清空原生代币（如：ETH、BNB、BERA等）和一键清空 ERC20 代币
 
-
 ### 4️⃣ spl_scavenger
 
 **主要功能：**                 ➡️[详细介绍与使用说明](./spl_scavenger/SPL_Scavenger.md)
 - 一键转移 Solana 钱包中所有 SPL_Token
 - 支持批量处理多个钱包
-
 
 ### 5️⃣ rpc_endpoint_finder
 
@@ -100,6 +98,12 @@ chmod +x cli.sh && ./cli.sh
 **主要功能：**                 ➡️[详细介绍与使用说明](./smart_contract_toolkit/SmartContract_Toolkit.md)
 - EVM 智能合约交互工具集
 - 包括：调用 ABI 执行和自定义 HEX 执行
+
+### 8️⃣ monitor
+
+**主要功能：**                 ➡️[详细介绍与使用说明](./monitor/Monitor.md)
+- 代币监控系统，实时监控代币到账并发送 Telegram 通知
+- 支持 EVM 和 Solana 生态
 
 ## 💬 联系与支持
 - Telegram: [t.me/cryptostar210](https://t.me/cryptostar210)

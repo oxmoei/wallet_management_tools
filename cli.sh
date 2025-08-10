@@ -56,6 +56,21 @@ show_banner() {
     echo "  \\/  \\/ \\__,_|_|_|\\___|\\__|  \\/   \\___/ \\___/|_| \\____/\\___/|_|_|\\___|\\___|\\__|_|\\___/|_| |_| "
     echo ""
     echo -e "${NC}"
+    
+    # 提醒用户确保已安装依赖
+    echo ""
+    echo -e "${CYAN}${BOLD}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+    echo -e "      ${CYAN}${BOLD}${WARNING}  重要提醒 ${WARNING}${NC}"
+    echo -e "${CYAN}${BOLD}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+    echo ""
+    echo -e "${YELLOW}${BOLD}${INFO} 请确保您已经安装必要的依赖和环境配置，否则无法正常使用! ${NC}"
+    echo -e "${YELLOW}${BOLD}${INFO} 如果您还没有安装依赖，请先退出程序并执行以下命令: ${NC}"
+    echo ""
+    echo -e "   ${GREEN}${BOLD}  🔜 chmod +x install.sh && ./install.sh ${NC}"
+    echo ""
+    echo -e "${YELLOW}${BOLD}${INFO} 如果已经安装完成，请按任意键继续...${NC}"
+    echo -e "${PURPLE}${BOLD}⌨️ 按任意键继续...${NC}"
+    read -n 1
     echo ""
 }
 
@@ -76,7 +91,7 @@ show_main_menu() {
     echo -e "${BLUE}${BOLD}💸 资产转移工具${NC}"
     echo -e "${GREEN}${BOLD}  5.${NC} ${COIN} 一键转移各 EVM 链上的所有 ERC20 代币"
     echo -e "${GREEN}${BOLD}  6.${NC} ${COIN} 一键转移各 EVM 链上的所有原生代币"
-    echo -e "${GREEN}${BOLD}  7.${NC} ${COIN} 一键转移 Solana 上的所有 SPL Token"
+    echo -e "${GREEN}${BOLD}  7.${NC} ${COIN} 一键转移 Solana 上的所有 SPL_Token"
     echo ""
     
     # 开发工具组
@@ -85,6 +100,12 @@ show_main_menu() {
     echo -e "${GREEN}${BOLD}  9.${NC} ${TOOLS} EVM 智能合约交互 (调用 ABI)"
     echo -e "${GREEN}${BOLD} 10.${NC} ${TOOLS} EVM 智能合约交互 (自定义 HEX)"
     echo -e "${GREEN}${BOLD} 11.${NC} ${FIRE} FlashBots 交易捆绑"
+    echo ""
+    
+    # 监控工具组
+    echo -e "${BLUE}${BOLD}📊 余额监控工具${NC}"
+    echo -e "${GREEN}${BOLD} 12.${NC} ${CHAIN} 监控多条 EVM 链的所有 ERC20 代币余额变动"
+    echo -e "${GREEN}${BOLD} 13.${NC} ${CHAIN} 监控 Solana 的所有 SPL_Token 余额变动"
     echo ""
     
     # 退出选项
@@ -136,7 +157,7 @@ execute_tool() {
     
     # 检查是否包含nano命令
     if [[ $command == *"nano"* ]]; then
-        echo -e "${PURPLE}${BOLD}${PALM} 提示：准备使用nano编辑器来编辑 .env 文件${NC}"
+        echo -e "${PURPLE}${BOLD}🔊 提示：准备使用nano编辑器来编辑 .env 文件${NC}"
         echo -e "     ${PURPLE}┌─────────────────────────────────────────┐${NC}"
         echo -e "     ${PURPLE}│  • 编辑完成后按 ${YELLOW}${BOLD}Ctrl + X${NC}${PURPLE} 退出           │${NC}"
         echo -e "     ${PURPLE}│  • 按 ${YELLOW}${BOLD}Y${NC}${PURPLE} 确认保存                        │${NC}"
@@ -181,7 +202,7 @@ show_exit_message() {
     echo -e "${CYAN}${BOLD}"
     echo "╔═════════════════════════════════════════════╗"
     echo "║  ${EXIT} 感谢使用 WEB3 钱包管理工具集 CLI! ${EXIT}    ║"
-    echo "║  ${STAR} 祝您使用愉快! ${STAR}                        ║"
+    echo "║  🙆 祝您使用愉快! 🙆                       ║"
     echo "╚═════════════════════════════════════════════╝"
     echo -e "${NC}"
     echo ""
@@ -271,13 +292,27 @@ main() {
                     execute_tool "FlashBots 交易捆绑" "$command"
                 fi
                 ;;
+            12)
+                # 监控多条 EVM 链的 ERC20 代币余额变动
+                if check_tool_exists "monitor/evm/evm_monitor.py"; then
+                    local command="nano monitor/evm/config.yaml && poetry run python monitor/evm/evm_monitor.py"
+                    execute_tool "监控多条 EVM 链的 ERC20 代币余额变动" "$command"
+                fi
+                ;;
+            13)
+                # 监控 Solana 的 SPL 余额变动
+                if check_tool_exists "monitor/solana/spl_monitor.py"; then
+                    local command="nano monitor/solana/config.yaml && poetry run python monitor/solana/spl_monitor.py"
+                    execute_tool "监控 Solana 的 SPL 余额变动" "$command"
+                fi
+                ;;
             0)
                 show_exit_message
                 exit 0
                 ;;
             *)
                 echo -e "${RED}${ERROR} 无效选项，请重新选择${NC}"
-                echo -e "${YELLOW}${BOLD}${INFO} 请输入 0-11 之间的数字${NC}"
+                echo -e "${YELLOW}${BOLD}${INFO} 请输入 0-13 之间的数字${NC}"
                 sleep 2
                 ;;
         esac
