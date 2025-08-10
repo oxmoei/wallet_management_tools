@@ -1,16 +1,46 @@
-venv/
+# Python/Node
+**/__pycache__/
+**/node_modules/
+*.py[cod]
+*$py.class
+
+# Virtual environments
 .venv/
-evm_scavenger/conf/match_chains.py
-evm_scavenger/conf/chainlist.json
-evm_scavenger/.env
-evm_scavenger/src/__pycache__/
+venv/
+
+# IDE settings
+.vscode/
+.idea/
+
+# System
+.DS_Store
+Thumbs.db
+
+# Logs / temp
+*.log
+*.tmp
+*.temp
+
+# Test & coverage
+htmlcov/
+.coverage
+*.cover
+*.py,cover
+.pytest_cache/
+
+# Build
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Env vars
+.env
+*.env
+
+# 文件
 evm_scavenger/conf/used_chains.json
-debank_checker/__pycache__/
 debank_checker/balances.json
 rpc_endpoint_finder/result.json
-spl_scavenger/.env
-okxOS_checker/node_modules/
-flashbots_bundle_sender/node_modules/
-flashbots_bundle_sender/.env
-smart_contract_toolkit/.env
 init_poetry.sh
+evm_scavenger/conf/match_chains.py

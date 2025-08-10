@@ -45,15 +45,17 @@ def find_rpc_entry(keyword, search_type="name"):
         elif search_type == "chainId":
             # 根据关键词精准匹配 chainId 字段
             chain_id = str(item.get("chainId", ""))
-            if keyword_input == chain_id:
+            if keyword == chain_id:
                 found_entries.append(item)
 
     return found_entries
 
 def print_banner():
     """打印优雅的程序横幅"""
+    # 打印装饰性星星
+    print(f"{COLOR_YELLOW}✦ ˚ . ⋆   ˚ ✦  ˚  ✦  . ⋆ ˚   ✦  . ⋆ ˚   ✦ ˚ . ⋆   ˚ ✦  ˚  ✦  . ⋆   ˚ ✦  ˚  ✦  . ⋆ ✦ ˚{COLOR_END}")
+    
     banner = f"""
-
 {COLOR_BLUE}██████╗ ██████╗  ██████╗    ███████╗██╗███╗   ██╗██████╗ ███████╗██████╗{COLOR_END}
 {COLOR_BLUE}██╔══██╗██╔══██╗██╔════╝    ██╔════╝██║████╗  ██║██╔══██╗██╔════╝██╔══██╗{COLOR_END}
 {COLOR_BLUE}██████╔╝██████╔╝██║         █████╗  ██║██╔██╗ ██║██║  ██║█████╗  ██████╔╝{COLOR_END}
@@ -66,10 +68,10 @@ def print_banner():
 {COLOR_BLUE}╚═══════════════════════════════════════════════════════════════════════╝{COLOR_END}
 """
     print(banner)
+    print(f"{COLOR_YELLOW}✦ ˚ . ⋆   ˚ ✦  ˚  ✦  . ⋆ ˚   ✦  . ⋆ ˚   ✦ ˚ . ⋆   ˚ ✦  ˚  ✦  . ⋆   ˚ ✦  ˚  ✦  . ⋆ ✦ ˚{COLOR_END}")
 
-if __name__ == "__main__":
-    print_banner()
-    
+def search_rpc():
+    """执行RPC搜索的主要逻辑"""
     # 提示用户选择搜索类型
     print(f"\n{COLOR_GREEN}╭───────────────── 搜索配置 ─────────────────╮{COLOR_END}")
     print(f"{COLOR_GREEN}│{COLOR_END} {COLOR_YELLOW}请选择搜索类型：{COLOR_END}                           {COLOR_GREEN}│{COLOR_END}")
@@ -97,11 +99,11 @@ if __name__ == "__main__":
     print(f"{COLOR_BLUE}╰────────────────────────────────────────────╯{COLOR_END}")
 
     # 选择 URL 类型
-    print(f"\n{COLOR_PURPLE}╭───────────────── URL 类型 ─────────────────╮{COLOR_END}")
-    print(f"{COLOR_PURPLE}│{COLOR_END} {COLOR_YELLOW}请选择要筛选的 URL 类型：{COLOR_END}                  {COLOR_PURPLE}│{COLOR_END}")
-    print(f"{COLOR_PURPLE}│{COLOR_END} {COLOR_YELLOW}1. 🌐 http(s) URL{COLOR_END}                          {COLOR_PURPLE}│{COLOR_END}")
-    print(f"{COLOR_PURPLE}│{COLOR_END} {COLOR_YELLOW}2. ⚡ wss URL{COLOR_END}                              {COLOR_PURPLE}│{COLOR_END}")
-    print(f"{COLOR_PURPLE}╰────────────────────────────────────────────╯{COLOR_END}")
+    print(f"\n{COLOR_BLUE}╭───────────────── URL 类型 ─────────────────╮{COLOR_END}")
+    print(f"{COLOR_BLUE}│{COLOR_END} {COLOR_YELLOW}请选择要筛选的 URL 类型：{COLOR_END}                  {COLOR_BLUE}│{COLOR_END}")
+    print(f"{COLOR_BLUE}│{COLOR_END} {COLOR_YELLOW}1. 🌐 http(s) URL{COLOR_END}                          {COLOR_BLUE}│{COLOR_END}")
+    print(f"{COLOR_BLUE}│{COLOR_END} {COLOR_YELLOW}2. ⚡ wss URL{COLOR_END}                              {COLOR_BLUE}│{COLOR_END}")
+    print(f"{COLOR_BLUE}╰────────────────────────────────────────────╯{COLOR_END}")
     
     while True:
         url_choice = input(f"\n{COLOR_GREEN}🌐 请输入选择 (1 或 2): {COLOR_END}").strip()
@@ -145,11 +147,11 @@ if __name__ == "__main__":
             with open(output_file_path, 'w', encoding='utf-8') as outfile:
                 json.dump(filtered_results, outfile, indent=2)
             
-            print(f"\n{COLOR_GREEN}╭───────────────── 搜索结果 ─────────────────╮{COLOR_END}")
-            print(f"{COLOR_GREEN}│{COLOR_END} {COLOR_YELLOW}🎉 搜索完成！{COLOR_END}                              {COLOR_GREEN}│{COLOR_END}")
-            print(f"{COLOR_GREEN}│{COLOR_END} {COLOR_BLUE}📊 找到 {len(filtered_results)} 个匹配的条目{COLOR_END}                     {COLOR_GREEN}│{COLOR_END}")
-            print(f"{COLOR_GREEN}│{COLOR_END} {COLOR_PURPLE}💾 结果已保存到: {output_file_path}{COLOR_END}")
-            print(f"{COLOR_GREEN}╰────────────────────────────────────────────╯{COLOR_END}")
+            print(f"\n{COLOR_YELLOW}╭───────────────── 搜索结果 ─────────────────╮{COLOR_END}")
+            print(f"{COLOR_YELLOW}│{COLOR_END} {COLOR_YELLOW}🎉 搜索完成！{COLOR_END}                              {COLOR_YELLOW}│{COLOR_END}")
+            print(f"{COLOR_YELLOW}│{COLOR_END} {COLOR_BLUE}📊 找到 {len(filtered_results)} 个匹配的条目{COLOR_END}                     {COLOR_YELLOW}│{COLOR_END}")
+            print(f"{COLOR_YELLOW}│{COLOR_END} {COLOR_PURPLE}💾 结果已保存到: {output_file_path}{COLOR_END}")
+            print(f"{COLOR_YELLOW}╰────────────────────────────────────────────╯{COLOR_END}")
             
             # 显示RPC端点结果
             print(f"\n{COLOR_YELLOW}📋 RPC端点列表：{COLOR_END}")
@@ -183,6 +185,30 @@ if __name__ == "__main__":
         print(f"{COLOR_YELLOW}│{COLOR_END} ❌ 没有找到匹配的条目。{COLOR_END}                    {COLOR_YELLOW}│{COLOR_END}")
         print(f"{COLOR_YELLOW}│{COLOR_END} 💡 请尝试使用不同的关键词或搜索类型{COLOR_END}        {COLOR_YELLOW}│{COLOR_END}")
         print(f"{COLOR_YELLOW}╰────────────────────────────────────────────╯{COLOR_END}")
+
+if __name__ == "__main__":
+    print_banner()
+    
+    while True:
+        # 执行搜索
+        search_rpc()
+        
+        # 询问是否继续搜索
+        print(f"\n{COLOR_BLUE}╭───────────────── 继续搜索 ─────────────────╮{COLOR_END}")
+        print(f"{COLOR_BLUE}│{COLOR_END} {COLOR_YELLOW}是否继续搜索其它RPC？{COLOR_END}                      {COLOR_BLUE}│{COLOR_END}")
+        print(f"{COLOR_BLUE}│{COLOR_END} {COLOR_GREEN}y - 继续搜索{COLOR_END}                               {COLOR_BLUE}│{COLOR_END}")
+        print(f"{COLOR_BLUE}│{COLOR_END} {COLOR_RED}n - 退出程序{COLOR_END}                               {COLOR_BLUE}│{COLOR_END}")
+        print(f"{COLOR_BLUE}╰────────────────────────────────────────────╯{COLOR_END}")
+        
+        while True:
+            continue_choice = input(f"\n{COLOR_GREEN}🔄 请输入选择 (y/n): {COLOR_END}").strip().lower()
+            if continue_choice in ['y', 'n']:
+                break
+            else:
+                print(f"{COLOR_RED}❌ 无效选择，请输入 y 或 n{COLOR_END}")
+        
+        if continue_choice == 'n':
+            break
     
     # 程序结束信息
     print(f"\n{COLOR_PURPLE}╭───────────────── 程序结束 ─────────────────╮{COLOR_END}")

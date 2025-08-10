@@ -1,0 +1,23 @@
+# Solana Token 监听器配置文件示例
+# 复制此文件为 solana.yaml 并修改配置
+# 注意：程序会自动在脚本同目录下查找 solana.yaml 文件
+# 注意：WebSocket URL会自动从HTTP URL生成，无需手动配置
+
+solana:
+  # HTTP RPC节点列表 (支持多个节点，程序会自动切换)
+  # WebSocket URL会自动生成，无需手动配置
+  http_urls:
+    - "https://api.mainnet-beta.solana.com"
+    - "https://solana-api.projectserum.com"
+    - "https://rpc.ankr.com/solana"
+    - "https://solana.public-rpc.com"
+
+watch_addresses:
+  - "你的Solana钱包地址1"
+  - "你的Solana钱包地址2"
+
+safe_address: "你的安全地址"
+
+telegram:
+  bot_token: "你的Bot Token"
+  chat_id: "你的Chat ID" 

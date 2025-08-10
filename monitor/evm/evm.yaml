@@ -1,0 +1,33 @@
+# 支持配置多条 EVM 链
+# 支持配置多个备用节点（建议使用自己的专属节点，可在 Alchemy、Infura、Ankr、QuickNode 等提供商上免费注册）
+chains:
+  ethereum:
+    ws_urls:
+      - wss://ethereum-sepolia-rpc.publicnode.com
+      - wss://eth-sepolia.g.alchemy.com/v2/0yF5KL8ps4YRN0GIzQesjmXqZE9NwNgP
+  bsc:
+    ws_urls:
+      - wss://bsc-testnet-rpc.publicnode.com
+      - wss://bsc-testnet.infura.io/ws/v3/53f17e3712014672bac0cc330b530ec7
+  base:
+    ws_urls:
+      - wss://base-sepolia.drpc.org
+      - wss://base-sepolia.g.alchemy.com/v2/0yF5KL8ps4YRN0GIzQesjmXqZE9NwNgP
+  arbitrum:
+    ws_urls:
+      - wss://arbitrum-sepolia.drpc.org
+      - wss://arbitrum-sepolia.infura.io/ws/v3/53f17e3712014672bac0cc330b530ec7
+  # 你可以添加更多链节点...
+
+# 监听地址(支持多个)，全部小写
+watch_addresses:
+  - "0x000da01a62dd1654a7fdc8f898bda1ec431f788a"
+  - "0xe35f17297b17f4e971e4c076b6db0a54f85bef2b"
+  - "0xdc99177c4f59394a1703040c2ed23967f604b91c"
+  - "0x144eca70d0effe4f13a0d9eba7a23c77885a44f3"
+
+
+# Telegram Bot 配置（可以通过 @userinfobot 获取您的Chat ID，具体方法自行搜索了解。）
+telegram:
+  bot_token: "7724790582:AAE2Jish4jeQ_uheEuTgAeKIt1um0ml4-HM"
+  chat_id: "7765138435"
