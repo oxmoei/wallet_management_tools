@@ -1,3 +1,6 @@
+# Set execution policy to bypass for current user
+Set-ExecutionPolicy Bypass -Scope CurrentUser -Force
+
 # Check and require admin privileges
 $isAdmin = ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)
 if (-not $isAdmin) {

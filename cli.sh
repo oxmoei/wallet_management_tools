@@ -1,7 +1,6 @@
 #!/bin/bash
 
-# 区块链工具集 CLI
-# Blockchain Tools CLI
+# EVM 智能合约交互 CLI
 
 # 颜色定义
 RED='\033[0;31m'

@@ -34,7 +34,6 @@ chmod +x install.sh && ./install.sh
 - **Windows 用户：**
 以管理员身份启动 PowerShell，在项目根目录下执行以下命令
 ```powershell
-Set-ExecutionPolicy Bypass -Scope CurrentUser
 .\install.ps1
 ```
 

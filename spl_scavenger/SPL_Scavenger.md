@@ -61,11 +61,6 @@ poetry run python spl_scavenger.py
 ## 📊 输出示例
 
 ```
-============================================
-  🧹 Solana SPL Token 清道夫 (Scavenger)
-  💸 一键清空钱包 SPL Token 到指定地址
-============================================
-
 ℹ️ 已加载配置:
     🌐 RPC URL: https://api.mainnet-beta.solana.com
     🏦 目标地址: 6uqskVFXM3QYd7HfTRJYbthm8gQyWLQzZD1WawAWvWkN

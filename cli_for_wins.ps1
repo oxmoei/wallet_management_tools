@@ -1,5 +1,4 @@
-# 区块链工具集 CLI - PowerShell版本
-# Blockchain Tools CLI - PowerShell Version
+# EVM 智能合约交互 CLI - PowerShell版本
 
 # 颜色定义
 $RED = "Red"
@@ -61,7 +60,6 @@ function Show-Banner {
     Write-Host "ℹ️ 请确保您已经安装必要的依赖和环境配置，否则无法正常使用!" -ForegroundColor $CYAN
     Write-Host "ℹ️ 如果您还没有安装依赖，请先退出程序并以管理员身份执行以下命令:" -ForegroundColor $CYAN
     Write-Host ""
-    Write-Host "     🔜 Set-ExecutionPolicy Bypass -Scope CurrentUser" -ForegroundColor $GREEN
     Write-Host "     🔜 ./install.ps1" -ForegroundColor $GREEN
     Write-Host ""
     Write-Host "ℹ️ 如果已经安装完成，请按任意键继续..." -ForegroundColor $CYAN
