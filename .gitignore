@@ -39,8 +39,5 @@ dist/
 *.env
 
 # 文件
-evm_scavenger/conf/used_chains.json
-debank_checker/balances.json
-rpc_endpoint_finder/result.json
 init_poetry.sh
 evm_scavenger/conf/match_chains.py

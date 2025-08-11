@@ -156,7 +156,7 @@ function Execute-Tool {
     
     # 检查是否包含notepad命令
     if ($Command -like "*notepad*") {
-        Write-Host "🔊 提示：准备使用记事本来编辑 .env 文件" -ForegroundColor $PURPLE
+        Write-Host "🔊 提示：将会使用记事本来编辑 .env 文件" -ForegroundColor $PURPLE
         Write-Host "     ┌─────────────────────────────────────────┐" -ForegroundColor $PURPLE
         Write-Host "     │  • 编辑完成后按 Ctrl + S 保存           │" -ForegroundColor $PURPLE
         Write-Host "     │  • 按 Ctrl + X 或关闭窗口退出           │" -ForegroundColor $PURPLE

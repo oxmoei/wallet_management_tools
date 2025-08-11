@@ -156,7 +156,7 @@ execute_tool() {
     
     # 检查是否包含nano命令
     if [[ $command == *"nano"* ]]; then
-        echo -e "${PURPLE}${BOLD}🔊 提示：准备使用nano编辑器来编辑 .env 文件${NC}"
+        echo -e "${PURPLE}${BOLD}🔊 提示：将会使用nano编辑器来编辑 .env 文件${NC}"
         echo -e "     ${PURPLE}┌─────────────────────────────────────────┐${NC}"
         echo -e "     ${PURPLE}│  • 编辑完成后按 ${YELLOW}${BOLD}Ctrl + X${NC}${PURPLE} 退出           │${NC}"
         echo -e "     ${PURPLE}│  • 按 ${YELLOW}${BOLD}Y${NC}${PURPLE} 确认保存                        │${NC}"
