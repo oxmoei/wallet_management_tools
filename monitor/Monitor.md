@@ -113,11 +113,19 @@ telegram:
 ```
 poetry run python evm_monitor.py
 ```
+如需后台运行（即使终端关闭也能继续运行），使用以下命令：
+```
+nohup poetry run python evm_monitor.py > monitor.log 2>&1 &
+```
 
 #### 启动Solana监控
 在 monitor/solana 目录下执行以下命令：
 ```
 poetry run python spl_monitor.py
+```
+如需后台运行（即使终端关闭也能继续运行），使用以下命令：
+```
+nohup poetry run python spl_monitor.py > monitor.log 2>&1 &
 ```
 
 ## 📱 通知格式
