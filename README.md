@@ -101,7 +101,7 @@ chmod +x cli.sh && ./cli.sh
 ### 8️⃣ monitor
 
 **主要功能：**                 ➡️[详细介绍与使用说明](./monitor/Monitor.md)
-- 代币监控系统，实时监控代币到账并发送 Telegram 通知
+- 代币监控系统，实时监控指定钱包的代币余额变化并发送 Telegram 通知
 - 支持 EVM 和 Solana 生态
 
 ## 💬 联系与支持
