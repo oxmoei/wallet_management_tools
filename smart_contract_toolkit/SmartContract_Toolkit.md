@@ -50,7 +50,7 @@ AID_WALLET_PRIVATE_KEY=your_aid_wallet_private_key
 ```
 
 
-### 运行程序：**代币/NFT管理器**
+### 🔴 运行程序：**代币/NFT管理器**
 在 smart_contract_toolkit 目录下执行以下命令
 ```
 poetry run python erc20_nft_manager.py
@@ -70,7 +70,7 @@ poetry run python erc20_nft_manager.py
 | 7 | 🎭 转移全部 NFT | 将目标钱包中的所有 NFT 转移到指定地址 |
 
 
-### 运行程序：**自定义合约执行器**
+### 🔴 运行程序：**自定义合约执行器**
 在 smart_contract_toolkit 目录下执行以下命令：
 ```
 poetry run python custom_hex_executor.py

@@ -84,7 +84,7 @@ chmod +x cli.sh && ./cli.sh
 
 **主要功能：**                 ➡️[详细介绍与使用说明](./rpc_endpoint_finder/RPC_Endpoint_Finder.md)
 - 获取最新的免费 RPC 端点
-- 支持按名称或链 ID 搜索，并可筛选 HTTP 或 WSS 类型
+- 测试 RPC 端点的连接性
 
 ### 6️⃣ flashbots_bundle_sender
 

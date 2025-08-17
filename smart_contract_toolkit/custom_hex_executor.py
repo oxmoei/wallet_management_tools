@@ -585,7 +585,12 @@ def execute_custom_hex_transaction():
         receipt = w3.eth.wait_for_transaction_receipt(tx_hash, timeout=300)
         if receipt.status == 1:           
             gas_used = receipt.gasUsed
-            gas_limit = receipt.gasLimit
+            # 从原始交易中获取gas限制，因为收据中可能没有gas属性
+            try:
+                tx = w3.eth.get_transaction(tx_hash)
+                gas_limit = tx.gas
+            except:
+                gas_limit = gas_used  # 如果无法获取，使用已使用的gas作为参考
             print_info_box("交易详情", f"📊 Gas 使用: {gas_used:,} / {gas_limit:,}")
             print_success_box("交易成功", "🎉 自定义 Hex 交易执行成功！")
         else:
