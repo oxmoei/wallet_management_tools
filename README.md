@@ -1,5 +1,5 @@
 
-# 📦 钱包管理百宝箱
+# 钱包管理百宝箱
 
 ```
  __    __      _ _      _     _____            _     ___      _ _           _   _              
@@ -18,7 +18,7 @@
 - ![Linux](https://img.shields.io/badge/-Linux-FCC624?logo=linux&logoColor=black)
 
 ## ♻️ 克隆仓库并进入项目目录
-```bash
+```
 git clone https://github.com/oxmoei/wallet_management_tools.git && cd wallet_management_tools
 
 ```

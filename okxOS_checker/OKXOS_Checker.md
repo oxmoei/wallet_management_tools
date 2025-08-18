@@ -52,8 +52,6 @@ OKX_PROJECT=your_project_here
 在项目主目录下执行以下命令：
 ```
 node okxOS_checker/src/single.js
-# 或者使用 npm 脚本
-cd okxOS_checker && npm run single
 ```
 
 程序会提示您输入钱包地址（支持任何类型地址），然后显示该地址在所有支持网络上的资产余额。
@@ -82,8 +80,6 @@ cd okxOS_checker && npm run single
 
 ```
 node okxOS_checker/src/batch.js
-# 或者使用 npm 脚本
-cd okxOS_checker && npm run batch
 
 ```
 
