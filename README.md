@@ -104,6 +104,12 @@ chmod +x cli.sh && ./cli.sh
 - 代币监控系统，实时监控指定钱包的代币余额变化并发送 Telegram 通知
 - 支持 EVM 和 Solana 生态
 
+### 9️⃣ eip7702
+
+**主要功能：**                 ➡️[详细介绍与使用说明](https://github.com/oxmoei/eip-7702)
+- 将 EOA 钱包临时升级为智能账户钱包并执行批量交易
+- 支持标准批量交易和 HEX 批量交易
+
 ## 💬 联系与支持
 - Telegram: [t.me/cryptostar210](https://t.me/cryptostar210)
 - 请我喝杯☕：**0xd328426a8e0bcdbbef89e96a91911eff68734e84** ▋**5LmGJmv7Lbjh9K1gEer47xSHZ7mDcihYqVZGoPMRo89s**
