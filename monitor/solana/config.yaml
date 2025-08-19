@@ -14,17 +14,17 @@ solana:
 
 # 监听地址列表 (要监听的Solana钱包地址)
 watch_addresses:
-  - "2wVXwDnWUBoZqmFvFTMiUtMA5NZSvCtWBHgiEuHzBEd3"  # 示例地址1
-  - "zEftHcuc7jDHwGFVzDEBiAe8bhP8VuvRAE64ETwg6kZ"  # 示例地址2
-
+  - "2wVXwDnWUBoZqmFvFTMiUtMA5NZSvCtWBHgiEuHzBEd3"  # 示例1，修改为你要监听的地址
+  - "zEftHcuc7jDHwGFVzDEBiAe8bhP8VuvRAE64ETwg6kZ"  # 示例2，修改为你要监听的地址
+  # 你可以添加更多地址...
 
 # Telegram机器人配置
 telegram:
   # Telegram Bot Token (从 @BotFather 获取)
-  bot_token: "123456789:ABCdefGHIjklMNOpqrsTUVwxyz"  # 🔴 请替换为您的Bot Token
+  bot_token: "123456789:ABCdefGHIjklMNOpqrsTUVwxyz"  # 示例，请替换为你的Bot Token
   
   # Telegram Chat ID (接收通知的聊天ID)
-  chat_id: "9876543210"  # 🔴 请替换为您的Chat ID
+  chat_id: "9876543210"  # 示例，请替换为你的Chat ID
 
 
 # 获取Telegram配置的步骤:

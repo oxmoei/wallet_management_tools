@@ -52,6 +52,8 @@ OKX_PROJECT=your_project_here
 在项目主目录下执行以下命令：
 ```
 node okxOS_checker/src/single.js
+# 或
+npm run single
 ```
 
 程序会提示您输入钱包地址（支持任何类型地址），然后显示该地址在所有支持网络上的资产余额。
@@ -80,7 +82,8 @@ node okxOS_checker/src/single.js
 
 ```
 node okxOS_checker/src/batch.js
-
+# 或
+npm run batch
 ```
 
 程序会提示您输入多个钱包地址（每行一个，支持任何类型地址），然后显示各个地址的总资产余额。

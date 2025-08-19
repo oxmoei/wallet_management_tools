@@ -1,36 +1,36 @@
 # 支持配置多条 EVM 链
-# 支持配置多个备用节点（建议使用自己的专属节点，可在 Alchemy、Infura、Ankr、QuickNode 等提供商上免费注册）
+# 支持配置多个备用节点（务必是wss链接，可在 Alchemy、Infura、Ankr、QuickNode 等提供商上免费注册）
 chains:
   ethereum:
     ws_urls:
-      - 
-      - 
+      - "wss://eth-mainnet.g.alchemy.com/v2/demo" #示例1，请修改为你的节点
+      - "wss://eth-mainnet.g.alchemy.com/v2/demo" #示例2，请修改为你的节点
   bsc:
     ws_urls:
-      - 
-      - 
+      - "wss://bsc-mainnet.g.alchemy.com/v2/demo" #示例1，请修改为你的节点
+      - "wss://bsc-mainnet.g.alchemy.com/v2/demo" #示例2，请修改为你的节点
   base:
     ws_urls:
-      - 
-      - 
+      - "wss://base-mainnet.g.alchemy.com/v2/demo" #示例1，请修改为你的节点
+      - "wss://base-mainnet.g.alchemy.com/v2/demo" #示例2，请修改为你的节点
   arbitrum:
     ws_urls:
-      - 
-      - 
-  # 你可以添加更多链节点...
+      - "wss://arbitrum-mainnet.g.alchemy.com/v2/demo" #示例1，请修改为你的节点
+      - "wss://arbitrum-mainnet.g.alchemy.com/v2/demo" #示例2，请修改为你的节点
+      # 你可以添加更多链节点...
 
 # 监听地址(支持多个)，全部小写
 watch_addresses:
-  - "0x000da01a62dd1654a7fdc8f898bda1ec431f788a" #示例地址1
-  - "0xe35f17297b17f4e971e4c076b6db0a54f85bef2b" #示例地址2
-  - "0xdc99177c4f59394a1703040c2ed23967f604b91c" #示例地址3
-  - "0x144eca70d0effe4f13a0d9eba7a23c77885a44f3" #示例地址4
-
+  - "0x000da01a62dd1654a7fdc8f898bda1ec431f788a" #示例1，请修改为你要监听的地址
+  - "0xe35f17297b17f4e971e4c076b6db0a54f85bef2b" #示例2，请修改为你要监听的地址
+  - "0xdc99177c4f59394a1703040c2ed23967f604b91c" #示例3，请修改为你要监听的地址
+  - "0x144eca70d0effe4f13a0d9eba7a23c77885a44f3" #示例4，请修改为你要监听的地址
+  # 你可以添加更多地址...
 
 # Telegram Bot 配置
 telegram:
-  bot_token: "123456789:ABCdefGHIjklMNOpqrsTUVwxyz" # 🔴 请替换为您的Bot Token
-  chat_id: "9876543210" # 🔴 请替换为您的Chat ID
+  bot_token: "123456789:ABCdefGHIjklMNOpqrsTUVwxyz" # 示例，  请替换为你的Bot Token
+  chat_id: "9876543210" # 示例，请替换为你的Chat ID
 
 # 获取Telegram配置的步骤:
 # ========================================

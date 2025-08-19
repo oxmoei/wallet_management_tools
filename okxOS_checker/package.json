@@ -4,7 +4,6 @@
   "description": "基于 OKX OS 钱包 API 的多链资产余额查询工具，支持查询 62+ 个区块链网络的资产余额",
   "main": "src/single.js",
   "scripts": {
-    "start": "node src/single.js",
     "single": "node src/single.js",
     "batch": "node src/batch.js",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -18,7 +17,7 @@
     "checker",
     "api"
   ],
-  "author": "cryptostar210",
+  "author": "oxmoei",
   "license": "ISC",
   "repository": {
     "type": "git",

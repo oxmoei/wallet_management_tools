@@ -60,13 +60,13 @@ chains:
 
 # 监听地址(支持多个)，全部小写
 watch_addresses:
-  - "0x1234567890abcdef1234567890abcdef12345678"  # 示例地址1
-  - "0xabcdef1234567890abcdef1234567890abcdef12"  # 示例地址2
+  - "0x1234567890abcdef1234567890abcdef12345678"  # 示例1，请修改为你要监听的地址
+  - "0xabcdef1234567890abcdef1234567890abcdef12"  # 示例2，请修改为你要监听的地址
 
 # Telegram Bot 配置
 telegram:
-  bot_token: "123456789:ABCdefGHIjklMNOpqrsTUVwxyz"  # 请替换为您的Bot Token
-  chat_id: "9876543210"  # 请替换为您的Chat ID
+  bot_token: "123456789:ABCdefGHIjklMNOpqrsTUVwxyz"  # 示例，请替换为你的Bot Token
+  chat_id: "9876543210"  # 示例，请替换为你的Chat ID
 ```
 
 #### Solana链配置 (solana/config.yaml)
@@ -84,13 +84,13 @@ solana:
 
 # 监听地址列表 (要监听的Solana钱包地址)
 watch_addresses:
-  - "2wVXwDnWUBoZqmFvFTMiUtMA5NZSvCtWBHgiEuHzBEd3"  # 示例地址1
-  - "zEftHcuc7jDHwGFVzDEBiAe8bhP8VuvRAE64ETwg6kZ"  # 示例地址2
+  - "2wVXwDnWUBoZqmFvFTMiUtMA5NZSvCtWBHgiEuHzBEd3"  # 示例1，请修改为你要监听的地址
+  - "zEftHcuc7jDHwGFVzDEBiAe8bhP8VuvRAE64ETwg6kZ"   # 示例2，请修改为你要监听的地址
 
 # Telegram机器人配置
 telegram:
-  bot_token: "123456789:ABCdefGHIjklMNOpqrsTUVwxyz"  # 请替换为您的Bot Token
-  chat_id: "9876543210"  # 请替换为您的Chat ID
+  bot_token: "123456789:ABCdefGHIjklMNOpqrsTUVwxyz"  # 示例，请替换为你的Bot Token
+  chat_id: "9876543210"  # 示例，请替换为你的Chat ID
 ```
 
 ### 3. 获取Telegram配置

@@ -36,14 +36,14 @@ httpx==0.28.1
 在项目根目录的 `.env` 文件中设置：
 ```env
 # 必填：发送方 Solana 钱包私钥，支持批量（base58 格式）
-PRIVATE_KEY_1=
-PRIVATE_KEY_2=
-PRIVATE_KEY_2=
+PRIVATE_KEY_1=5HueCGU8rMjxEXxiPuD5BDuD6vVRrxCVcuxF2jFq5hPpKPLqFZAWGpgmQ9x1Af6s1eNbnXqCxh3Rx3a9Gc4XmP1t #示例1，修改为你的私钥
+PRIVATE_KEY_2=3yZeXnP6MP4HSoQCyx5UoLBvYci2QXU4u9TAXVjK3fJ9f3KXmcxqQMRJvDd6q4Q7LBfg4LhUJr9x8QyqqsmhVebk #示例2，修改为你的私钥
+PRIVATE_KEY_3=
 ...
 
 # 必填：接收方 Solana 钱包地址
-TO_ADDRESS=
-TO_PRIVATE_KEY=
+TO_ADDRESS=3oHM3G9r4wtdvvk2KMej162KrHofARrtgWzGrGavFyWR  #示例，修改为你的地址
+TO_PRIVATE_KEY=7t8kEJ7P1uQG6FJmv7e3uEXbqF7yQ6qN1WhwDj2tRjpjgfU9r2XuyFfwZ94n8vVUnVqQ9jrbFfXfAdJGp7R4Zd6 #示例，修改为你的私钥
 
 # 必填：Solana RPC节点
 RPC_URL=https://api.mainnet-beta.solana.com
@@ -63,7 +63,7 @@ poetry run python spl_scavenger.py
 ```
 ℹ️ 已加载配置:
     🌐 RPC URL: https://api.mainnet-beta.solana.com
-    🏦 目标地址: 6uqskVFXM3QYd7HfTRJYbthm8gQyWLQzZD1WawAWvWkN
+    🏦 目标地址: 3oHM3G9r4wtdvvk2KMej162KrHofARrtgWzGrGavFyWR
     ⚙️ Dry Run: false
   ✅ 已加载私钥: PRIVATE_KEY_1 -> 🏠 2wVXwDnWUBoZqmFvFTMiUtMA5NZSvCtWBHgiEuHzBEd3
 
