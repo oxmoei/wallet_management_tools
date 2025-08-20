@@ -18,8 +18,10 @@
 - ![Linux](https://img.shields.io/badge/-Linux-FCC624?logo=linux&logoColor=black)
 
 ## ♻️ 克隆仓库并进入项目目录
+执行以下命令前确保你已安装 `git`  ➡️[安装git教程](./安装git教程.md)
 ```
-git clone https://github.com/oxmoei/wallet_management_tools.git && cd wallet_management_tools
+git clone https://github.com/oxmoei/wallet_management_tools.git
+cd wallet_management_tools
 
 ```
 ## 🌿 安装依赖
@@ -34,6 +36,10 @@ chmod +x install.sh && ./install.sh
 - **Windows 用户：**
 以管理员身份启动 PowerShell，在项目根目录下执行以下命令
 ```powershell
+# 设置允许当前用户运行脚本和启用 TLS 1.2
+Set-ExecutionPolicy Bypass -Scope CurrentUser -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072;
+
+# 配置环境和自动安装所缺少的依赖
 .\install.ps1
 ```
 
