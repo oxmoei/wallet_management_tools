@@ -1,220 +1,54 @@
 [
   {
-    "name": "Arbitrum One",
-    "chainId": 42161,
-    "shortName": "arb1",
-    "chain": "ETH",
-    "networkId": 42161,
-    "nativeCurrency": {
-      "name": "Ether",
-      "symbol": "ETH",
-      "decimals": 18
-    },
+    "name": "Monad Testnet",
+    "chain": "MON",
+    "icon": "monad",
     "rpc": [
       {
-        "url": "wss://arbitrum-one-rpc.publicnode.com",
+        "url": "https://monad-testnet.drpc.org",
         "tracking": "none"
       },
       {
-        "url": "wss://arbitrum.callstaticrpc.com",
-        "tracking": "none"
-      }
-    ],
-    "faucets": [],
-    "explorers": [
-      {
-        "name": "Arbiscan",
-        "url": "https://arbiscan.io",
-        "standard": "EIP3091"
-      },
-      {
-        "name": "Arbitrum Explorer",
-        "url": "https://explorer.arbitrum.io",
-        "standard": "EIP3091"
-      },
-      {
-        "name": "dexguru",
-        "url": "https://arbitrum.dex.guru",
-        "icon": "dexguru",
-        "standard": "EIP3091"
-      }
-    ],
-    "infoURL": "https://arbitrum.io",
-    "parent": {
-      "type": "L2",
-      "chain": "eip155-1",
-      "bridges": [
-        {
-          "url": "https://bridge.arbitrum.io"
-        }
-      ]
-    },
-    "tvl": 3456503703.8837466,
-    "chainSlug": "arbitrum"
-  },
-  {
-    "name": "Arbitrum Nova",
-    "chainId": 42170,
-    "shortName": "arb-nova",
-    "chain": "ETH",
-    "networkId": 42170,
-    "nativeCurrency": {
-      "name": "Ether",
-      "symbol": "ETH",
-      "decimals": 18
-    },
-    "rpc": [
-      {
-        "url": "wss://arbitrum-nova-rpc.publicnode.com",
-        "tracking": "none"
-      }
-    ],
-    "faucets": [],
-    "explorers": [
-      {
-        "name": "Arbitrum Nova Chain Explorer",
-        "url": "https://nova-explorer.arbitrum.io",
-        "icon": "blockscout",
-        "standard": "EIP3091"
-      }
-    ],
-    "infoURL": "https://arbitrum.io",
-    "parent": {
-      "type": "L2",
-      "chain": "eip155-1",
-      "bridges": [
-        {
-          "url": "https://bridge.arbitrum.io"
-        }
-      ]
-    },
-    "tvl": 787070.6620067653,
-    "chainSlug": "arbitrum nova"
-  },
-  {
-    "name": "Arbitrum Goerli",
-    "title": "Arbitrum Goerli Rollup Testnet",
-    "chainId": 421613,
-    "shortName": "arb-goerli",
-    "chain": "ETH",
-    "networkId": 421613,
-    "slip44": 1,
-    "nativeCurrency": {
-      "name": "Arbitrum Goerli Ether",
-      "symbol": "AGOR",
-      "decimals": 18
-    },
-    "rpc": [
-      {
-        "url": "wss://arbitrum-goerli-rpc.publicnode.com",
+        "url": "https://rpc.ankr.com/monad_testnet",
         "tracking": "none"
       },
       {
-        "url": "wss://arbitrum-goerli.publicnode.com"
-      }
-    ],
-    "faucets": [],
-    "infoURL": "https://arbitrum.io/",
-    "explorers": [
-      {
-        "name": "Arbitrum Goerli Arbiscan",
-        "url": "https://goerli.arbiscan.io",
-        "standard": "EIP3091"
-      }
-    ],
-    "parent": {
-      "type": "L2",
-      "chain": "eip155-5",
-      "bridges": [
-        {
-          "url": "https://bridge.arbitrum.io/"
-        }
-      ]
-    }
-  },
-  {
-    "name": "Arbitrum Sepolia",
-    "title": "Arbitrum Sepolia Rollup Testnet",
-    "chain": "ETH",
-    "rpc": [
-      {
-        "url": "wss://arbitrum-sepolia.drpc.org",
+        "url": "https://rpc.ankr.com/monad_testnet",
         "tracking": "none"
       },
       {
-        "url": "wss://arbitrum-sepolia-rpc.publicnode.com"
+        "url": "https://monad-testnet.gateway.tatum.io",
+        "tracking": "yes"
+      },
+      {
+        "url": "https://testnet-rpc.monad.xyz"
+      }
+    ],
+    "features": [
+      {
+        "name": "EIP155"
+      },
+      {
+        "name": "EIP1559"
       }
     ],
     "faucets": [],
     "nativeCurrency": {
-      "name": "Sepolia Ether",
-      "symbol": "ETH",
+      "name": "Testnet MON Token",
+      "symbol": "MON",
       "decimals": 18
     },
-    "infoURL": "https://arbitrum.io",
-    "shortName": "arb-sep",
-    "chainId": 421614,
-    "networkId": 421614,
+    "infoURL": "https://monad.xyz",
+    "shortName": "mon-testnet",
+    "chainId": 10143,
+    "networkId": 10143,
     "slip44": 1,
     "explorers": [
       {
-        "name": "arbiscan-sepolia",
-        "url": "https://sepolia.arbiscan.io",
-        "standard": "EIP3091"
-      },
-      {
-        "name": "Arbitrum Sepolia Rollup Testnet Explorer",
-        "url": "https://sepolia-explorer.arbitrum.io",
+        "name": "Monad Testnet Explorer",
+        "url": "https://testnet.monadexplorer.com",
         "standard": "EIP3091"
       }
-    ],
-    "parent": {
-      "type": "L2",
-      "chain": "eip155-11155111",
-      "bridges": [
-        {
-          "url": "https://bridge.arbitrum.io"
-        }
-      ]
-    }
-  },
-  {
-    "name": "Arbitrum Blueberry",
-    "title": "Arbitrum Blueberry Testnet",
-    "chain": "ETH",
-    "rpc": [
-      {
-        "url": "wss://ws.arb-blueberry.gelato.digital"
-      }
-    ],
-    "faucets": [],
-    "nativeCurrency": {
-      "name": "GelatoCGT",
-      "symbol": "CGT",
-      "decimals": 18
-    },
-    "infoURL": "https://raas.gelato.network/rollups/details/public/arb-blueberry",
-    "shortName": "arb-blueberry",
-    "chainId": 88153591557,
-    "networkId": 88153591557,
-    "slip44": 60,
-    "explorers": [
-      {
-        "name": "blockscout",
-        "url": "https://arb-blueberry.gelatoscout.com",
-        "icon": "blockscout",
-        "standard": "EIP3091"
-      }
-    ],
-    "parent": {
-      "type": "L2",
-      "chain": "eip155-421614",
-      "bridges": [
-        {
-          "url": "https://bridge.gelato.network/bridge/arb-blueberry"
-        }
-      ]
-    },
-    "status": "active"
+    ]
   }
 ]

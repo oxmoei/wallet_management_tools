@@ -112,9 +112,9 @@ chmod +x cli.sh && ./cli.sh
 
 ### 9️⃣ eip7702
 
-**主要功能：**                 ➡️[详细介绍与使用说明](https://github.com/oxmoei/eip-7702)
-- 将 EOA 钱包临时升级为智能账户钱包并执行批量交易
-- 支持标准批量交易和 HEX 批量交易
+**主要功能：**                 ➡️[详细介绍与使用说明](https://github.com/oxmoei/eip-7702_QN)
+- 将 EOA 钱包临时升级为智能账户钱包
+- 调用委托合约执行批量交易 
 
 ## 💬 联系与支持
 - Telegram: [t.me/cryptostar210](https://t.me/cryptostar210)

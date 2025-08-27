@@ -82,30 +82,70 @@ def test_rpc(chain_name, rpc_url, index, total):
     try:
         # 根据协议类型选择 provider
         if rpc_url.startswith("wss://") or rpc_url.startswith("ws://"):
-            web3 = Web3(Web3.WebsocketProvider(rpc_url))
+            # WebSocket 连接需要使用异步方式
+            try:
+                import asyncio
+                from web3 import AsyncWeb3
+                
+                # 在最新版本的 web3.py 中，WebSocketProvider 的导入路径已更改
+                try:
+                    from web3.providers.websocket import WebSocketProvider
+                except ImportError:
+                    try:
+                        from web3.providers import WebSocketProvider
+                    except ImportError:
+                        # 最新版本中可能直接从 web3 导入
+                        from web3 import WebSocketProvider
+                
+                # 创建异步 Web3 实例
+                async def test_websocket():
+                    async with AsyncWeb3(WebSocketProvider(rpc_url)) as w3:
+                        # 获取链信息
+                        block_number = await w3.eth.get_block_number()
+                        gas_price = await w3.eth.gas_price
+                        chain_id = await w3.eth.chain_id
+                        
+                        # 美化输出链信息
+                        print()
+                        print(f"{Colors.GREEN}┌─ 连接状态: 成功{Colors.ENDC}")
+                        print(f"{Colors.BLUE}├─ 区块高度: {block_number:,}{Colors.ENDC}")
+                        print(f"{Colors.BLUE}├─ Gas 价格: {w3.from_wei(gas_price, 'gwei'):.2f} Gwei{Colors.ENDC}")
+                        print(f"{Colors.BLUE}└─ 链 ID: {chain_id}{Colors.ENDC}")
+                        
+                        return True
+                
+                # 运行异步测试
+                return asyncio.run(test_websocket())
+                
+            except Exception as e:
+                print_error(f"WebSocket 连接失败: {e}")
+                return False
+                
         elif rpc_url.startswith("https://") or rpc_url.startswith("http://"):
-            web3 = Web3(Web3.HTTPProvider(rpc_url))
+            # HTTPProvider 也可以直接从 web3 导入
+            from web3 import HTTPProvider
+            web3 = Web3(HTTPProvider(rpc_url))
+            
+            if not web3.is_connected():
+                print_error(f"连接失败：无法连接到 {rpc_url}")
+                return False
+
+            # 获取链信息
+            block_number = web3.eth.block_number
+            gas_price = web3.eth.gas_price
+            chain_id = web3.eth.chain_id
+
+            # 美化输出链信息
+            print()
+            print(f"{Colors.GREEN}┌─ 连接状态: 成功{Colors.ENDC}")
+            print(f"{Colors.BLUE}├─ 区块高度: {block_number:,}{Colors.ENDC}")
+            print(f"{Colors.BLUE}├─ Gas 价格: {web3.from_wei(gas_price, 'gwei'):.2f} Gwei{Colors.ENDC}")
+            print(f"{Colors.BLUE}└─ 链 ID: {chain_id}{Colors.ENDC}")
+
+            return True
         else:
             print_error(f"无法识别的 RPC 协议: {rpc_url}")
             return False
-
-        if not web3.is_connected():
-            print_error(f"连接失败：无法连接到 {rpc_url}")
-            return False
-
-        # 获取链信息
-        block_number = web3.eth.block_number
-        gas_price = web3.eth.gas_price
-        chain_id = web3.eth.chain_id
-
-        # 美化输出链信息
-        print()
-        print(f"{Colors.GREEN}┌─ 连接状态: 成功{Colors.ENDC}")
-        print(f"{Colors.BLUE}├─ 区块高度: {block_number:,}{Colors.ENDC}")
-        print(f"{Colors.BLUE}├─ Gas 价格: {web3.from_wei(gas_price, 'gwei'):.2f} Gwei{Colors.ENDC}")
-        print(f"{Colors.BLUE}└─ 链 ID: {chain_id}{Colors.ENDC}")
-
-        return True
 
     except Exception as e:
         print_error(f"初始化 Web3 或获取链信息失败：{e}")
@@ -135,25 +175,39 @@ def print_footer():
     print(f"{Colors.ENDC}")
     
 if __name__ == "__main__":
-    # 从控制台获取 RPC 列表
-    rpc_list = get_rpc_from_console()
-    
-    if not rpc_list:
-        print_error("未输入任何 RPC 地址，程序退出")
-        exit(1)
-    
-    print_section("开始测试")
-    print_info(f"准备测试 {len(rpc_list)} 个 RPC 端点...")
-    
-    # 测试每个 RPC 端点
-    results = []
-    for i, rpc_url in enumerate(rpc_list, 1):
-        result = test_rpc(f"RPC #{i}", rpc_url, i, len(rpc_list))
-        results.append(result)
-        time.sleep(0.5)  # 添加小延迟，让输出更优雅
-    
-    # 打印摘要
-    print_summary(results)
-    
-    # 打印页脚
-    print_footer()
+    while True:
+        # 从控制台获取 RPC 列表
+        rpc_list = get_rpc_from_console()
+        
+        if not rpc_list:
+            print_error("未输入任何 RPC 地址，程序退出")
+            exit(1)
+        
+        print_section("开始测试")
+        print_info(f"准备测试 {len(rpc_list)} 个 RPC 端点...")
+        
+        # 测试每个 RPC 端点
+        results = []
+        for i, rpc_url in enumerate(rpc_list, 1):
+            result = test_rpc(f"RPC #{i}", rpc_url, i, len(rpc_list))
+            results.append(result)
+            time.sleep(0.5)  # 添加小延迟，让输出更优雅
+        
+        # 打印摘要
+        print_summary(results)
+        
+        # 询问是否继续测试其他RPC
+        print_section("继续测试")
+        choice = input(f"{Colors.CYAN}是否要测试其他 RPC 端点？(y/n): {Colors.ENDC}").strip().lower()
+        if choice in ['y', 'yes', '是', 'y']:
+            print_info("准备开始新的测试...")
+            print()  # 添加空行分隔
+        elif choice in ['n', 'no', '否', 'n']:
+            print_success("感谢使用 RPC 测试工具，再见！")
+            print_footer()  # 在程序结束前打印页脚
+            exit(0)
+        else:
+            print_warning("请输入 y 或 n")
+            # 如果输入无效，默认继续测试
+            print_info("输入无效，默认继续测试...")
+            print()
