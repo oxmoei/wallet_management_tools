@@ -1,3 +1,4 @@
+
 import json
 
 from .config import file_json
@@ -36,7 +37,8 @@ def save_full_to_json(wallets, chains, coins, balances, file_json):
                     'amount': coin['amount'],
                     'price': coin['price'],
                     'name': coin['name'],
-                    'usd': coin_in_usd
+                    'usd': coin_in_usd,
+                    'contract_address': coin.get('contract_address', '')
                 })
                 if isinstance(coin_in_usd, (int, float)):
                     total_in_wallet += coin_in_usd
@@ -84,7 +86,8 @@ def save_selected_to_json(wallets, chains, coins, balances, ticker, file_json):
                         'amount': coin['amount'],
                         'price': coin['price'],
                         'name': coin['name'],
-                        'usd': coin_in_usd
+                        'usd': coin_in_usd,
+                        'contract_address': coin.get('contract_address', '')
                     })
                     total_in_wallet += coin_in_usd
             wallet_data['chains'][chain] = chain_list

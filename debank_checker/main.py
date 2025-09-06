@@ -120,7 +120,8 @@ def chain_balance(node_process, session, address, chain, ticker, min_amount):
                     'name': coin['name'],
                     'ticker': coin['optimized_symbol'],
                     'price': coin['price'],
-                    'logo_url': coin['logo_url']
+                    'logo_url': coin['logo_url'],
+                    'contract_address': coin.get('id', '')
                 })
     
     return coins
@@ -229,7 +230,8 @@ def get_pools(node_process, session, wallets):
                         'name': coin['name'],
                         'ticker': coin['optimized_symbol'],
                         'price': coin['price'],
-                        'logo_url': coin['logo_url']
+                        'logo_url': coin['logo_url'],
+                        'contract_address': coin.get('id', '')
                     })
 
         return pools

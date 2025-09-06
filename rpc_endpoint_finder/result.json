@@ -1,54 +1,82 @@
 [
   {
-    "name": "Monad Testnet",
-    "chain": "MON",
-    "icon": "monad",
+    "name": "Linea",
+    "title": "Linea Mainnet",
+    "chain": "ETH",
     "rpc": [
       {
-        "url": "https://monad-testnet.drpc.org",
+        "url": "https://rpc.linea.build"
+      },
+      {
+        "url": "https://1rpc.io/linea",
         "tracking": "none"
       },
       {
-        "url": "https://rpc.ankr.com/monad_testnet",
+        "url": "https://linea.drpc.org",
         "tracking": "none"
       },
       {
-        "url": "https://rpc.ankr.com/monad_testnet",
+        "url": "https://linea.decubate.com",
         "tracking": "none"
       },
       {
-        "url": "https://monad-testnet.gateway.tatum.io",
+        "url": "https://rpc.owlracle.info/linea/70d38ce1826c4a60bb2a8e05a6c8b20f",
+        "tracking": "limited"
+      },
+      {
+        "url": "https://linea.therpc.io",
+        "tracking": "limited"
+      },
+      {
+        "url": "https://linea.rpc.grove.city/v1/01fdb492",
         "tracking": "yes"
       },
       {
-        "url": "https://testnet-rpc.monad.xyz"
-      }
-    ],
-    "features": [
-      {
-        "name": "EIP155"
-      },
-      {
-        "name": "EIP1559"
+        "url": "https://linea-rpc.publicnode.com"
       }
     ],
     "faucets": [],
     "nativeCurrency": {
-      "name": "Testnet MON Token",
-      "symbol": "MON",
+      "name": "Linea Ether",
+      "symbol": "ETH",
       "decimals": 18
     },
-    "infoURL": "https://monad.xyz",
-    "shortName": "mon-testnet",
-    "chainId": 10143,
-    "networkId": 10143,
-    "slip44": 1,
+    "infoURL": "https://linea.build",
+    "shortName": "linea",
+    "chainId": 59144,
+    "networkId": 59144,
+    "icon": "linea",
+    "parent": {
+      "type": "L2",
+      "chain": "eip155-1",
+      "bridges": [
+        {
+          "url": "https://bridge.linea.build"
+        }
+      ]
+    },
     "explorers": [
       {
-        "name": "Monad Testnet Explorer",
-        "url": "https://testnet.monadexplorer.com",
-        "standard": "EIP3091"
+        "name": "Etherscan",
+        "url": "https://lineascan.build",
+        "standard": "EIP3091",
+        "icon": "linea"
+      },
+      {
+        "name": "Blockscout",
+        "url": "https://explorer.linea.build",
+        "standard": "EIP3091",
+        "icon": "linea"
+      },
+      {
+        "name": "L2scan",
+        "url": "https://linea.l2scan.co",
+        "standard": "EIP3091",
+        "icon": "linea"
       }
-    ]
+    ],
+    "status": "active",
+    "tvl": 910506445.7114924,
+    "chainSlug": "linea"
   }
 ]
